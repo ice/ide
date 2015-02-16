@@ -2,7 +2,7 @@
 
 namespace Ice\Mvc;
 
-abstract class Model extends \Ice\Arr
+abstract class Model extends \Ice\Arr implements \Serializable
 {
 
     const BELONGS_TO = 1;
@@ -113,13 +113,13 @@ abstract class Model extends \Ice\Arr
 
     /**
      * Allows to query one record that match the specified conditions.
-     * <code>
+     * <pre><code>
      * //Get the user from users by id 2
      * $user = Users::findOne(2);
      * echo "The user name is ", $user->username;
      * //Get one active user with age > 18
      * $user = Users::findOne(array("status" => 1, "age" => array(">" => 18)));
-     * </code>
+     * </code></pre>
      *
      * @param array $filters 
      * @return Model|false 
@@ -128,10 +128,10 @@ abstract class Model extends \Ice\Arr
 
     /**
      * Allows to query all records that match the specified conditions.
-     * <code>
+     * <pre><code>
      * //Get all active users with age > 18
      * $user = Users::find(array("status" => 1, "age" => array(">" => 18)));
-     * </code>
+     * </code></pre>
      *
      * @param array $filters 
      * @param array $options 
@@ -149,13 +149,13 @@ abstract class Model extends \Ice\Arr
 
     /**
      * Insert a new object to the database.
-     * <code>
+     * <pre><code>
      * //Creating a new user
      * $user = new Users();
      * $user->lastname = "Kowalski";
      * $user->status = 1;
      * $user->create();
-     * </code>
+     * </code></pre>
      *
      * @param array $fields Fields to save or valid fields
      * @param object $extra Validation for fields such as a CSRF token, password verification, or a CAPTCHA
@@ -164,12 +164,12 @@ abstract class Model extends \Ice\Arr
 
     /**
      * Update an existing object in the database.
-     * <code>
+     * <pre><code>
      * //Updating a user last name
      * $user = Users::findOne(100);
      * $user->lastname = "Nowak";
      * $user->update();
-     * </code>
+     * </code></pre>
      *
      * @param array $fields Fields to save or valid fields
      * @param object $extra Validation for fields such as a CSRF token, password verification, or a CAPTCHA
@@ -178,7 +178,7 @@ abstract class Model extends \Ice\Arr
 
     /**
      * Inserts or updates a model instance. Returning true on success or false otherwise.
-     * <code>
+     * <pre><code>
      * //Creating a new user
      * $user = new Users();
      * $user->lastname = "Kowalski";
@@ -188,7 +188,7 @@ abstract class Model extends \Ice\Arr
      * $user = Users::findOne(100);
      * $user->lastname = "Nowak";
      * $user->save();
-     * </code>
+     * </code></pre>
      *
      * @param array $fields 
      * @param Validation $extra 
@@ -198,13 +198,13 @@ abstract class Model extends \Ice\Arr
 
     /**
      * Removes a model instance(s). Returning true on success or false otherwise.
-     * <code>
+     * <pre><code>
      * //Remove current user
      * $user = Users::findOne(100);
      * $user->delete();
      * //Remove all unactive users
      * $status = (new Users())->remove(["status" => 0]);
-     * </code>
+     * </code></pre>
      *
      * @param mixed $filters 
      * @param filters  
@@ -229,7 +229,7 @@ abstract class Model extends \Ice\Arr
 
     /**
      * Setup a relation reverse 1-1 between two models.
-     * <code>
+     * <pre><code>
      * class Posts extends Model
      * {
      * public function initialize()
@@ -241,7 +241,7 @@ abstract class Model extends \Ice\Arr
      * //Get post's author
      * $post = Posts::findOne(100);
      * echo $post->getUser()->username;
-     * </code>
+     * </code></pre>
      *
      * @param string $field 
      * @param string $referenceModel 
@@ -252,7 +252,7 @@ abstract class Model extends \Ice\Arr
 
     /**
      * Setup a 1-1 relation between two models
-     * <code>
+     * <pre><code>
      * class Users extends Model
      * {
      * public function initialize()
@@ -260,7 +260,7 @@ abstract class Model extends \Ice\Arr
      * $this->hasOne('id', __NAMESPACE__ . '\UsersDescriptions', 'user_id', ['alias' => 'Description']);
      * }
      * }
-     * </code>
+     * </code></pre>
      *
      * @param string $field 
      * @param string $referenceModel 
@@ -271,7 +271,7 @@ abstract class Model extends \Ice\Arr
 
     /**
      * Setup a relation 1-n between two models.
-     * <code>
+     * <pre><code>
      * class Users extends Model
      * {
      * public function initialize()
@@ -285,7 +285,7 @@ abstract class Model extends \Ice\Arr
      * foreach ($user->getPosts() as $post) {
      * echo $post->title;
      * }
-     * </code>
+     * </code></pre>
      *
      * @param string $field 
      * @param string $referenceModel 
@@ -320,7 +320,7 @@ abstract class Model extends \Ice\Arr
     /**
      * Unserialize and set the data.
      *
-     * @param mixed $data 
+     * @param string $data 
      */
 	public function unserialize($data) {}
 

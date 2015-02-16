@@ -36,7 +36,7 @@ class Model extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      * @param string $role Role name
      * @return boolean 
      */
-	public function hasRole(\Ice\Auth\Driver\Model\Users $user, $role = "login") {}
+	public function hasRole($user, $role = "login") {}
 
     /**
      * Logs a user in.
@@ -47,6 +47,15 @@ class Model extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      * @return boolean 
      */
 	public function login($username, $password, $remember = false) {}
+
+    /**
+     * Logs a user in through social network.
+     *
+     * @param mixed $social 
+     * @param boolean $remember enable autologin
+     * @return boolean 
+     */
+	public function loginBy(\Ice\Auth\Social $social, $remember = false) {}
 
     /**
      * Log a user out and remove any autologin cookies.

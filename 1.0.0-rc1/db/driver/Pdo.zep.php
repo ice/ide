@@ -45,14 +45,14 @@ class Pdo implements \Ice\Db\DbInterface
 
     /**
      * Find all records that match criteria.
-     * <code>
+     * <pre><code>
      * //SELECTFROM users WHERE a=1 and b="q"
      * $db->find("users", array("a" => 1, "b" => "q"));
      * //SELECTFROM users WHERE age>33
      * $db->find("users", array("age" => array(">" => 33)));
      * //SELECTFROM users WHERE a=1 or b=2
      * $db->find("users", array("OR" => array(array("a" => 1), array("b" => 2))));
-     * </code>
+     * </code></pre>
      *
      * @param string $from Table name
      * @param mixed $filters Filters to create WHERE conditions

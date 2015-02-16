@@ -64,9 +64,9 @@ class Router
 
     /**
      * Handles routing information received from command-line arguments.
-     * <code>
+     * <pre><code>
      * php index.php --module=shell --handler=main --action=main --id=1 --param="some value"
-     * </code>
+     * </code></pre>
      *
      * @param array $arguments 
      * @return array 
