@@ -9,6 +9,8 @@ class I18n
 
     protected $_cache = array();
 
+    protected $_rules = array();
+
     protected $_options = array(en-gb, en-gb, );
 
     /**
@@ -36,19 +38,22 @@ class I18n
     /**
      * Get ISO language code.
      *
+     * @param string $lang Language
+     * @param boolean $country Get country code, by default gets language code
      * @return string 
      */
-	public function iso() {}
+	public function iso($lang = null, $country = false) {}
 
     /**
-     * Returns translation of a string. No parameters are replaced.
+     * Returns specified form of a string translation. No parameters are replaced.
      * If no translation exists, the original string will be returned.
      *
      * @param string $str Text to translate
+     * @param mixed $form If NULL, looking for `other` form, else the very first form
      * @param string $lang Target language
      * @return string 
      */
-	public function get($str, $lang = null) {}
+	public function get($str, $form = null, $lang = null) {}
 
     /**
      * Load language from the file.
@@ -59,24 +64,46 @@ class I18n
 	private function load($lang) {}
 
     /**
+     * Returns translation of a string with right plural form.
+     * If no translation exists, the original string will be returned.
+     *
+     * @param string $str 
+     * @param int $count 
+     * @param string $lang 
+     * @param string $string 
+     * @return string 
+     */
+	public function plural($str, $count = 0, $lang = null) {}
+
+    /**
+     * Plural rules lazy initialization.
+     *
+     * @param string $code Language code
+     * @return object 
+     */
+	protected function pluralRules($code) {}
+
+    /**
      * Alias of translate.
      *
      * @param string $str 
      * @param array $values 
+     * @param mixed $context 
      * @param string $lang 
      * @return string 
      */
-	public function _($str, $values = null, $lang = null) {}
+	public function _($str, $values = null, $context = null, $lang = null) {}
 
     /**
      * Translation/internationalization function. strtr() or sprintf is used for replacing parameters.
      *
      * @param string $str 
      * @param array $values Values to replace in the translated text
+     * @param mixed $context String form or numeric count
      * @param string $lang Source language
      * @param string $string Text to translate
      * @return string 
      */
-	public function translate($str, $values = null, $lang = null) {}
+	public function translate($str, $values = null, $context = null, $lang = null) {}
 
 }
