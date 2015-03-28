@@ -13,6 +13,8 @@ class Mongo implements \Ice\Db\DbInterface
 
     protected $_client;
 
+    protected $_lastInsertId;
+
 
 	public function getId() {}
 
@@ -20,10 +22,10 @@ class Mongo implements \Ice\Db\DbInterface
 	public function getType() {}
 
 
-	public function getError() {}
-
-
 	public function getClient() {}
+
+
+	public function getLastInsertId() {}
 
     /**
      * Instantiate mongo connection.
@@ -95,5 +97,12 @@ class Mongo implements \Ice\Db\DbInterface
      * @param mixed $filters Criteria
      */
 	public function remove($from, $filters = array()) {}
+
+    /**
+     * Get an error message.
+     *
+     * @return mixed 
+     */
+	public function getError() {}
 
 }

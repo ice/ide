@@ -33,10 +33,10 @@ class Collector
      * Adds a route to the collection.
      * The syntax used in the $route string depends on the used route parser.
      *
-     * @param string $httpMethod 
+     * @param mixed $httpMethod 
      * @param string $route 
      * @param mixed $handler 
-     * @param string $$httpMethod 
+     * @param string|array $$httpMethod 
      * @param string $$route 
      * @param mixed $$handler 
      */

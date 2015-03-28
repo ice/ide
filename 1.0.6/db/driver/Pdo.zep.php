@@ -113,7 +113,7 @@ class Pdo implements \Ice\Db\DbInterface
      *
      * @return int 
      */
-	public function lastInsertId() {}
+	public function getLastInsertId() {}
 
     /**
      * Get an error message.

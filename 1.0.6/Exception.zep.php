@@ -16,6 +16,15 @@ class Exception extends \Exception
 	public function __construct($message = "", $code = 0, \Exception $previous = null) {}
 
     /**
+     * Get the full trace as string.
+     *
+     * @param mixed $e 
+     * @param Exception $$e 
+     * @return string 
+     */
+	public function getFullTraceAsString(\Exception $e) {}
+
+    /**
      * PHP error handler, converts all errors into ErrorExceptions. This handler respects error_reporting settings.
      *
      * @throws ErrorException

@@ -31,6 +31,8 @@ abstract class Dispatcher
 
     protected $_module;
 
+    protected $_namespace;
+
     protected $_handler;
 
     protected $_action;
@@ -89,6 +91,14 @@ abstract class Dispatcher
      * @param mixed $module 
      */
 	public function setModule($module) {}
+
+
+	public function getNamespace() {}
+
+    /**
+     * @param mixed $namespace 
+     */
+	public function setNamespace($namespace) {}
 
 
 	public function getHandler() {}
