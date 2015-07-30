@@ -196,6 +196,24 @@ class Validation
     public function getValue($field, $filtered = true) {}
 
     /**
+     * Get the values by fields.
+     * Values are automatically filtered out if filters have been setted.
+     * <pre><code>
+     * // Get value for one field
+     * $validation->getValues('password');
+     * // Get values for multiple fields
+     * $validation->getValues(['fullName', 'about']);
+     * // Get all values
+     * $validation->getValues();
+     * </code></pre>
+     *
+     * @param mixed $fields The data keys
+     * @param boolean $filtered Get the filtered value or original
+     * @return mixed 
+     */
+    public function getValues($fields = null, $filtered = true) {}
+
+    /**
      * Get the label of a field.
      * Humanize a label if humanLabels attribute and filter service is available
      *

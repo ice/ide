@@ -36,13 +36,13 @@ class Version
     const MINOR = 0;
 
 
-    const PATCH = 16;
+    const PATCH = 19;
 
 
     const STAGE = 4;
 
 
-    const BUILD = 1;
+    const BUILD = 2;
 
 
     /**
