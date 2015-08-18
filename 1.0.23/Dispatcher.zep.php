@@ -39,6 +39,9 @@ abstract class Dispatcher
     protected $lastHandler;
 
 
+    protected $loops = 0;
+
+
     protected $finished;
 
 
@@ -97,6 +100,9 @@ abstract class Dispatcher
 
 
     public function getLastHandler() {}
+
+
+    public function getLoops() {}
 
 
     public function getFinished() {}
@@ -221,8 +227,9 @@ abstract class Dispatcher
      * Forwards the execution flow to another module/controller/action.
      *
      * @param array $forward 
+     * @param boolean $force 
      */
-    public function forward($forward) {}
+    public function forward($forward, $force = false) {}
 
 
      function zephir_init_properties_Ice_Dispatcher() {}

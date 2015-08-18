@@ -144,6 +144,7 @@ class Response implements \Ice\Http\Response\ResponseInterface
      * @param string $location The redirect destination
      * @param int $status The redirect HTTP status code
      * @param bool $external 
+     * @return object 
      */
     public function redirect($location = null, $status = 302, $external = false) {}
 

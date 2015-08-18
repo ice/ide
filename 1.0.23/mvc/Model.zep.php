@@ -173,7 +173,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      *
      * @param array $filters 
      * @param array $options 
-     * @return Arr 
+     * @return object 
      */
     public static function find($filters = null, $options = array()) {}
 
@@ -337,8 +337,9 @@ abstract class Model extends \Ice\Arr implements \Serializable
      *
      * @param string $alias 
      * @param array $filters 
+     * @param array $options 
      */
-    public function getRelated($alias, $filters = array()) {}
+    public function getRelated($alias, $filters = array(), $options = array()) {}
 
     /**
      * Get rules for validation.
