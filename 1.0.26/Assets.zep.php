@@ -105,12 +105,12 @@ class Assets
     /**
      * Prepare resource
      *
-     * @param string $source The uri/url source path
+     * @param string $uri The uri/url source path
      * @param string $type Type of content
      * @param int $minify Option of minify
      * @return string path to the source
      */
-    protected function prepare($source, $type, $minify) {}
+    protected function prepare($uri, $type, $minify) {}
 
 
      function zephir_init_properties_Ice_Assets() {}

@@ -63,6 +63,9 @@ class Tag
     protected $titleSeparator = " - ";
 
 
+    protected $meta = array();
+
+
     protected $escape = true;
 
 
@@ -93,6 +96,9 @@ class Tag
 
     public function getTitleSeparator() {}
 
+
+    public function getMeta() {}
+
     /**
      * @param mixed $escape 
      */
@@ -120,6 +126,14 @@ class Tag
      * @return void 
      */
     public function prependTitle($title, $separator = null) {}
+
+    /**
+     * Add meta tag to the container.
+     *
+     * @param array $parameters 
+     * @return object 
+     */
+    public function addMeta($parameters) {}
 
     /**
      * Builds a HTML INPUT[type="text"] tag.
@@ -357,6 +371,20 @@ class Tag
     public function style($parameters) {}
 
     /**
+     * Builds a META tag.
+     * <pre><code>
+     * // Phtml <meta name="keywords" content="ice, framework">
+     * $this->tag->meta(['ice, framework', 'keywords']);
+     * // Sleet <meta property="og:description" content="Your description">
+     * {{ meta(['Your description', 'property': 'og:description']) }}
+     * </code></pre>
+     *
+     * @param array $parameters 
+     * @return string 
+     */
+    public function meta($parameters) {}
+
+    /**
      * Builds a SELECT tag.
      * <pre><code>
      * $countries = [1 => 'England', 2 => 'Poland'];
@@ -464,5 +492,8 @@ class Tag
      * @return string 
      */
     public function getDocType() {}
+
+
+     function zephir_init_properties_Ice_Tag() {}
 
 }

@@ -21,11 +21,21 @@ class Db
     public function getDriver() {}
 
     /**
+     * @param mixed $driver 
+     */
+    public function setDriver($driver) {}
+
+    /**
      * Db constructor.
      *
-     * @param DbInterface $driver Database driver
+     * @param mixed $driver 
+     * @param string $host 
+     * @param int $port 
+     * @param string $name 
+     * @param string $user 
+     * @param string $password 
      */
-    public function __construct(\Ice\Db\DbInterface $driver) {}
+    public function __construct($driver, $host = null, $port = null, $name = null, $user = null, $password = null) {}
 
     /**
      * Magic call, call driver's method.
