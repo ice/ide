@@ -41,10 +41,9 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @param string $key The data key
      * @param mixed $defaultValue The value to return if data key does not exist
-     * @param boolean $required Throw exception if key is required but doesn't exist
      * @return mixed 
      */
-    public function get($key, $defaultValue = null, $required = false) {}
+    public function get($key, $defaultValue = null) {}
 
     /**
      * Assigns a value to the specified data.

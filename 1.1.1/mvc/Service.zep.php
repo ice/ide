@@ -26,11 +26,6 @@ abstract class Service extends \Ice\Di\Access
     public function getModel() {}
 
     /**
-     * Controller constructor. Run onConstruct() if method exist.
-     */
-    public final function __construct() {}
-
-    /**
      * Magic method to call model's method.
      *
      * @param string $method 

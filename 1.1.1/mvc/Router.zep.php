@@ -117,11 +117,6 @@ class Router
 
     public function getOptions() {}
 
-    /**
-     * @param mixed $options 
-     */
-    public function setOptions($options) {}
-
 
     public function getRoutes() {}
 
@@ -157,6 +152,14 @@ class Router
      * @param array $defaults 
      */
     public function setDefaults($defaults) {}
+
+    /**
+     * Set options.
+     *
+     * @param array $options 
+     * @return object 
+     */
+    public function setOptions($options) {}
 
     /**
      * Prepare the FastRoute.

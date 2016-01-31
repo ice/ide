@@ -28,12 +28,32 @@ class Crypt
 
 
     /**
+     * @param mixed $key 
+     */
+    public function setKey($key) {}
+
+    /**
+     * @param mixed $cipher 
+     */
+    public function setCipher($cipher) {}
+
+    /**
+     * @param mixed $mode 
+     */
+    public function setMode($mode) {}
+
+    /**
+     * @param mixed $block 
+     */
+    public function setBlock($block) {}
+
+    /**
      * Create a new encrypter instance.
      *
      * @param string $key 
      * @return void 
      */
-    public function __construct($key) {}
+    public function __construct($key = null) {}
 
     /**
      * Encrypt the given value.
@@ -131,29 +151,5 @@ class Crypt
      * @return int 
      */
     protected function getIvSize() {}
-
-    /**
-     * Set the encryption key.
-     *
-     * @param string $key 
-     * @return void 
-     */
-    public function setKey($key) {}
-
-    /**
-     * Set the encryption cipher.
-     *
-     * @param string $cipher 
-     * @return void 
-     */
-    public function setCipher($cipher) {}
-
-    /**
-     * Set the encryption mode.
-     *
-     * @param string $mode 
-     * @return void 
-     */
-    public function setMode($mode) {}
 
 }

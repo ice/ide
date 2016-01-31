@@ -20,6 +20,14 @@ class Di extends \Ice\Arr
     protected $hooks = array();
 
 
+    protected $defaults = array();
+
+
+    /**
+     * @param mixed $defaults 
+     */
+    public function setDefaults($defaults) {}
+
     /**
      * Di constructor. Sets root path.
      *
@@ -35,6 +43,14 @@ class Di extends \Ice\Arr
     public static function fetch() {}
 
     /**
+     * Resolves the service based on its configuration.
+     *
+     * @param string $key Service name
+     * @param mixed $parameters Definition
+     */
+    public function get($key, $parameters = null) {}
+
+    /**
      * Registers a service in the services container.
      *
      * @param string $key Service name
@@ -43,12 +59,55 @@ class Di extends \Ice\Arr
     public function set($key, $value) {}
 
     /**
+     * Get default services.
+     *
+     * @return array 
+     */
+    public function getDefaults() {}
+
+    /**
      * Resolve service.
      *
      * @param mixed $service Definition
      * @return object 
      */
     public function resolve($service) {}
+
+    /**
+     * Build an instance of the given class.
+     *
+     * @param string $service 
+     * @param mixed $parameters 
+     * @return mixed 
+     */
+    public function build($service, $parameters = array()) {}
+
+    /**
+     * If extra parameters are passed by numeric ID, rekey them by argument name.
+     *
+     * @param array $dependencies 
+     * @param array $parameters 
+     * @return array 
+     */
+    protected function getParameters($dependencies, $parameters) {}
+
+    /**
+     * Build up a list of dependencies for a given methods parameters.
+     *
+     * @param array $parameters 
+     * @param array $primitives 
+     * @return array 
+     */
+    public function getDependencies($parameters, $primitives = array()) {}
+
+    /**
+     * Determine what to do with a non-class value.
+     *
+     * @throws Exception
+     * @param ReflectionParameter $parameter 
+     * @return mixed 
+     */
+    public function resolveNonClass(\ReflectionParameter $parameter) {}
 
     /**
      * Set handlers for error, exeception and shutdown.
