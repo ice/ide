@@ -39,10 +39,13 @@ abstract class Dispatcher
     protected $lastHandler;
 
 
-    protected $loops = 0;
+    protected $loops = 16;
 
 
     protected $finished;
+
+
+    protected $forwards = 0;
 
 
     protected $forwarded = false;
@@ -104,8 +107,16 @@ abstract class Dispatcher
 
     public function getLoops() {}
 
+    /**
+     * @param mixed $loops 
+     */
+    public function setLoops($loops) {}
+
 
     public function getFinished() {}
+
+
+    public function getForwards() {}
 
 
     public function getForwarded() {}
