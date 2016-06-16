@@ -8,7 +8,7 @@ namespace Ice\Http\Response;
  * @package     Ice/Http
  * @category    Component
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  */
 class Headers extends \Ice\Arr implements \Ice\Http\Response\HeadersInterface

@@ -8,7 +8,7 @@ namespace Ice;
  * @package     Ice/Flash
  * @category    Helper
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  */
 class Flash
@@ -22,6 +22,11 @@ class Flash
 
     protected $options = array("session_key" => "_flash", "success" => array("class" => "alert alert-success"), "info" => array("class" => "alert alert-info"), "warning" => array("class" => "alert alert-warning"), "danger" => array("class" => "alert alert-danger"), "html" => true);
 
+
+    /**
+     * @param mixed $options 
+     */
+    public function setOptions($options) {}
 
     /**
      * Flash constructor. Fetch session and tag service from the di.

@@ -8,7 +8,7 @@ namespace Ice\Mvc;
  * @package     Ice/View
  * @category    Component
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  */
 class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
@@ -159,6 +159,14 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      * @param array $vars 
      */
     public function setVars($vars) {}
+
+    /**
+     * Alias of the `setMainView` method.
+     *
+     * @param string $layout 
+     * @param array $vars 
+     */
+    public function setLayout($layout) {}
 
     /**
      * Magic toStrint, get the rendered view.

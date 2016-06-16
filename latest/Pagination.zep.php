@@ -8,7 +8,7 @@ namespace Ice;
  * @package     Ice/Pagination
  * @category    Library
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  * @uses        Ice\Tag
  */
@@ -45,7 +45,7 @@ class Pagination extends \Ice\Arr
      * Prepare list button.
      *
      * @param mixed $page Name or page number
-     * @param string $url URL with pagination
+     * @param mixed $url URL with pagination
      * @param boolean $active If active create link else span
      * @param string $symbol HTML symbol to add
      * @return string 
@@ -56,8 +56,8 @@ class Pagination extends \Ice\Arr
      * Prepare minimal pagination.
      * Previous 1 [2] 3 4 5 6 Next
      *
-     * @param string $url URL with pagination
-     * @param string $parameters UL attributes to adding
+     * @param mixed $url URL with pagination
+     * @param array $parameters UL attributes to adding
      * @return string 
      */
     public function minimal($url = null, $parameters = array()) {}
@@ -66,8 +66,8 @@ class Pagination extends \Ice\Arr
      * Prepare basic pagination.
      * First Previous 1 [2] 3 4 5 6 Next Last
      *
-     * @param string $url URL with pagination
-     * @param string $parameters UL attributes to adding
+     * @param mixed $url URL with pagination
+     * @param array $parameters UL attributes to adding
      * @return string 
      */
     public function basic($url = null, $parameters = array()) {}
@@ -76,8 +76,8 @@ class Pagination extends \Ice\Arr
      * Prepare floating pagination.
      * First Previous 1 2 3 ... 23 24 25 26 [27] 28 29 30 31 ... 48 49 50 Next Last
      *
-     * @param string $url URL with pagination
-     * @param string $parameters UL attributes to adding
+     * @param mixed $url URL with pagination
+     * @param array $parameters UL attributes to adding
      * @param int $countOut Number of page links in the begin and end of whole range
      * @param int $countIn Number of page links on each side of current page
      * @return string 

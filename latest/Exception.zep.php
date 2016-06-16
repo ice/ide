@@ -56,7 +56,8 @@ class Exception extends \Exception
     public static function handler(\Exception $e) {}
 
     /**
-     * Catches errors that are not caught by the error handler, such as E_PARSE.
+     * Catches errors that are not caught by the error handler.
+     * E_PARSE, E_ERROR, E_CORE_ERROR, E_USER_ERROR
      *
      * @return void 
      */

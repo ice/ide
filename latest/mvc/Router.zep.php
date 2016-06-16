@@ -9,7 +9,7 @@ namespace Ice\Mvc;
  * @package     Ice/Router
  * @category    Component
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  * @uses        FastRoute http:/github.com/nikic/FastRoute
  */
@@ -23,9 +23,6 @@ class Router
 
 
     const METHOD_NOT_ALLOWED = 2;
-
-
-    protected $di;
 
 
     protected $defaultModule = "default";
@@ -140,11 +137,6 @@ class Router
      * @param mixed $dispatcher 
      */
     public function setDispatcher($dispatcher) {}
-
-    /**
-     * Router constructor. Fetch Di and set it as a property.
-     */
-    public function __construct() {}
 
     /**
      * Set defaults values

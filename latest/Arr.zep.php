@@ -8,7 +8,7 @@ namespace Ice;
  * @package     Ice/Arr
  * @category    Helper
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  */
 class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
@@ -68,6 +68,34 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      * @return array 
      */
     public function all() {}
+
+    /**
+     * Fetch some data.
+     *
+     * @param array $keys Keys to fetch
+     * @param boolean $strict Fetch key only if exist
+     * @return array 
+     */
+    public function only($keys, $strict = true) {}
+
+    /**
+     * Gets value from data applying filters if needed.
+     * <pre><code>
+     * //Returns value from $arr["id"] without sanitizing
+     * $id = $arr->getValue("id");
+     * //Returns value from $arr["title"] with sanitizing
+     * $title = $arr->getValue("title", "escape|repeats");
+     * //Returns value from $arr["id"] with a default value
+     * $id = $arr->getValue("id", null, 150);
+     * </code></pre>
+     *
+     * @param string $key Index to get
+     * @param string|array $filters Filters to apply
+     * @param mixed $defaultValue Default value if key not exist or value is empty and allowEmpty is false
+     * @param boolean $allowEmpty 
+     * @return mixed 
+     */
+    public function getValue($key, $filters = null, $defaultValue = null, $allowEmpty = false) {}
 
     /**
      * Set data, clears and overwrites the current data.

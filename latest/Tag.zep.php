@@ -8,7 +8,7 @@ namespace Ice;
  * @package     Ice/Tag
  * @category    Helper
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  * @uses        Ice\Mvc\Url
  */
@@ -95,6 +95,11 @@ class Tag
 
 
     public function getTitleSeparator() {}
+
+    /**
+     * @param mixed $meta 
+     */
+    public function setMeta($meta) {}
 
 
     public function getMeta() {}

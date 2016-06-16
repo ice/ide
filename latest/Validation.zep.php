@@ -8,7 +8,7 @@ namespace Ice;
  * @package     Ice/Validation
  * @category    Security
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  * @uses        Ice\Filter (if service is available)
  * @uses        Ice\I18n (if service is available)
@@ -32,7 +32,7 @@ class Validation
     protected $di;
 
 
-    protected $data = array();
+    protected $data;
 
 
     protected $rules = array();
@@ -67,6 +67,9 @@ class Validation
 
 
     public function getDi() {}
+
+
+    public function getData() {}
 
     /**
      * @param mixed $rules 
@@ -159,17 +162,19 @@ class Validation
      * </code></pre>
      *
      * @param array $validators 
+     * @param boolean $clear 
      * @return void 
      */
-    public function rules($validators) {}
+    public function rules($validators, $clear = false) {}
 
     /**
      * Validate the data.
      *
      * @param array $data Data to validate
+     * @param boolean $clear Clear messages before
      * @return boolean 
      */
-    public function validate($data = array()) {}
+    public function validate($data = array(), $clear = false) {}
 
     /**
      * Check if validation passed.

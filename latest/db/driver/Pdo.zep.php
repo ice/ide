@@ -8,7 +8,7 @@ namespace Ice\Db\Driver;
  * @package     Ice/Db
  * @category    Component
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  */
 class Pdo implements \Ice\Db\DbInterface
@@ -92,7 +92,7 @@ class Pdo implements \Ice\Db\DbInterface
      * @param array $values 
      * @return array 
      */
-    private function where($filters = array(), $values = array()) {}
+    protected function where($filters = array(), $values = array()) {}
 
     /**
      * SELECT record(s) that match criteria.

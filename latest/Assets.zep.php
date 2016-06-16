@@ -8,7 +8,7 @@ namespace Ice;
  * @package     Ice/Assets
  * @category    Helper
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  */
 class Assets
@@ -29,20 +29,19 @@ class Assets
     protected $di;
 
 
-    protected $css = array();
-
-
-    protected $js = array();
+    protected $collections = array();
 
 
     protected $options = array();
 
 
+    /**
+     * @param mixed $collections 
+     */
+    public function setCollections($collections) {}
 
-    public function getCss() {}
 
-
-    public function getJs() {}
+    public function getCollections() {}
 
     /**
      * @param mixed $options 
@@ -68,33 +67,69 @@ class Assets
      *
      * @param mixed $parameters Parameters of link/script/style
      * @param string $version Version appending to the uri
+     * @param string $collection 
      * @param mixed $minify Local minify option
+     * @param string $Collection Collection name
      * @return object 
      */
-    public function add($parameters, $version = null, $minify = null) {}
+    public function add($parameters, $version = null, $collection = null, $minify = null) {}
 
     /**
      * Add CSS resource to assets.
      *
      * @param array $parameters Parameters of link/style
      * @param string $version Version appending to the uri
+     * @param string $collection 
      * @param mixed $minify Local minify option
+     * @param string $Collection Collection name
      * @return object 
      */
-    public function addCss($parameters, $version = null, $minify = null) {}
+    public function addCss($parameters, $version = null, $collection = "css", $minify = null) {}
 
     /**
      * Add JS resource to assets.
      *
      * @param array $parameters Parameters of script
      * @param string $version Version appending to the uri
+     * @param string $collection 
      * @param mixed $minify Local minify option
+     * @param string $Collection Collection name
      * @return object 
      */
-    public function addJs($parameters, $version = null, $minify = null) {}
+    public function addJs($parameters, $version = null, $collection = "js", $minify = null) {}
 
     /**
-     * Minify content
+     * Add an asset to the collection.
+     *
+     * @param string $key Collection name
+     * @param string $value Asset HTML code
+     */
+    public function addToCollection($key, $value) {}
+
+    /**
+     * Get the CSS default collection.
+     *
+     * @return array 
+     */
+    public function getCss() {}
+
+    /**
+     * Get the JS default collection.
+     *
+     * @return array 
+     */
+    public function getJs() {}
+
+    /**
+     * Get some collection.
+     *
+     * @param string $key Collection name
+     * @return array 
+     */
+    public function get($key) {}
+
+    /**
+     * Minify content.
      *
      * @param string $content Input text to minify
      * @param string $type Type of content
@@ -103,7 +138,7 @@ class Assets
     protected function minify($content, $type) {}
 
     /**
-     * Prepare resource
+     * Prepare resource.
      *
      * @param string $uri The uri/url source path
      * @param string $type Type of content

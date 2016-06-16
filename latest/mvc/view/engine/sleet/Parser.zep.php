@@ -8,7 +8,7 @@ namespace Ice\Mvc\View\Engine\Sleet;
  * @package     Ice/View
  * @category    Component
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  */
 class Parser
@@ -38,21 +38,12 @@ class Parser
     public function __construct() {}
 
     /**
-     * Parse text, line by line.
+     * Parse text.
      *
      * @param string $text 
      * @return string text
      */
     public function text($text) {}
-
-    /**
-     * Parse one line - detect the expressions.
-     *
-     * @param string $line 
-     * @param int $no Line number
-     * @return string line
-     */
-    public function line($line, $no = 1) {}
 
     /**
      * Parse one sleet expression.

@@ -8,7 +8,7 @@ namespace Ice;
  * @package     Ice/Dump
  * @category    Helper
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  * <pre><code>
  * $foo = 123;
@@ -31,6 +31,9 @@ class Dump
     protected $detailed = false;
 
 
+    protected $skipDi = true;
+
+
     protected $methods = array();
 
 
@@ -44,6 +47,14 @@ class Dump
      * @param mixed $detailed 
      */
     public function setDetailed($detailed) {}
+
+
+    public function getSkipDi() {}
+
+    /**
+     * @param mixed $skipDi 
+     */
+    public function setSkipDi($skipDi) {}
 
     /**
      * Dump constructor

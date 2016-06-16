@@ -9,11 +9,14 @@ namespace Ice\Mvc;
  * @package     Ice/Dispatcher
  * @category    Component
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  */
 class Dispatcher extends \Ice\Dispatcher
 {
+
+    const REDIRECT_CYCLIC = 5;
+
 
     protected $method;
 
@@ -35,5 +38,8 @@ class Dispatcher extends \Ice\Dispatcher
      * @return string 
      */
     public function getActiveMethod() {}
+
+
+    public function dispatch() {}
 
 }

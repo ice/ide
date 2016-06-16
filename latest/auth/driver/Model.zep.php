@@ -8,7 +8,7 @@ namespace Ice\Auth\Driver;
  * @package     Ice/Auth
  * @category    Driver
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  */
 class Model extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface

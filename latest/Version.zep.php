@@ -8,7 +8,7 @@ namespace Ice;
  * @package     Ice/Version
  * @category    Helper
  * @author      Ice Team
- * @copyright   (c) 2014-2015 Ice Team
+ * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  * @see         http://semver.org (Semantic Versioning 2.0.0)
  */
@@ -36,7 +36,7 @@ class Version
     const MINOR = 1;
 
 
-    const PATCH = 2;
+    const PATCH = 5;
 
 
     const STAGE = 4;
