@@ -5,7 +5,7 @@ git clone https://github.com/ice/ide.git
 ```
 
 ### NetBeans
-add `ide/1.0.0` to your project's include path or to the global path
+add `ide/latest` to your project's include path or to the global path
 
 ### Eclipse
-add `ide/1.0.0` to eclipse path
+add `ide/latest` to eclipse path
