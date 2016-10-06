@@ -31,7 +31,7 @@ class I18n
      *
      * @param array $options 
      */
-    public function __construct($options = array()) {}
+    public function __construct(array $options = array()) {}
 
     /**
      * Return the last I18n created.
@@ -105,7 +105,7 @@ class I18n
      * @param string $lang 
      * @return string 
      */
-    public function _($str, $values = null, $context = null, $lang = null) {}
+    public function _($str, array $values = null, $context = null, $lang = null) {}
 
     /**
      * Translation/internationalization function. strtr() or sprintf is used for replacing parameters.
@@ -117,6 +117,6 @@ class I18n
      * @param string $string Text to translate
      * @return string 
      */
-    public function translate($str, $values = null, $context = null, $lang = null) {}
+    public function translate($str, array $values = null, $context = null, $lang = null) {}
 
 }

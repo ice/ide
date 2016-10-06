@@ -24,6 +24,6 @@ interface EngineInterface
      * @param string $path 
      * @param array $data 
      */
-    public function render($path, $data = array());
+    public function render($path, array $data = array());
 
 }

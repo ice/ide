@@ -84,7 +84,7 @@ class Assets
      * @param string $Collection Collection name
      * @return object 
      */
-    public function addCss($parameters, $version = null, $collection = "css", $minify = null) {}
+    public function addCss(array $parameters, $version = null, $collection = "css", $minify = null) {}
 
     /**
      * Add JS resource to assets.
@@ -96,7 +96,7 @@ class Assets
      * @param string $Collection Collection name
      * @return object 
      */
-    public function addJs($parameters, $version = null, $collection = "js", $minify = null) {}
+    public function addJs(array $parameters, $version = null, $collection = "js", $minify = null) {}
 
     /**
      * Add an asset to the collection.

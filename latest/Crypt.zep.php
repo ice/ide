@@ -143,7 +143,7 @@ class Crypt
      * @param array $data 
      * @return bool 
      */
-    protected function invalidPayload($data) {}
+    protected function invalidPayload(array $data) {}
 
     /**
      * Get the IV size for the cipher.

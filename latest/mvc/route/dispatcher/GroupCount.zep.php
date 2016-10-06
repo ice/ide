@@ -25,7 +25,7 @@ class GroupCount extends \Ice\Mvc\Route\Dispatcher\Regex
     /**
      * @param array $data 
      */
-    public function __construct($data = array()) {}
+    public function __construct(array $data = array()) {}
 
     /**
      * @param mixed $routeData 

@@ -110,6 +110,6 @@ abstract class Adapter implements \Ice\Auth\Social\SocialInterface
      * @param boolean $parse 
      * @return array|string 
      */
-    protected function call($method = self::GET, $url, $params, $parse = true) {}
+    protected function call($method = self::GET, $url, array $params, $parse = true) {}
 
 }

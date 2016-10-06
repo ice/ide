@@ -47,7 +47,7 @@ abstract class Engine extends \Ice\Di\Access implements \Ice\Mvc\View\Engine\Eng
      * @param array $data 
      * @return string 
      */
-    public function load($path, $data = array()) {}
+    public function load($path, array $data = array()) {}
 
     /**
      * Load some partial view.
@@ -56,7 +56,7 @@ abstract class Engine extends \Ice\Di\Access implements \Ice\Mvc\View\Engine\Eng
      * @param array $data 
      * @return string 
      */
-    public function partial($path, $data = array()) {}
+    public function partial($path, array $data = array()) {}
 
     /**
      * Render some view.
@@ -64,6 +64,6 @@ abstract class Engine extends \Ice\Di\Access implements \Ice\Mvc\View\Engine\Eng
      * @param string $path 
      * @param array $data 
      */
-    public abstract function render($path, $data = array());
+    public abstract function render($path, array $data = array());
 
 }

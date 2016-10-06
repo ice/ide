@@ -25,7 +25,7 @@ abstract class Regex implements \Ice\Mvc\Route\Dispatcher\DispatcherInterface
     /**
      * @param array $data 
      */
-    public function setData($data = array()) {}
+    public function setData(array $data = array()) {}
 
     /**
      * @param mixed $routeData 

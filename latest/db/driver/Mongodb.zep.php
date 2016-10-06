@@ -3,7 +3,7 @@
 namespace Ice\Db\Driver;
 
 /**
- * Mongo driver.
+ * MongoDB driver.
  *
  * @package     Ice/Db
  * @category    Component
@@ -11,7 +11,7 @@ namespace Ice\Db\Driver;
  * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
  */
-class Mongo implements \Ice\Db\DbInterface
+class Mongodb implements \Ice\Db\DbInterface
 {
 
     protected $id = "_id";

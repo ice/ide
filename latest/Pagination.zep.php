@@ -32,7 +32,7 @@ class Pagination extends \Ice\Arr
      *
      * @param array $options 
      */
-    public function __construct($options = array()) {}
+    public function __construct(array $options = array()) {}
 
     /**
      * Returns a slice of the resultset to show in the pagination.
@@ -60,7 +60,7 @@ class Pagination extends \Ice\Arr
      * @param array $parameters UL attributes to adding
      * @return string 
      */
-    public function minimal($url = null, $parameters = array()) {}
+    public function minimal($url = null, array $parameters = array()) {}
 
     /**
      * Prepare basic pagination.
@@ -70,7 +70,7 @@ class Pagination extends \Ice\Arr
      * @param array $parameters UL attributes to adding
      * @return string 
      */
-    public function basic($url = null, $parameters = array()) {}
+    public function basic($url = null, array $parameters = array()) {}
 
     /**
      * Prepare floating pagination.
@@ -82,6 +82,6 @@ class Pagination extends \Ice\Arr
      * @param int $countIn Number of page links on each side of current page
      * @return string 
      */
-    public function floating($url = null, $parameters = array(), $countOut = 0, $countIn = 2) {}
+    public function floating($url = null, array $parameters = array(), $countOut = 0, $countIn = 2) {}
 
 }

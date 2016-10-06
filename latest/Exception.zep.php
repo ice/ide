@@ -44,7 +44,7 @@ class Exception extends \Exception
      * @param array $context 
      * @return true 
      */
-    public static function errorHandler($code, $message, $file = null, $line = 0, $context = array()) {}
+    public static function errorHandler($code, $message, $file = null, $line = 0, array $context = array()) {}
 
     /**
      * Inline exception handler, displays the error message, source of the exception, and the stack trace of the error.

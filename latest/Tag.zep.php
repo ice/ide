@@ -138,7 +138,7 @@ class Tag
      * @param array $parameters 
      * @return object 
      */
-    public function addMeta($parameters) {}
+    public function addMeta(array $parameters) {}
 
     /**
      * Builds a HTML INPUT[type="text"] tag.
@@ -152,7 +152,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function textField($parameters) {}
+    public function textField(array $parameters) {}
 
     /**
      * Builds a HTML INPUT[type="password"] tag.
@@ -166,7 +166,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function passwordField($parameters) {}
+    public function passwordField(array $parameters) {}
 
     /**
      * Builds a HTML INPUT[type="hidden"] tag.
@@ -180,7 +180,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function hiddenField($parameters) {}
+    public function hiddenField(array $parameters) {}
 
     /**
      * Builds a HTML INPUT[type="file"] tag.
@@ -192,7 +192,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function fileField($parameters) {}
+    public function fileField(array $parameters) {}
 
     /**
      * Builds a HTML INPUT[type="submit"] tag.
@@ -206,7 +206,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function submitButton($parameters) {}
+    public function submitButton(array $parameters) {}
 
     /**
      * Builds a HTML BUTTON tag.
@@ -220,7 +220,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function button($parameters) {}
+    public function button(array $parameters) {}
 
     /**
      * Builds a HTML INPUT[type="checkbox"] tag.
@@ -234,7 +234,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function checkField($parameters) {}
+    public function checkField(array $parameters) {}
 
     /**
      * Builds a HTML INPUT[type="radio"] tag.
@@ -248,7 +248,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function radioField($parameters) {}
+    public function radioField(array $parameters) {}
 
     /**
      * Builds generic INPUT tags.
@@ -257,7 +257,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    private function input($type, $parameters) {}
+    private function input($type, array $parameters) {}
 
     /**
      * Builds a HTML FORM tag.
@@ -275,7 +275,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function form($parameters) {}
+    public function form(array $parameters) {}
 
     /**
      * Builds a HTML TEXTAREA tag.
@@ -289,7 +289,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function textArea($parameters) {}
+    public function textArea(array $parameters) {}
 
     /**
      * Alias of the `img` method.
@@ -297,7 +297,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function image($parameters) {}
+    public function image(array $parameters) {}
 
     /**
      * Builds HTML IMG tags.
@@ -311,7 +311,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function img($parameters) {}
+    public function img(array $parameters) {}
 
     /**
      * Alias of the `a` method.
@@ -319,7 +319,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function linkTo($parameters) {}
+    public function linkTo(array $parameters) {}
 
     /**
      * Builds a HTML A tag using framework conventions.
@@ -333,7 +333,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function a($parameters) {}
+    public function a(array $parameters) {}
 
     /**
      * Builds a LINK[rel="stylesheet"] tag.
@@ -347,7 +347,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function link($parameters) {}
+    public function link(array $parameters) {}
 
     /**
      * Builds a SCRIPT[type="javascript"] tag.
@@ -361,7 +361,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function script($parameters) {}
+    public function script(array $parameters) {}
 
     /**
      * Builds a STYLE tag.
@@ -373,7 +373,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function style($parameters) {}
+    public function style(array $parameters) {}
 
     /**
      * Builds a META tag.
@@ -387,7 +387,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function meta($parameters) {}
+    public function meta(array $parameters) {}
 
     /**
      * Builds a SELECT tag.
@@ -399,7 +399,7 @@ class Tag
      * @param array $parameters 
      * @return string 
      */
-    public function select($parameters) {}
+    public function select(array $parameters) {}
 
     /**
      * Builds a HTML tag.
@@ -414,7 +414,7 @@ class Tag
      * @param boolean $single Void element, close a tag by " />" (depending on doctype)
      * @return string 
      */
-    public function tagHtml($name, $parameters = array(), $defaultParams = array(), $skip = array(), $content = null, $close = false, $eol = false, $single = false) {}
+    public function tagHtml($name, array $parameters = array(), array $defaultParams = array(), array $skip = array(), $content = null, $close = false, $eol = false, $single = false) {}
 
     /**
      * Builds a HTML close tag.
@@ -438,7 +438,7 @@ class Tag
      * @param boolean $single 
      * @return string 
      */
-    public function prepareTag($name, $attributes, $skip = array(), $single = false) {}
+    public function prepareTag($name, array $attributes, array $skip = array(), $single = false) {}
 
     /**
      * Check if a helper has a default value set using Ice\Tag::setValues or value from _POST.
@@ -464,7 +464,7 @@ class Tag
      * @param boolean $merge 
      * @return void 
      */
-    public function setValues($values, $merge = false) {}
+    public function setValues(array $values, $merge = false) {}
 
     /**
      * Every helper calls this function to check whether a component has a predefined value using Ice\Tag::setValue

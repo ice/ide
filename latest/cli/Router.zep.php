@@ -77,7 +77,7 @@ class Router
      *
      * @param array $defaults 
      */
-    public function setDefaults($defaults) {}
+    public function setDefaults(array $defaults) {}
 
     /**
      * Handles routing information received from command-line arguments.

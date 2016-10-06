@@ -31,7 +31,7 @@ abstract class Validator
      *
      * @param array $options 
      */
-    public function __construct($options = array()) {}
+    public function __construct(array $options = array()) {}
 
     /**
      * Validate the validator
@@ -73,6 +73,6 @@ abstract class Validator
      * @param int $keys Type of options
      * @param array $options 
      */
-    public function getOptions($keys = self::ALL, $options = array()) {}
+    public function getOptions($keys = self::ALL, array $options = array()) {}
 
 }

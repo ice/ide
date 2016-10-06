@@ -33,7 +33,7 @@ class Di extends \Ice\Arr
      *
      * @param array $data Array of services
      */
-    public function __construct($data = array()) {}
+    public function __construct(array $data = array()) {}
 
     /**
      * Return the last DI created.
@@ -89,7 +89,7 @@ class Di extends \Ice\Arr
      * @param array $parameters 
      * @return array 
      */
-    protected function getParameters($dependencies, $parameters) {}
+    protected function getParameters(array $dependencies, array $parameters) {}
 
     /**
      * Build up a list of dependencies for a given methods parameters.
@@ -98,7 +98,7 @@ class Di extends \Ice\Arr
      * @param array $primitives 
      * @return array 
      */
-    public function getDependencies($parameters, $primitives = array()) {}
+    public function getDependencies(array $parameters, array $primitives = array()) {}
 
     /**
      * Determine what to do with a non-class value.
@@ -135,7 +135,7 @@ class Di extends \Ice\Arr
      * @param array $args 
      * @param mixed $hookArg Argument for hooked functions
      */
-    public function applyHook($name, $args = null) {}
+    public function applyHook($name, array $args = null) {}
 
     /**
      * Get hook listeners.

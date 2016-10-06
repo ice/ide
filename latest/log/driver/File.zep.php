@@ -33,7 +33,7 @@ class File extends \Ice\Log\Driver
      * @param array $context 
      * @return void 
      */
-    public function log($level, $message, $context = array()) {}
+    public function log($level, $message, array $context = array()) {}
 
     /**
      * Interpolates context values into the message placeholders.
@@ -42,6 +42,6 @@ class File extends \Ice\Log\Driver
      * @param array $context 
      * @return string 
      */
-    protected function interpolate($message, $context = array()) {}
+    protected function interpolate($message, array $context = array()) {}
 
 }

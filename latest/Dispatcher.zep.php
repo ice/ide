@@ -259,6 +259,6 @@ abstract class Dispatcher
      * @param array $forward 
      * @param boolean $force 
      */
-    public function forward($forward, $force = false) {}
+    public function forward(array $forward, $force = false) {}
 
 }

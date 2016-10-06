@@ -21,6 +21,6 @@ interface ViewInterface
      * @param mixed $file 
      * @param array $data 
      */
-    public function render($file = null, $data = array());
+    public function render($file = null, array $data = array());
 
 }

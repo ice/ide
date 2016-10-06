@@ -15,16 +15,16 @@ namespace Ice\Mvc;
 class Route
 {
 
-    protected $httpMethod;
+    public $httpMethod;
 
 
-    protected $regex;
+    public $regex;
 
 
-    protected $variables;
+    public $variables;
 
 
-    protected $handler;
+    public $handler;
 
 
     /**
@@ -35,7 +35,7 @@ class Route
      * @param string $regex 
      * @param array $variables 
      */
-    public function __construct($httpMethod, $handler, $regex, $variables) {}
+    public function __construct($httpMethod, $handler, $regex, array $variables) {}
 
     /**
      * Tests whether this route matches the given string.

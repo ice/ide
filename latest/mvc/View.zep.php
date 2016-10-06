@@ -102,7 +102,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      * @param string $file 
      * @param array $data 
      */
-    public function __construct($file = null, $data = array()) {}
+    public function __construct($file = null, array $data = array()) {}
 
     /**
      * Get registered engines.
@@ -116,7 +116,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      * @param array $data 
      * @return string 
      */
-    public function render($file = null, $data = array()) {}
+    public function render($file = null, array $data = array()) {}
 
     /**
      * Load the view.
@@ -125,7 +125,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      * @param array $data Vars to send
      * @return string 
      */
-    public function load($file, $data = array()) {}
+    public function load($file, array $data = array()) {}
 
     /**
      * Load the partial view.
@@ -134,7 +134,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      * @param array $data Vars to send
      * @return string 
      */
-    public function partial($file, $data = array()) {}
+    public function partial($file, array $data = array()) {}
 
     /**
      * Load the layout view.
@@ -143,7 +143,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      * @param array $data Vars to send
      * @return string 
      */
-    public function layout($file = null, $data = array()) {}
+    public function layout($file = null, array $data = array()) {}
 
     /**
      * Set var to the view.
@@ -158,7 +158,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      *
      * @param array $vars 
      */
-    public function setVars($vars) {}
+    public function setVars(array $vars) {}
 
     /**
      * Alias of the `setMainView` method.

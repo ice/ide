@@ -26,55 +26,55 @@ interface LoggerInterface
      * @param string $message 
      * @param array $context 
      */
-    public function emergency($message, $context = array());
+    public function emergency($message, array $context = array());
 
     /**
      * @param string $message 
      * @param array $context 
      */
-    public function alert($message, $context = array());
+    public function alert($message, array $context = array());
 
     /**
      * @param string $message 
      * @param array $context 
      */
-    public function critical($message, $context = array());
+    public function critical($message, array $context = array());
 
     /**
      * @param string $message 
      * @param array $context 
      */
-    public function error($message, $context = array());
+    public function error($message, array $context = array());
 
     /**
      * @param string $message 
      * @param array $context 
      */
-    public function warning($message, $context = array());
+    public function warning($message, array $context = array());
 
     /**
      * @param string $message 
      * @param array $context 
      */
-    public function notice($message, $context = array());
+    public function notice($message, array $context = array());
 
     /**
      * @param string $message 
      * @param array $context 
      */
-    public function info($message, $context = array());
+    public function info($message, array $context = array());
 
     /**
      * @param string $message 
      * @param array $context 
      */
-    public function debug($message, $context = array());
+    public function debug($message, array $context = array());
 
     /**
      * @param mixed $level 
      * @param string $message 
      * @param array $context 
      */
-    public function log($level, $message, $context = array());
+    public function log($level, $message, array $context = array());
 
 }

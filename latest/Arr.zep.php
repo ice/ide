@@ -25,7 +25,7 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @param array $data Initial array
      */
-    public function __construct($data = array()) {}
+    public function __construct(array $data = array()) {}
 
     /**
      * Whether or not an data exists by key.
@@ -60,7 +60,7 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      * @param array $data 
      * @return void 
      */
-    public function replace($data) {}
+    public function replace(array $data) {}
 
     /**
      * Fetch all data.
@@ -76,7 +76,7 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      * @param boolean $strict Fetch key only if exist
      * @return array 
      */
-    public function only($keys, $strict = true) {}
+    public function only(array $keys, $strict = true) {}
 
     /**
      * Gets value from data applying filters if needed.
@@ -103,7 +103,7 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      * @param array $data 
      * @return void 
      */
-    public function setData($data = array()) {}
+    public function setData(array $data = array()) {}
 
     /**
      * Fetch set data keys.

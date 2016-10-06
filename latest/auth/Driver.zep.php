@@ -35,7 +35,7 @@ abstract class Driver
      * @param array $options Config options
      * @return void 
      */
-    public function __construct($options = array()) {}
+    public function __construct(array $options = array()) {}
 
     /**
      * Checks a plain text password and its hash version to check if the password matches.
@@ -53,7 +53,7 @@ abstract class Driver
      * @param array $roles User's roles
      * @return void 
      */
-    protected function completeLogin($user, $roles = array()) {}
+    protected function completeLogin($user, array $roles = array()) {}
 
     /**
      * Get option value with key.

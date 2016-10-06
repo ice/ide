@@ -28,7 +28,7 @@ class Model extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      * @param array $roles User's roles
      * @return void 
      */
-    protected function completeLogin($user, $roles = array()) {}
+    protected function completeLogin($user, array $roles = array()) {}
 
     /**
      * Gets the currently logged in user from the session. Returns NULL if no user is currently logged in.

@@ -43,7 +43,7 @@ class Pdo implements \Ice\Db\DbInterface
      * @param string $password 
      * @param array $options 
      */
-    public function __construct($dsn, $user = null, $password = null, $options = array()) {}
+    public function __construct($dsn, $user = null, $password = null, array $options = array()) {}
 
     /**
      * Get the id value.
@@ -62,7 +62,7 @@ class Pdo implements \Ice\Db\DbInterface
      * @param array $fields Fields to retrieve, if not specified get all
      * @return Arr|false 
      */
-    public function findOne($from, $filters = array(), $options = array(), $fields = array()) {}
+    public function findOne($from, $filters = array(), array $options = array(), array $fields = array()) {}
 
     /**
      * Find all records that match criteria.
@@ -81,7 +81,7 @@ class Pdo implements \Ice\Db\DbInterface
      * @param array $fields Fields to retrieve, if not specified get all
      * @return Arr 
      */
-    public function find($from, $filters = array(), $options = array(), $fields = array()) {}
+    public function find($from, $filters = array(), array $options = array(), array $fields = array()) {}
 
     /**
      * Prepare SQL WHERE condition.
@@ -92,7 +92,7 @@ class Pdo implements \Ice\Db\DbInterface
      * @param array $values 
      * @return array 
      */
-    protected function where($filters = array(), $values = array()) {}
+    protected function where($filters = array(), array $values = array()) {}
 
     /**
      * SELECT record(s) that match criteria.
@@ -102,7 +102,7 @@ class Pdo implements \Ice\Db\DbInterface
      * @param array $options Options to limit/group results
      * @param array $fields Fields to retrieve, if not specified get all
      */
-    public function select($from, $filters = array(), $options = array(), $fields = array()) {}
+    public function select($from, $filters = array(), array $options = array(), array $fields = array()) {}
 
     /**
      * INSERT record into table.
@@ -110,7 +110,7 @@ class Pdo implements \Ice\Db\DbInterface
      * @param string $from Table name
      * @param array $fields Fields to insert, keys are the column names
      */
-    public function insert($from, $fields = array()) {}
+    public function insert($from, array $fields = array()) {}
 
     /**
      * UPDATE records in the table.
@@ -119,7 +119,7 @@ class Pdo implements \Ice\Db\DbInterface
      * @param mixed $filters Filters to create WHERE conditions
      * @param array $fields Fields to update, keys are the column names
      */
-    public function update($from, $filters = array(), $fields = array()) {}
+    public function update($from, $filters = array(), array $fields = array()) {}
 
     /**
      * Remove records from the table.

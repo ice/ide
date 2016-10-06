@@ -112,7 +112,7 @@ class Validation
      *
      * @param array $data Data to validate
      */
-    public function __construct($data = array()) {}
+    public function __construct(array $data = array()) {}
 
     /**
      * Resolve one rule.
@@ -165,7 +165,7 @@ class Validation
      * @param boolean $clear 
      * @return void 
      */
-    public function rules($validators, $clear = false) {}
+    public function rules(array $validators, $clear = false) {}
 
     /**
      * Validate the data.
@@ -174,7 +174,7 @@ class Validation
      * @param boolean $clear Clear messages before
      * @return boolean 
      */
-    public function validate($data = array(), $clear = false) {}
+    public function validate(array $data = array(), $clear = false) {}
 
     /**
      * Check if validation passed.
@@ -233,7 +233,7 @@ class Validation
      * @param array $messages 
      * @return void 
      */
-    public function setDefaultMessages($messages = array()) {}
+    public function setDefaultMessages(array $messages = array()) {}
 
     /**
      * Get a default message for the type.

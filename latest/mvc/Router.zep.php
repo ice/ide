@@ -143,7 +143,7 @@ class Router
      *
      * @param array $defaults 
      */
-    public function setDefaults($defaults) {}
+    public function setDefaults(array $defaults) {}
 
     /**
      * Set options.
@@ -151,7 +151,7 @@ class Router
      * @param array $options 
      * @return object 
      */
-    public function setOptions($options) {}
+    public function setOptions(array $options) {}
 
     /**
      * Prepare the FastRoute.

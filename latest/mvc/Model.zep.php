@@ -122,7 +122,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param mixed $filters 
      * @param array $data 
      */
-    public function __construct($filters = null, $data = array()) {}
+    public function __construct($filters = null, array $data = array()) {}
 
     /**
      * Get the id.
@@ -145,7 +145,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param array $options 
      * @return this|false 
      */
-    public function loadOne($filters, $options = array()) {}
+    public function loadOne($filters, array $options = array()) {}
 
     /**
      * Load results to the current object.
@@ -154,7 +154,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param array $options 
      * @return object 
      */
-    public function load($filters, $options = array()) {}
+    public function load($filters, array $options = array()) {}
 
     /**
      * Allows to query one record that match the specified conditions.
@@ -170,7 +170,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param array $options 
      * @return this|false 
      */
-    public static function findOne($filters = null, $options = array()) {}
+    public static function findOne($filters = null, array $options = array()) {}
 
     /**
      * Allows to query all records that match the specified conditions.
@@ -183,7 +183,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param array $options 
      * @return object 
      */
-    public static function find($filters = null, $options = array()) {}
+    public static function find($filters = null, array $options = array()) {}
 
     /**
      * Prepare fields for validation on create/update.
@@ -295,7 +295,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param string $referencedField 
      * @param array $options 
      */
-    public function belongsTo($field, $referenceModel, $referencedField, $options = array()) {}
+    public function belongsTo($field, $referenceModel, $referencedField, array $options = array()) {}
 
     /**
      * Setup a 1-1 relation between two models
@@ -314,7 +314,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param string $referencedField 
      * @param array $options 
      */
-    public function hasOne($field, $referenceModel, $referencedField, $options = array()) {}
+    public function hasOne($field, $referenceModel, $referencedField, array $options = array()) {}
 
     /**
      * Setup a relation 1-n between two models.
@@ -339,7 +339,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param string $referencedField 
      * @param array $options 
      */
-    public function hasMany($field, $referenceModel, $referencedField, $options = array()) {}
+    public function hasMany($field, $referenceModel, $referencedField, array $options = array()) {}
 
     /**
      * Get related models.
@@ -348,7 +348,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param array $filters 
      * @param array $options 
      */
-    public function getRelated($alias, $filters = array(), $options = array()) {}
+    public function getRelated($alias, array $filters = array(), array $options = array()) {}
 
     /**
      * Get rules for validation.
@@ -372,7 +372,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param array $rules 
      * @param boolean $merge 
      */
-    public function setRules($rules = array(), $merge = true) {}
+    public function setRules(array $rules = array(), $merge = true) {}
 
     /**
      * Serialize the model's data.

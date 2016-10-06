@@ -33,7 +33,7 @@ class Flash
      *
      * @param array $options 
      */
-    public function __construct($options = array()) {}
+    public function __construct(array $options = array()) {}
 
     /**
      * Get option value with key.

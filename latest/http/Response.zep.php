@@ -111,7 +111,7 @@ class Response implements \Ice\Http\Response\ResponseInterface
      *
      * @param array $headers 
      */
-    public function setHeaders($headers) {}
+    public function setHeaders(array $headers) {}
 
     /**
      * Remove header by index name.
