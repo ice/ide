@@ -1,0 +1,17 @@
+{
+    "name": "iceframework/ide",
+    "description": "Ice auto-completion in IDE",
+    "keywords": ["framework", "ice", "ide", "autocomplete"],
+    "homepage": "http://www.iceframework.org",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Ice Team",
+            "email": "info@iceframework.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "ext-ice": "~1.0.0"
+    }
+}
