@@ -13,5 +13,10 @@
     "require": {
         "php": ">=5.4",
         "ext-ice": ">=1.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ice\\": "latest/"
+        }
     }
 }
