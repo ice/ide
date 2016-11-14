@@ -31,6 +31,9 @@ class Dump
     protected $detailed = false;
 
 
+    protected $plain = false;
+
+
     protected $skipDi = true;
 
 
@@ -49,6 +52,14 @@ class Dump
     public function setDetailed($detailed) {}
 
 
+    public function getPlain() {}
+
+    /**
+     * @param mixed $plain 
+     */
+    public function setPlain($plain) {}
+
+
     public function getSkipDi() {}
 
     /**
@@ -60,9 +71,9 @@ class Dump
      * Dump constructor
      *
      * @param boolean $detailed debug object's private and protected properties
-     * @param array $styles 
+     * @param mixed $styles 
      */
-    public function __construct($detailed = false, array $styles = array()) {}
+    public function __construct($detailed = false, $styles = array()) {}
 
     /**
      * Alias of vars() method

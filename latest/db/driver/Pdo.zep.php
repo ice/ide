@@ -54,6 +54,15 @@ class Pdo implements \Ice\Db\DbInterface
     public function getIdValue($id) {}
 
     /**
+     * Get a date time object.
+     *
+     * @param mixed $value 
+     * @param boolean $model 
+     * @return object 
+     */
+    public function getDateTime($value = null, $model = false) {}
+
+    /**
      * Find one row that match criteria.
      *
      * @param string $from Table name

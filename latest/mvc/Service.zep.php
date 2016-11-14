@@ -14,7 +14,7 @@ namespace Ice\Mvc;
 abstract class Service extends \Ice\Di\Access
 {
 
-    private $model;
+    protected $model;
 
 
     /**

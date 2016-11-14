@@ -139,6 +139,15 @@ abstract class Model extends \Ice\Arr implements \Serializable
     public function getIdKey() {}
 
     /**
+     * Get the date time object.
+     *
+     * @param mixed $key 
+     * @param boolean $model 
+     * @return object 
+     */
+    public function getDateTime($key, $model = false) {}
+
+    /**
      * Load one result to the current object.
      *
      * @param mixed $filters 
