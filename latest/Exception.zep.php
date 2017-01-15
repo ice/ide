@@ -20,18 +20,18 @@ class Exception extends \Exception
      *
      * @param mixed $message Error message
      * @param mixed $code The exception code
-     * @param Exception $previous Previous exception
+     * @param Exception|Throwable $previous Previous exception
      */
-    public function __construct($message = "", $code = 0, \Exception $previous = null) {}
+    public function __construct($message = "", $code = 0, $previous = null) {}
 
     /**
      * Get the full trace as string.
      *
      * @param mixed $e 
-     * @param Exception $$e 
+     * @param Exception|Throwable $$e 
      * @return string 
      */
-    public function getFullTraceAsString(\Exception $e) {}
+    public function getFullTraceAsString($e) {}
 
     /**
      * PHP error handler, converts all errors into ErrorExceptions. This handler respects error_reporting settings.
@@ -50,10 +50,10 @@ class Exception extends \Exception
      * Inline exception handler, displays the error message, source of the exception, and the stack trace of the error.
      *
      * @param mixed $e 
-     * @param Exception $$e 
+     * @param Exception|Throwable $$e 
      * @return void 
      */
-    public static function handler(\Exception $e) {}
+    public static function handler($e) {}
 
     /**
      * Catches errors that are not caught by the error handler.

@@ -36,6 +36,9 @@ abstract class Model extends \Ice\Arr implements \Serializable
     protected $primary;
 
 
+    protected $autoincrement = true;
+
+
     protected $filters = array();
 
 
@@ -75,6 +78,11 @@ abstract class Model extends \Ice\Arr implements \Serializable
 
 
     public function getPrimary() {}
+
+    /**
+     * @param mixed $autoincrement 
+     */
+    public function setAutoincrement($autoincrement) {}
 
     /**
      * @param mixed $filters 
@@ -198,7 +206,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * Prepare fields for validation on create/update.
      *
      * @param mixed $fields Fields to save or valid fields
-     * @param booleat $primary Keept primary keys
+     * @param boolean $primary Keep primary key
      * @return array 
      */
     protected function fields($fields = array(), $primary = true) {}
