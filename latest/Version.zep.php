@@ -36,7 +36,7 @@ class Version
     const MINOR = 2;
 
 
-    const PATCH = 4;
+    const PATCH = 5;
 
 
     const STAGE = 4;

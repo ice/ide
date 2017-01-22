@@ -29,7 +29,8 @@ interface DriverInterface
      * @param mixed $username 
      * @param string $password 
      * @param bool $remember 
+     * @param bool $force 
      */
-    public function login($username, $password, $remember = false);
+    public function login($username, $password, $remember = false, $force = false);
 
 }

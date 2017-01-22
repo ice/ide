@@ -53,9 +53,10 @@ class Model extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      * @param mixed $username 
      * @param string $password 
      * @param boolean $remember enable autologin
+     * @param boolean $force login without password
      * @return boolean 
      */
-    public function login($username, $password, $remember = false) {}
+    public function login($username, $password, $remember = false, $force = false) {}
 
     /**
      * Logs a user in through social network.

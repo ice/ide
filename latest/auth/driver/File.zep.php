@@ -45,8 +45,9 @@ class File extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      * @param string $username Username
      * @param string $password Password
      * @param boolean $remember Enable autologin (not supported)
+     * @param boolean $force login without password
      * @return boolean 
      */
-    public function login($username, $password, $remember = false) {}
+    public function login($username, $password, $remember = false, $force = false) {}
 
 }
