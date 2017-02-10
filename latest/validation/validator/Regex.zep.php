@@ -30,7 +30,7 @@ class Regex extends \Ice\Validation\Validator
 
     /**
      * Validate the validator
-     * Options: label, pattern, message
+     * Options: pattern (0), label, message
      *
      * @param Validation $validation 
      * @param string $field 

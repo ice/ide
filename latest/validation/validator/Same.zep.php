@@ -27,6 +27,7 @@ class Same extends \Ice\Validation\Validator
 
     /**
      * Validate the validator
+     * Options: other (0), allowEmpty (1), label, labelOther, message
      *
      * @param Validation $validation 
      * @param string $field 

@@ -278,6 +278,13 @@ class Tag
     public function form(array $parameters) {}
 
     /**
+     * Builds a FORM close tag.
+     *
+     * @return string 
+     */
+    public function endForm() {}
+
+    /**
      * Builds a HTML TEXTAREA tag.
      * <pre><code>
      * // Phtml <textarea id="description" name="description">content</textarea>

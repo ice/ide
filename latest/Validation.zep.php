@@ -162,10 +162,10 @@ class Validation
      * </code></pre>
      *
      * @param array $validators 
-     * @param boolean $clear 
+     * @param boolean $merge 
      * @return void 
      */
-    public function rules(array $validators, $clear = false) {}
+    public function rules(array $validators, $merge = true) {}
 
     /**
      * Validate the data.
@@ -174,7 +174,7 @@ class Validation
      * @param boolean $clear Clear messages before
      * @return boolean 
      */
-    public function validate(array $data = array(), $clear = false) {}
+    public function validate(array $data = array(), $clear = true) {}
 
     /**
      * Check if validation passed.
