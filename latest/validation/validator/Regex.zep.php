@@ -10,19 +10,23 @@ namespace Ice\Validation\Validator;
  * @author      Ice Team
  * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
+ *
  * <pre><code>
- * $validation = new Ice\Validation();
- * $validation->rules([
- * 'username' => [
- * 'regex' => [
- * 'pattern' => '/[a-zA-Z][a-zA-Z0-9_-]{3,}/'
- * ],
- * ]
- * ]);
- * $valid = $validation->validate($_POST);
- * if (!$valid) {
- * $messages = $validation->getMessages();
- * }
+ *  $validation = new Ice\Validation();
+ *
+ *  $validation->rules([
+ *      'username' => [
+ *          'regex' => [
+ *              'pattern' => '/[a-zA-Z][a-zA-Z0-9_-]{3,}/'
+ *          ],
+ *      ]
+ *  ]);
+ *
+ *  $valid = $validation->validate($_POST);
+ *
+ *  if (!$valid) {
+ *      $messages = $validation->getMessages();
+ *  }
  * </code></pre>
  */
 class Regex extends \Ice\Validation\Validator
@@ -32,9 +36,9 @@ class Regex extends \Ice\Validation\Validator
      * Validate the validator
      * Options: pattern (0), label, message
      *
-     * @param Validation $validation 
-     * @param string $field 
-     * @return boolean 
+     * @param Validation $validation
+     * @param string $field
+     * @return bool
      */
     public function validate(\Ice\Validation $validation, $field) {}
 

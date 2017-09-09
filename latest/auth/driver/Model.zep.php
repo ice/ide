@@ -17,7 +17,7 @@ class Model extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
     /**
      * Logs a user in, based on the autologin cookie.
      *
-     * @return mixed 
+     * @return mixed
      */
     public function autoLogin() {}
 
@@ -26,7 +26,7 @@ class Model extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      *
      * @param object $user User Model object
      * @param array $roles User's roles
-     * @return void 
+     * @return void
      */
     protected function completeLogin($user, array $roles = array()) {}
 
@@ -34,7 +34,7 @@ class Model extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      * Gets the currently logged in user from the session. Returns NULL if no user is currently logged in.
      *
      * @param mixed $defaultValue Default value to return if the user is currently not logged in
-     * @return mixed 
+     * @return mixed
      */
     public function getUser($defaultValue = null) {}
 
@@ -43,27 +43,27 @@ class Model extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      *
      * @param object $user User Model object
      * @param string $role Role name
-     * @return boolean 
+     * @return bool
      */
     public function hasRole($user, $role = "login") {}
 
     /**
      * Logs a user in.
      *
-     * @param mixed $username 
-     * @param string $password 
+     * @param mixed $username
+     * @param string $password
      * @param boolean $remember enable autologin
      * @param boolean $force login without password
-     * @return boolean 
+     * @return bool|null
      */
     public function login($username, $password, $remember = false, $force = false) {}
 
     /**
      * Logs a user in through social network.
      *
-     * @param mixed $social 
+     * @param mixed $social
      * @param boolean $remember enable autologin
-     * @return boolean 
+     * @return boolean
      */
     public function loginBy(\Ice\Auth\Social $social, $remember = false) {}
 
@@ -72,7 +72,7 @@ class Model extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      *
      * @param boolean $destroy Completely destroy the session
      * @param boolean $logoutAll Remove all tokens for user
-     * @return boolean 
+     * @return bool
      */
     public function logout($destroy = false, $logoutAll = false) {}
 
@@ -80,7 +80,7 @@ class Model extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      * Refresh user data stored in the session.
      * Returns null if no user is currently logged in.
      *
-     * @return mixed 
+     * @return mixed
      */
     public function refreshUser() {}
 

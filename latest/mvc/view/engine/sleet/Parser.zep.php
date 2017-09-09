@@ -40,16 +40,16 @@ class Parser
     /**
      * Parse text.
      *
-     * @param string $text 
-     * @return string text
+     * @param string $text
+     * @return string
      */
     public function text($text) {}
 
     /**
      * Parse one sleet expression.
      *
-     * @param string $expression 
-     * @return string 
+     * @param string $expression
+     * @return string
      */
     public function parse($expression) {}
 
@@ -58,7 +58,7 @@ class Parser
      *
      * @param string $control Control structure
      * @param array $expression Tokens
-     * @return string 
+     * @return string
      */
     private function parseControl($control, $expression) {}
 
@@ -66,7 +66,7 @@ class Parser
      * Parse echo expression.
      *
      * @param array $expression Tokens
-     * @return string 
+     * @return string
      */
     private function parseEcho($expression) {}
 
@@ -74,7 +74,7 @@ class Parser
      * Parse set expression.
      *
      * @param array $expression Tokens
-     * @return string 
+     * @return string
      */
     private function parseSet($expression) {}
 
@@ -82,25 +82,25 @@ class Parser
      * Parse use expression.
      *
      * @param array $expression Tokens
-     * @return string 
+     * @return string
      */
     private function parseUse($expression) {}
 
     /**
      * Internal tokens parse.
      *
-     * @param array $tokens 
-     * @return string 
+     * @param array $tokens
+     * @return string
      */
     private function doParse($tokens) {}
 
     /**
      * Internal token parse.
      *
-     * @param mixed $token 
-     * @param mixed $prev 
-     * @param mixed $next 
-     * @return mixed 
+     * @param mixed $token
+     * @param mixed $prev
+     * @param mixed $next
+     * @return mixed
      */
     private function token($token, $prev = null, $next = null) {}
 

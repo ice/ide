@@ -13,23 +13,23 @@ class GroupCount extends \Ice\Mvc\Route\Dispatcher\Regex
 
 
     /**
-     * @param mixed $staticRouteMap 
+     * @param mixed $staticRouteMap
      */
     public function setStaticRouteMap($staticRouteMap) {}
 
     /**
-     * @param mixed $variableRouteData 
+     * @param mixed $variableRouteData
      */
     public function setVariableRouteData($variableRouteData) {}
 
     /**
-     * @param array $data 
+     * @param array $data
      */
     public function __construct(array $data = array()) {}
 
     /**
-     * @param mixed $routeData 
-     * @param mixed $uri 
+     * @param mixed $routeData
+     * @param mixed $uri
      */
     protected function dispatchVariableRoute($routeData, $uri) {}
 

@@ -24,7 +24,7 @@ class Di extends \Ice\Arr
 
 
     /**
-     * @param mixed $defaults 
+     * @param mixed $defaults
      */
     public function setDefaults($defaults) {}
 
@@ -38,7 +38,7 @@ class Di extends \Ice\Arr
     /**
      * Return the last DI created.
      *
-     * @return Di 
+     * @return Di
      */
     public static function fetch() {}
 
@@ -61,7 +61,7 @@ class Di extends \Ice\Arr
     /**
      * Get default services.
      *
-     * @return array 
+     * @return array
      */
     public function getDefaults() {}
 
@@ -69,43 +69,44 @@ class Di extends \Ice\Arr
      * Resolve service.
      *
      * @param mixed $service Definition
-     * @return object 
+     * @return object
      */
     public function resolve($service) {}
 
     /**
      * Build an instance of the given class.
      *
-     * @param string $service 
-     * @param mixed $parameters 
-     * @return mixed 
+     * @param string $service
+     * @param mixed $parameters
+     * @return mixed
      */
     public function build($service, $parameters = array()) {}
 
     /**
      * If extra parameters are passed by numeric ID, rekey them by argument name.
      *
-     * @param array $dependencies 
-     * @param array $parameters 
-     * @return array 
+     * @param array $dependencies
+     * @param array $parameters
+     * @return array
      */
     protected function getParameters(array $dependencies, array $parameters) {}
 
     /**
      * Build up a list of dependencies for a given methods parameters.
      *
-     * @param array $parameters 
-     * @param array $primitives 
-     * @return array 
+     * @param array $parameters
+     * @param array $primitives
+     * @return array
      */
     public function getDependencies(array $parameters, array $primitives = array()) {}
 
     /**
      * Determine what to do with a non-class value.
      *
+     * @return mixed
+     *
      * @throws Exception
-     * @param ReflectionParameter $parameter 
-     * @return mixed 
+     * @param ReflectionParameter $parameter
      */
     public function resolveNonClass(\ReflectionParameter $parameter) {}
 
@@ -113,8 +114,8 @@ class Di extends \Ice\Arr
      * Set handlers for error, exeception and shutdown.
      * Class should contain method handler, errorHandler and shutdownHandler.
      *
-     * @param string $className 
-     * @return object 
+     * @param string $className
+     * @return object
      */
     public function errors($className = "Ice\\\\Exception") {}
 
@@ -122,7 +123,7 @@ class Di extends \Ice\Arr
      * Assign hook.
      *
      * @param string $name The hook name
-     * @param mixed $callback 
+     * @param mixed $callback
      * @param int $priority The hook priority; 0 = high, 10 = low
      * @param mixed $callable A callable object
      */
@@ -132,7 +133,7 @@ class Di extends \Ice\Arr
      * Invoke hook.
      *
      * @param string $name The hook name
-     * @param array $args 
+     * @param array $args
      * @param mixed $hookArg Argument for hooked functions
      */
     public function applyHook($name, array $args = null) {}
@@ -144,7 +145,7 @@ class Di extends \Ice\Arr
      * are arrays of listeners.
      *
      * @param string $name A hook name (Optional)
-     * @return array|null 
+     * @return array|null
      */
     public function getHooks($name = null) {}
 
@@ -153,7 +154,7 @@ class Di extends \Ice\Arr
      * Clear all listeners for all hooks. If `$name` is a valid hook name, only the listeners attached to that hook
      * will be cleared.
      *
-     * @param string $name 
+     * @param string $name
      * @param string $$name A hook name (Optional)
      */
     public function clearHooks($name = null) {}
@@ -161,9 +162,9 @@ class Di extends \Ice\Arr
     /**
      * Magic method to get or set services using setters/getters.
      *
-     * @param string $method 
-     * @param mixed $arguments 
-     * @return mixed 
+     * @param string $method
+     * @param mixed $arguments
+     * @return mixed
      */
     public function __call($method, $arguments = null) {}
 

@@ -18,7 +18,7 @@ interface ModuleInterface
     public function registerAutoloaders();
 
     /**
-     * @param mixed $di 
+     * @param \Ice\Di $di
      */
     public function registerServices(\Ice\Di $di);
 

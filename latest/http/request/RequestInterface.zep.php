@@ -15,100 +15,100 @@ interface RequestInterface
 {
 
     /**
-     * @param string $name 
-     * @return bool 
+     * @param string $name
+     * @return bool
      */
     public function hasRequest($name);
 
     /**
-     * @param string $name 
-     * @return bool 
+     * @param string $name
+     * @return bool
      */
     public function hasPost($name);
 
     /**
-     * @param string $name 
-     * @return bool 
+     * @param string $name
+     * @return bool
      */
     public function hasGet($name);
 
     /**
-     * @param string $name 
-     * @return bool 
+     * @param string $name
+     * @return bool
      */
     public function hasServer($name);
 
     /**
-     * @return bool 
+     * @return bool
      */
     public function isPost();
 
     /**
-     * @return bool 
+     * @return bool
      */
     public function isGet();
 
     /**
-     * @return bool 
+     * @return bool
      */
     public function isPut();
 
     /**
-     * @return bool 
+     * @return bool
      */
     public function isPatch();
 
     /**
-     * @return bool 
+     * @return bool
      */
     public function isHead();
 
     /**
-     * @return bool 
+     * @return bool
      */
     public function isDelete();
 
     /**
-     * @return bool 
+     * @return bool
      */
     public function isOptions();
 
     /**
-     * @return string 
+     * @return string
      */
     public function getMethod();
 
     /**
-     * @return string 
+     * @return string
      */
     public function getUserAgent();
 
     /**
-     * @return string 
+     * @return string
      */
     public function getHTTPReferer();
 
     /**
-     * @param string $key 
-     * @param mixed $defaultValue 
+     * @param string $key
+     * @param mixed $defaultValue
      */
     public function get($key, $defaultValue = null);
 
     /**
-     * @param string $key 
-     * @param mixed $defaultValue 
+     * @param string $key
+     * @param mixed $defaultValue
      */
     public function request($key, $defaultValue = null);
 
     /**
-     * @param string $key 
-     * @param mixed $defaultValue 
+     * @param string $key
+     * @param mixed $defaultValue
      */
     public function post($key, $defaultValue = null);
 
     /**
-     * @param string $key 
-     * @param mixed $defaultValue 
+     * @param string $key
+     * @param mixed $defaultValue
      */
     public function server($key, $defaultValue = null);
 

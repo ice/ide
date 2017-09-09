@@ -38,27 +38,27 @@ class Pdo implements \Ice\Db\DbInterface
     /**
      * Instantiate pdo connection.
      *
-     * @param string $dsn 
-     * @param string $user 
-     * @param string $password 
-     * @param array $options 
+     * @param string $dsn
+     * @param string $user
+     * @param string $password
+     * @param array $options
      */
     public function __construct($dsn, $user = null, $password = null, array $options = array()) {}
 
     /**
      * Get the id value.
      *
-     * @param string $id 
-     * @return int 
+     * @param string $id
+     * @return int
      */
     public function getIdValue($id) {}
 
     /**
      * Get a date time object.
      *
-     * @param mixed $value 
-     * @param boolean $model 
-     * @return object 
+     * @param mixed $value
+     * @param boolean $model
+     * @return object
      */
     public function getDateTime($value = null, $model = false) {}
 
@@ -69,26 +69,29 @@ class Pdo implements \Ice\Db\DbInterface
      * @param mixed $filters Filters to create WHERE conditions
      * @param array $options Options to limit/group results
      * @param array $fields Fields to retrieve, if not specified get all
-     * @return Arr|false 
+     * @return Arr|false
      */
     public function findOne($from, $filters = array(), array $options = array(), array $fields = array()) {}
 
     /**
      * Find all records that match criteria.
+     *
      * <pre><code>
-     * //SELECTFROM users WHERE a=1 and b="q"
-     * $db->find("users", array("a" => 1, "b" => "q"));
-     * //SELECTFROM users WHERE age>33
-     * $db->find("users", array("age" => array(">" => 33)));
-     * //SELECTFROM users WHERE a=1 or b=2
-     * $db->find("users", array("OR" => array(array("a" => 1), array("b" => 2))));
+     *  //SELECT FROM users WHERE a=1 and b="q"
+     *  $db->find("users", array("a" => 1, "b" => "q"));
+     *
+     *  //SELECT FROM users WHERE age>33
+     *  $db->find("users", array("age" => array(">" => 33)));
+     *
+     *  //SELECT FROM users WHERE a=1 or b=2
+     *  $db->find("users", array("OR" => array(array("a" => 1), array("b" => 2))));
      * </code></pre>
      *
      * @param string $from Table name
      * @param mixed $filters Filters to create WHERE conditions
      * @param array $options Options to limit/group results
      * @param array $fields Fields to retrieve, if not specified get all
-     * @return Arr 
+     * @return Arr
      */
     public function find($from, $filters = array(), array $options = array(), array $fields = array()) {}
 
@@ -97,9 +100,9 @@ class Pdo implements \Ice\Db\DbInterface
      *
      * @params mixed filters
      * @params array values
-     * @param mixed $filters 
-     * @param array $values 
-     * @return array 
+     * @param mixed $filters
+     * @param array $values
+     * @return array
      */
     protected function where($filters = array(), array $values = array()) {}
 
@@ -141,14 +144,14 @@ class Pdo implements \Ice\Db\DbInterface
     /**
      * Get last inserted ID.
      *
-     * @return int 
+     * @return int
      */
     public function getLastInsertId() {}
 
     /**
      * Get an error message.
      *
-     * @return mixed 
+     * @return mixed
      */
     public function getError() {}
 

@@ -18,7 +18,7 @@ class File extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
 
 
     /**
-     * @param mixed $users 
+     * @param mixed $users
      */
     public function setUsers($users) {}
 
@@ -26,7 +26,7 @@ class File extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      * Gets the currently logged in user from the session. Returns NULL if no user is currently logged in.
      *
      * @param mixed $defaultValue Default value to return if the user is currently not logged in
-     * @return mixed 
+     * @return mixed
      */
     public function getUser($defaultValue = null) {}
 
@@ -35,7 +35,7 @@ class File extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      *
      * @param array $user User data
      * @param string $role Role name
-     * @return boolean 
+     * @return bool
      */
     public function hasRole($user, $role = "login") {}
 
@@ -46,7 +46,7 @@ class File extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      * @param string $password Password
      * @param boolean $remember Enable autologin (not supported)
      * @param boolean $force login without password
-     * @return boolean 
+     * @return bool|null
      */
     public function login($username, $password, $remember = false, $force = false) {}
 

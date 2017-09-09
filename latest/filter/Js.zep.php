@@ -58,62 +58,64 @@ class Js
      * Minify the js.
      *
      * @param string $js JS code to minify
-     * @return string 
+     * @return string
      */
     public function sanitize($js) {}
 
     /**
      * Action -- do something! What to do is determined by the $command argument.
+     *
      * action treats a string as a single character. Wow!
      * action recognizes a regular expression if it is preceded by ( or , or =.
      *
      * @throws Exception If parser errors are found:
-     * - Unterminated string literal
-     * - Unterminated regular expression set in regex literal
-     * - Unterminated regular expression literal
+     *         - Unterminated string literal
+     *         - Unterminated regular expression set in regex literal
+     *         - Unterminated regular expression literal
+     *
      * @param int $command One of class constants:
-     * ACTION_KEEP_A      Output A. Copy B to A. Get the next B.
-     * ACTION_DELETE_A    Copy B to A. Get the next B. (Delete A).
-     * ACTION_DELETE_A_B  Get the next B. (Delete B).
-     * @param int $command 
+     *      ACTION_KEEP_A      Output A. Copy B to A. Get the next B.
+     *      ACTION_DELETE_A    Copy B to A. Get the next B. (Delete A).
+     *      ACTION_DELETE_A_B  Get the next B. (Delete B).
+     * @param int $command
      */
     protected function action($command) {}
 
     /**
      * Get next char. Convert ctrl char to space.
      *
-     * @return string|null 
+     * @return string|null
      */
     protected function get() {}
 
     /**
      * Is $c a letter, digit, underscore, dollar sign, or non-ASCII character.
      *
-     * @param mixed $c 
-     * @return bool 
+     * @param mixed $c
+     * @return bool
      */
     protected function isAlphaNum($c) {}
 
     /**
      * Perform minification, return result
      *
-     * @return string 
+     * @return string
      */
     protected function min() {}
 
     /**
      * Get the next character, skipping over comments. peek() is used to see
-     * if a "/" is followed by a "/" or "*".
+     *  if a "/" is followed by a "/" or "".
      *
      * @throws Exception On unterminated comment.
-     * @return string 
+     * @return string
      */
     protected function next() {}
 
     /**
      * Get next char. If is ctrl character, translate to a space or newline.
      *
-     * @return string|null 
+     * @return string|null
      */
     protected function peek() {}
 

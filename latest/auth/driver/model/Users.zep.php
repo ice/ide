@@ -17,14 +17,14 @@ class Users extends \Ice\Mvc\Model
     /**
      * Initialize user's relations.
      *
-     * @return void 
+     * @return void
      */
     public function initialize() {}
 
     /**
      * Complete the login for a user by incrementing the logins and saving login timestamp.
      *
-     * @return object 
+     * @return object
      */
     public function completeLogin() {}
 
@@ -32,7 +32,7 @@ class Users extends \Ice\Mvc\Model
      * Get user's role.
      *
      * @param string $name Role name to get
-     * @return mixed 
+     * @return mixed
      */
     public function getRole($name = "login") {}
 

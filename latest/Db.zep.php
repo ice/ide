@@ -21,27 +21,27 @@ class Db
     public function getDriver() {}
 
     /**
-     * @param mixed $driver 
+     * @param mixed $driver
      */
     public function setDriver($driver) {}
 
     /**
      * Db constructor.
      *
-     * @param mixed $driver 
-     * @param string $host 
-     * @param int $port 
-     * @param string $name 
-     * @param string $user 
-     * @param string $password 
+     * @param mixed $driver
+     * @param string $host
+     * @param int $port
+     * @param string $name
+     * @param string $user
+     * @param string $password
      */
     public function __construct($driver, $host = null, $port = null, $name = null, $user = null, $password = null) {}
 
     /**
      * Magic call, call driver's method.
      *
-     * @param string $method 
-     * @param mixed $arguments 
+     * @param string $method
+     * @param mixed $arguments
      */
     public function __call($method, $arguments = null) {}
 

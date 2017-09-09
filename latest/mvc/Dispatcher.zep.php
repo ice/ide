@@ -28,14 +28,14 @@ class Dispatcher extends \Ice\Dispatcher
     public function getMethod() {}
 
     /**
-     * @param mixed $method 
+     * @param mixed $method
      */
     public function setMethod($method) {}
 
     /**
      * Get active method, first check whether a method with the HTTP method as prefix exist.
      *
-     * @return string 
+     * @return string
      */
     public function getActiveMethod() {}
 

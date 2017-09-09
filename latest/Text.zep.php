@@ -32,9 +32,9 @@ class Text
     /**
      * Generates a random string based on the given type. Type is one of the constants.
      *
-     * @param int $type 
-     * @param int $length 
-     * @return string 
+     * @param int $type
+     * @param int $length
+     * @return string
      */
     public function random($type = 0, $length = 8) {}
 

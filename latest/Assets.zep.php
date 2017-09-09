@@ -36,7 +36,7 @@ class Assets
 
 
     /**
-     * @param mixed $collections 
+     * @param mixed $collections
      */
     public function setCollections($collections) {}
 
@@ -44,7 +44,7 @@ class Assets
     public function getCollections() {}
 
     /**
-     * @param mixed $options 
+     * @param mixed $options
      */
     public function setOptions($options) {}
 
@@ -58,7 +58,7 @@ class Assets
      *
      * @param string $key The data key
      * @param mixed $defaultValue The value to return if data key does not exist
-     * @return mixed 
+     * @return mixed
      */
     public function getOption($key, $defaultValue = null) {}
 
@@ -67,10 +67,10 @@ class Assets
      *
      * @param mixed $parameters Parameters of link/script/style
      * @param string $version Version appending to the uri
-     * @param string $collection 
+     * @param string $collection
      * @param mixed $minify Local minify option
      * @param string $Collection Collection name
-     * @return object 
+     * @return object
      */
     public function add($parameters, $version = null, $collection = null, $minify = null) {}
 
@@ -79,10 +79,10 @@ class Assets
      *
      * @param array $parameters Parameters of link/style
      * @param string $version Version appending to the uri
-     * @param string $collection 
+     * @param string $collection
      * @param mixed $minify Local minify option
      * @param string $Collection Collection name
-     * @return object 
+     * @return object
      */
     public function addCss(array $parameters, $version = null, $collection = "css", $minify = null) {}
 
@@ -91,10 +91,10 @@ class Assets
      *
      * @param array $parameters Parameters of script
      * @param string $version Version appending to the uri
-     * @param string $collection 
+     * @param string $collection
      * @param mixed $minify Local minify option
      * @param string $Collection Collection name
-     * @return object 
+     * @return object
      */
     public function addJs(array $parameters, $version = null, $collection = "js", $minify = null) {}
 
@@ -109,14 +109,14 @@ class Assets
     /**
      * Get the CSS default collection.
      *
-     * @return array 
+     * @return array
      */
     public function getCss() {}
 
     /**
      * Get the JS default collection.
      *
-     * @return array 
+     * @return array
      */
     public function getJs() {}
 
@@ -124,7 +124,7 @@ class Assets
      * Get some collection.
      *
      * @param string $key Collection name
-     * @return array 
+     * @return array
      */
     public function get($key) {}
 
@@ -133,7 +133,7 @@ class Assets
      *
      * @param string $content Input text to minify
      * @param string $type Type of content
-     * @return string 
+     * @return string
      */
     protected function minify($content, $type) {}
 

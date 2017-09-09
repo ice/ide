@@ -33,23 +33,23 @@ class Console extends \Ice\Di\Access
     public function getModules() {}
 
     /**
-     * @param mixed $modules 
+     * @param mixed $modules
      */
     public function setModules($modules) {}
 
     /**
      * Console constructor
      *
-     * @param mixed $di 
-     * @param Di $$di 
+     * @param \Ice\Di $di
+     * @param Di $$di
      */
     public function __construct(\Ice\Di $di = null) {}
 
     /**
      * Handle an command-line request.
      *
-     * @param array $arguments 
-     * @return mixed 
+     * @param array $arguments
+     * @return mixed
      */
     public function handle($arguments = null) {}
 

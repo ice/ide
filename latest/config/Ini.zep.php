@@ -17,7 +17,7 @@ class Ini extends \Ice\Config
     /**
      * Config ini constructor.
      *
-     * @param mixed $data 
+     * @param mixed $data
      * @param string $file Path to the ini file
      */
     public function __construct($data = null) {}
@@ -27,16 +27,16 @@ class Ini extends \Ice\Config
      *
      * @param mixed $ini The array casted by `parse_ini_file`
      * @param mixed $raw The same array but with raw strings
-     * @return mixed 
+     * @return mixed
      */
     private function cast($ini, $raw) {}
 
     /**
      * Map the array recursively.
      *
-     * @param array $ini 
-     * @param array $raw 
-     * @return array 
+     * @param array $ini
+     * @param array $raw
+     * @return array
      */
     private function map($ini, $raw) {}
 

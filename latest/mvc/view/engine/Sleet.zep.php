@@ -31,9 +31,9 @@ class Sleet extends \Ice\Mvc\View\Engine
     /**
      * Render the Slet file. Compile first.
      *
-     * @param string $path 
-     * @param array $data 
-     * @return string 
+     * @param string $path
+     * @param array $data
+     * @return string
      */
     public function render($path, array $data = array()) {}
 

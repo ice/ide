@@ -20,6 +20,9 @@ abstract class Adapter implements \Ice\Auth\Social\SocialInterface
     const POST = 1;
 
 
+    protected $options;
+
+
     protected $accessToken;
 
 
@@ -45,7 +48,7 @@ abstract class Adapter implements \Ice\Auth\Social\SocialInterface
 
 
     /**
-     * @param mixed $accessToken 
+     * @param mixed $accessToken
      */
     public function setAccessToken($accessToken) {}
 
@@ -62,17 +65,17 @@ abstract class Adapter implements \Ice\Auth\Social\SocialInterface
      * Adapter constructor.
      *
      * @throws Exception
-     * @param array $config 
+     * @param array $config
      */
     public function __construct($config = array()) {}
 
     /**
      * Magic method to get user's info.
      *
-     * @param string $name 
-     * @param mixed $arguments 
-     * @param string $method 
-     * @return mixed 
+     * @param string $name
+     * @param mixed $arguments
+     * @param string $method
+     * @return mixed
      */
     public function __call($name, $arguments = null) {}
 
@@ -80,7 +83,7 @@ abstract class Adapter implements \Ice\Auth\Social\SocialInterface
      * Whether or not an data exists by key.
      *
      * @param string $key The data key
-     * @return boolean 
+     * @return bool
      */
     public function has($key) {}
 
@@ -90,25 +93,34 @@ abstract class Adapter implements \Ice\Auth\Social\SocialInterface
      *
      * @param string $key The data key
      * @param mixed $defaultValue The value to return if data key does not exist
-     * @return mixed 
+     * @return mixed
      */
     public function get($key, $defaultValue = null) {}
 
     /**
      * Get authentication url.
      *
-     * @return string 
+     * @return string
      */
     public function getAuthUrl() {}
 
     /**
+     * Get option value with key.
+     *
+     * @param string $key The option key
+     * @param mixed $defaultValue The value to return if option key does not exist
+     * @return mixed
+     */
+    public function getOption($key, $defaultValue = null) {}
+
+    /**
      * Make curl get/post request and return result.
      *
-     * @param int $method 
-     * @param string $url 
-     * @param array $params 
-     * @param boolean $parse 
-     * @return array|string 
+     * @param int $method
+     * @param string $url
+     * @param array $params
+     * @param boolean $parse
+     * @return array|string
      */
     protected function call($method = self::GET, $url, array $params, $parse = true) {}
 

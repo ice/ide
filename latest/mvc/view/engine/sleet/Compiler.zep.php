@@ -44,14 +44,14 @@ class Compiler
     /**
      * Sleet compiler constructor. Set the view and parser.
      *
-     * @param mixed $view 
+     * @param mixed $view
      */
     public function __construct($view = null) {}
 
     /**
      * Compile the file.
      *
-     * @param string $path 
+     * @param string $path
      * @return string content
      */
     public function compile($path) {}

@@ -30,14 +30,14 @@ class Pagination extends \Ice\Arr
     /**
      * Pagination constructor. Fetch di and tag.
      *
-     * @param array $options 
+     * @param array $options
      */
     public function __construct(array $options = array()) {}
 
     /**
      * Returns a slice of the resultset to show in the pagination.
      *
-     * @return object 
+     * @return Pagination
      */
     public function calculate() {}
 
@@ -48,7 +48,7 @@ class Pagination extends \Ice\Arr
      * @param mixed $url URL with pagination
      * @param boolean $active If active create link else span
      * @param string $symbol HTML symbol to add
-     * @return string 
+     * @return string
      */
     protected function prepareButton($page, $url = null, $active = false, $symbol = null) {}
 
@@ -58,7 +58,7 @@ class Pagination extends \Ice\Arr
      *
      * @param mixed $url URL with pagination
      * @param array $parameters UL attributes to adding
-     * @return string 
+     * @return string
      */
     public function minimal($url = null, array $parameters = array()) {}
 
@@ -68,7 +68,7 @@ class Pagination extends \Ice\Arr
      *
      * @param mixed $url URL with pagination
      * @param array $parameters UL attributes to adding
-     * @return string 
+     * @return string
      */
     public function basic($url = null, array $parameters = array()) {}
 
@@ -80,7 +80,7 @@ class Pagination extends \Ice\Arr
      * @param array $parameters UL attributes to adding
      * @param int $countOut Number of page links in the begin and end of whole range
      * @param int $countIn Number of page links on each side of current page
-     * @return string 
+     * @return string
      */
     public function floating($url = null, array $parameters = array(), $countOut = 0, $countIn = 2) {}
 

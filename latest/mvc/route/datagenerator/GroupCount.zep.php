@@ -10,7 +10,7 @@ class GroupCount extends \Ice\Mvc\Route\DataGenerator\Regex
     protected function getApproxChunkSize() {}
 
     /**
-     * @param mixed $regexToRoutesMap 
+     * @param mixed $regexToRoutesMap
      */
     public function processChunk($regexToRoutesMap) {}
 

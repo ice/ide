@@ -27,9 +27,9 @@ class Exception extends \Exception
     /**
      * Get the full trace as string.
      *
-     * @param mixed $e 
-     * @param Exception|Throwable $$e 
-     * @return string 
+     * @param mixed $e
+     * @param Exception|Throwable $$e
+     * @return string
      */
     public function getFullTraceAsString($e) {}
 
@@ -37,21 +37,21 @@ class Exception extends \Exception
      * PHP error handler, converts all errors into ErrorExceptions. This handler respects error_reporting settings.
      *
      * @throws ErrorException
-     * @param int $code 
-     * @param string $message 
-     * @param string $file 
-     * @param int $line 
-     * @param array $context 
-     * @return true 
+     * @param int $code
+     * @param string $message
+     * @param string $file
+     * @param int $line
+     * @param array $context
+     * @return true
      */
     public static function errorHandler($code, $message, $file = null, $line = 0, array $context = array()) {}
 
     /**
      * Inline exception handler, displays the error message, source of the exception, and the stack trace of the error.
      *
-     * @param mixed $e 
-     * @param Exception|Throwable $$e 
-     * @return void 
+     * @param mixed $e
+     * @param Exception|Throwable $$e
+     * @return void
      */
     public static function handler($e) {}
 
@@ -59,7 +59,7 @@ class Exception extends \Exception
      * Catches errors that are not caught by the error handler.
      * E_PARSE, E_ERROR, E_CORE_ERROR, E_USER_ERROR
      *
-     * @return void 
+     * @return void
      */
     public static function shutdownHandler() {}
 

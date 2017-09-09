@@ -29,15 +29,15 @@ abstract class Validator
     /**
      * Validator constructor.
      *
-     * @param array $options 
+     * @param array $options
      */
     public function __construct(array $options = array()) {}
 
     /**
      * Validate the validator
      *
-     * @param Validation $validation 
-     * @param string $field 
+     * @param Validation $validation
+     * @param string $field
      */
     public abstract function validate(\Ice\Validation $validation, $field);
 
@@ -45,7 +45,7 @@ abstract class Validator
      * Whether or not an option exists by key.
      *
      * @param string $key The option key
-     * @return boolean 
+     * @return bool
      */
     public function has($key) {}
 
@@ -54,7 +54,7 @@ abstract class Validator
      *
      * @param string $key The data key
      * @param mixed $defaultValue The value to return if data key does not exist
-     * @return mixed 
+     * @return mixed
      */
     public function get($key, $defaultValue = null) {}
 
@@ -62,8 +62,8 @@ abstract class Validator
      * Assigns a value to the specified option.
      *
      * @param string $key The data key
-     * @param mixed $value 
-     * @return void 
+     * @param mixed $value
+     * @return void
      */
     public function set($key, $value) {}
 
@@ -71,7 +71,7 @@ abstract class Validator
      * Get options by type.
      *
      * @param int $keys Type of options
-     * @param array $options 
+     * @param array $options
      */
     public function getOptions($keys = self::ALL, array $options = array()) {}
 

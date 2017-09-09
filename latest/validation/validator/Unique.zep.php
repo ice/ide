@@ -10,20 +10,24 @@ namespace Ice\Validation\Validator;
  * @author      Ice Team
  * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
+ *
  * <pre><code>
- * $validation = new Ice\Validation();
- * $validation->rules([
- * 'userName' => [
- * 'unique' => [
- * 'from' => 'users',
- * 'custom' => 'username'
- * ],
- * ]
- * ]);
- * $valid = $validation->validate($_POST);
- * if (!$valid) {
- * $messages = $validation->getMessages();
- * }
+ *  $validation = new Ice\Validation();
+ *
+ *  $validation->rules([
+ *      'userName' => [
+ *          'unique' => [
+ *              'from' => 'users',
+ *              'custom' => 'username'
+ *          ],
+ *      ]
+ *  ]);
+ *
+ *  $valid = $validation->validate($_POST);
+ *
+ *  if (!$valid) {
+ *      $messages = $validation->getMessages();
+ *  }
  * </code></pre>
  */
 class Unique extends \Ice\Validation\Validator
@@ -33,9 +37,9 @@ class Unique extends \Ice\Validation\Validator
      * Validate the validator
      * Options: from (0), custom (1), except (2), caseInsensitive (3), label, message
      *
-     * @param Validation $validation 
-     * @param string $field 
-     * @return boolean 
+     * @param Validation $validation
+     * @param string $field
+     * @return bool
      */
     public function validate(\Ice\Validation $validation, $field) {}
 

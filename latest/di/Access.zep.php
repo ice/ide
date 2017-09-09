@@ -21,13 +21,13 @@ class Access
     /**
      * Magic get to easy retrieve service from the di.
      *
-     * @param string $property 
+     * @param string $property
      */
     public function __get($property) {}
 
     /**
-     * @param string $property 
-     * @param mixed $value 
+     * @param string $property
+     * @param mixed $value
      */
     public function __set($property, $value) {}
 

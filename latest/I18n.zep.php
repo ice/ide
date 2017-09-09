@@ -29,14 +29,14 @@ class I18n
     /**
      * I18n constructor.
      *
-     * @param array $options 
+     * @param array $options
      */
     public function __construct(array $options = array()) {}
 
     /**
      * Return the last I18n created.
      *
-     * @return I18n 
+     * @return I18n
      */
     public static function fetch() {}
 
@@ -44,7 +44,7 @@ class I18n
      * Get and set the target language.
      *
      * @param string $lang New language setting
-     * @return string 
+     * @return string
      */
     public function lang($lang = null) {}
 
@@ -53,7 +53,7 @@ class I18n
      *
      * @param string $lang Language
      * @param boolean $country Get country code, by default gets language code
-     * @return string 
+     * @return string
      */
     public function iso($lang = null, $country = false) {}
 
@@ -64,7 +64,7 @@ class I18n
      * @param string $str Text to translate
      * @param mixed $form If NULL, looking for `other` form, else the very first form
      * @param string $lang Target language
-     * @return string 
+     * @return string
      */
     public function get($str, $form = null, $lang = null) {}
 
@@ -72,7 +72,7 @@ class I18n
      * Load language from the file.
      *
      * @param string $lang Language code
-     * @return array 
+     * @return array
      */
     private function load($lang) {}
 
@@ -80,11 +80,11 @@ class I18n
      * Returns translation of a string with right plural form.
      * If no translation exists, the original string will be returned.
      *
-     * @param string $str 
-     * @param int $count 
-     * @param string $lang 
-     * @param string $string 
-     * @return string 
+     * @param string $str
+     * @param int $count
+     * @param string $lang
+     * @param string $string
+     * @return string
      */
     public function plural($str, $count = 0, $lang = null) {}
 
@@ -92,30 +92,30 @@ class I18n
      * Plural rules lazy initialization.
      *
      * @param string $code Language code
-     * @return object 
+     * @return object
      */
     protected function pluralRules($code) {}
 
     /**
      * Alias of translate.
      *
-     * @param string $str 
-     * @param array $values 
-     * @param mixed $context 
-     * @param string $lang 
-     * @return string 
+     * @param string $str
+     * @param array $values
+     * @param mixed $context
+     * @param string $lang
+     * @return string
      */
     public function _($str, array $values = null, $context = null, $lang = null) {}
 
     /**
      * Translation/internationalization function. strtr() or sprintf is used for replacing parameters.
      *
-     * @param string $str 
+     * @param string $str
      * @param array $values Values to replace in the translated text
      * @param mixed $context String form or numeric count
      * @param string $lang Source language
      * @param string $string Text to translate
-     * @return string 
+     * @return string
      */
     public function translate($str, array $values = null, $context = null, $lang = null) {}
 

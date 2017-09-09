@@ -15,14 +15,14 @@ interface EngineInterface
 {
 
     /**
-     * @param mixed $view 
-     * @param mixed $di 
+     * @param \Ice\Mvc\View\ViewInterface $view
+     * @param \Ice\Di $di
      */
     public function __construct(\Ice\Mvc\View\ViewInterface $view, \Ice\Di $di = null);
 
     /**
-     * @param string $path 
-     * @param array $data 
+     * @param string $path
+     * @param array $data
      */
     public function render($path, array $data = array());
 

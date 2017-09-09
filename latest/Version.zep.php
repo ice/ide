@@ -36,7 +36,7 @@ class Version
     const MINOR = 2;
 
 
-    const PATCH = 6;
+    const PATCH = 11;
 
 
     const STAGE = 4;
@@ -48,28 +48,30 @@ class Version
     /**
      * Get version array.
      *
-     * @return array 
+     * @return array
      */
     public static function current() {}
 
     /**
      * Get version string.
+     *
      * 1.0.0-dev
      * 1.0.0-alpha.3
      * 1.0.0-beta.2
      * 1.0.0-rc.5
      * 1.0.0
      *
-     * @return string 
+     * @return string
      */
     public static function get() {}
 
     /**
      * Get version id.
+     *
      * [major][minor(2 digits)][patch (2 digits)][stage][build]
      * eg. id for 1.4.12-rc.5 is 1041235
      *
-     * @return int 
+     * @return int
      */
     public static function id() {}
 

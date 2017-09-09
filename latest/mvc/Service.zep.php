@@ -18,7 +18,7 @@ abstract class Service extends \Ice\Di\Access
 
 
     /**
-     * @param mixed $model 
+     * @param mixed $model
      */
     public function setModel($model) {}
 
@@ -28,9 +28,9 @@ abstract class Service extends \Ice\Di\Access
     /**
      * Magic method to call model's method.
      *
-     * @param string $method 
-     * @param mixed $arguments 
-     * @return mixed 
+     * @param string $method
+     * @param mixed $arguments
+     * @return mixed
      */
     public function __call($method, $arguments = null) {}
 

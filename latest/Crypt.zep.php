@@ -28,54 +28,54 @@ class Crypt
 
 
     /**
-     * @param mixed $key 
+     * @param mixed $key
      */
     public function setKey($key) {}
 
     /**
-     * @param mixed $cipher 
+     * @param mixed $cipher
      */
     public function setCipher($cipher) {}
 
     /**
-     * @param mixed $mode 
+     * @param mixed $mode
      */
     public function setMode($mode) {}
 
     /**
-     * @param mixed $block 
+     * @param mixed $block
      */
     public function setBlock($block) {}
 
     /**
      * Create a new encrypter instance.
      *
-     * @param string $key 
-     * @return void 
+     * @param string $key
+     * @return void
      */
     public function __construct($key = null) {}
 
     /**
      * Encrypt the given value.
      *
-     * @param string $text 
-     * @return string 
+     * @param string $text
+     * @return string
      */
     public function encrypt($text) {}
 
     /**
      * Generate an input vector.
      *
-     * @return string 
+     * @return string
      */
     protected function generateInputVector() {}
 
     /**
      * Actually encrypt the value using the given Iv with the openssl library encrypt function.
      *
-     * @param string $value 
-     * @param string $iv 
-     * @return string 
+     * @param string $value
+     * @param string $iv
+     * @return string
      */
     protected function doEncrypt($value, $iv) {}
 
@@ -83,16 +83,16 @@ class Crypt
      * Decrypt the given value.
      *
      * @param string $text payload
-     * @return string 
+     * @return string
      */
     public function decrypt($text) {}
 
     /**
      * Actually decrypt the value using the given Iv with the openssl library decrypt function.
      *
-     * @param string $value 
-     * @param string $iv 
-     * @return string 
+     * @param string $value
+     * @param string $iv
+     * @return string
      */
     protected function doDecrypt($value, $iv) {}
 
@@ -100,55 +100,55 @@ class Crypt
      * Get the JSON array from the given payload.
      *
      * @param string $text payload
-     * @return array 
+     * @return array
      */
     protected function getJsonPayload($text) {}
 
     /**
      * Create a MAC for the given value.
      *
-     * @param string $value 
-     * @return string 
+     * @param string $value
+     * @return string
      */
     protected function hash($value) {}
 
     /**
      * Add PKCS7 padding to a given value.
      *
-     * @param string $value 
-     * @return string 
+     * @param string $value
+     * @return string
      */
     protected function addPadding($value) {}
 
     /**
      * Remove the padding from the given value.
      *
-     * @param string $value 
-     * @return string 
+     * @param string $value
+     * @return string
      */
     protected function stripPadding($value) {}
 
     /**
      * Determine if the given padding for a value is valid.
      *
-     * @param int $pad 
-     * @param string $value 
-     * @return bool 
+     * @param int $pad
+     * @param string $value
+     * @return bool
      */
     protected function paddingIsValid($pad, $value) {}
 
     /**
      * Verify that the encryption payload is valid.
      *
-     * @param array $data 
-     * @return bool 
+     * @param array $data
+     * @return bool
      */
     protected function invalidPayload(array $data) {}
 
     /**
      * Get the IV size for the cipher.
      *
-     * @return int 
+     * @return int
      */
     protected function getIvSize() {}
 

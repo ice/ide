@@ -18,8 +18,8 @@ interface ViewInterface
     public function getEngines();
 
     /**
-     * @param mixed $file 
-     * @param array $data 
+     * @param mixed $file
+     * @param array $data
      */
     public function render($file = null, array $data = array());
 

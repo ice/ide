@@ -39,12 +39,12 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
 
 
     /**
-     * @param mixed $engines 
+     * @param mixed $engines
      */
     public function setEngines($engines) {}
 
     /**
-     * @param mixed $content 
+     * @param mixed $content
      */
     public function setContent($content) {}
 
@@ -52,7 +52,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
     public function getContent() {}
 
     /**
-     * @param mixed $mainView 
+     * @param mixed $mainView
      */
     public function setMainView($mainView) {}
 
@@ -60,7 +60,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
     public function getMainView() {}
 
     /**
-     * @param mixed $layoutsDir 
+     * @param mixed $layoutsDir
      */
     public function setLayoutsDir($layoutsDir) {}
 
@@ -68,7 +68,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
     public function getLayoutsDir() {}
 
     /**
-     * @param mixed $partialsDir 
+     * @param mixed $partialsDir
      */
     public function setPartialsDir($partialsDir) {}
 
@@ -76,7 +76,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
     public function getPartialsDir() {}
 
     /**
-     * @param mixed $viewsDir 
+     * @param mixed $viewsDir
      */
     public function setViewsDir($viewsDir) {}
 
@@ -84,7 +84,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
     public function getViewsDir() {}
 
     /**
-     * @param mixed $file 
+     * @param mixed $file
      */
     public function setFile($file) {}
 
@@ -92,15 +92,15 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
     public function getFile() {}
 
     /**
-     * @param mixed $silent 
+     * @param mixed $silent
      */
     public function setSilent($silent) {}
 
     /**
      * View constructor. Set the file and vars.
      *
-     * @param string $file 
-     * @param array $data 
+     * @param string $file
+     * @param array $data
      */
     public function __construct($file = null, array $data = array()) {}
 
@@ -112,9 +112,9 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
     /**
      * Try to render the view with vars for engines.
      *
-     * @param string $file 
-     * @param array $data 
-     * @return string 
+     * @param string $file
+     * @param array $data
+     * @return string
      */
     public function render($file = null, array $data = array()) {}
 
@@ -123,7 +123,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      *
      * @param string $file Name of file without extension from the views dir
      * @param array $data Vars to send
-     * @return string 
+     * @return string
      */
     public function load($file, array $data = array()) {}
 
@@ -132,7 +132,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      *
      * @param string $file Name of file without extension from the partials dir
      * @param array $data Vars to send
-     * @return string 
+     * @return string
      */
     public function partial($file, array $data = array()) {}
 
@@ -141,30 +141,30 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      *
      * @param string $file Name of file without extension from the layouts dir
      * @param array $data Vars to send
-     * @return string 
+     * @return string
      */
     public function layout($file = null, array $data = array()) {}
 
     /**
      * Set var to the view.
      *
-     * @param string $name 
-     * @param mixed $value 
+     * @param string $name
+     * @param mixed $value
      */
     public function setVar($name, $value) {}
 
     /**
      * Set multiple vars to the view.
      *
-     * @param array $vars 
+     * @param array $vars
      */
     public function setVars(array $vars) {}
 
     /**
      * Alias of the `setMainView` method.
      *
-     * @param string $layout 
-     * @param array $vars 
+     * @param string $layout
+     * @param array $vars
      */
     public function setLayout($layout) {}
 

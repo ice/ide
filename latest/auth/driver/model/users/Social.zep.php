@@ -20,14 +20,14 @@ class Social extends \Ice\Mvc\Model
     /**
      * Initialize relations.
      *
-     * @return void 
+     * @return void
      */
     public function initialize() {}
 
     /**
      * Set PRIMARY key.
      *
-     * @return void 
+     * @return void
      */
     public function onConstruct() {}
 

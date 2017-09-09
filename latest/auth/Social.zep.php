@@ -23,14 +23,14 @@ class Social
     /**
      * Constructor.
      *
-     * @param SocialInterface $adapter 
+     * @param SocialInterface $adapter
      */
     public function __construct(\Ice\Auth\Social\SocialInterface $adapter) {}
 
     /**
      * Call method authenticate() of adater class.
      *
-     * @return boolean 
+     * @return boolean
      */
     public function authenticate() {}
 
@@ -39,16 +39,16 @@ class Social
      *
      * @param string $key The data key
      * @param mixed $defaultValue The value to return if data key does not exist
-     * @return mixed 
+     * @return mixed
      */
     public function get($key, $defaultValue = null) {}
 
     /**
      * Call method of this class or methods of adapter class.
      *
-     * @param string $method 
-     * @param mixed $arguments 
-     * @return mixed 
+     * @param string $method
+     * @param mixed $arguments
+     * @return mixed
      */
     public function __call($method, $arguments = null) {}
 

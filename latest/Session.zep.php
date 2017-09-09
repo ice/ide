@@ -25,35 +25,35 @@ class Session extends \Ice\Arr
     /**
      * Start the session.
      *
-     * @return boolean 
+     * @return bool
      */
     public function start() {}
 
     /**
      * Check whether the session was started.
      *
-     * @return boolean 
+     * @return bool
      */
     public function isStarted() {}
 
     /**
      * Get session id.
      *
-     * @return string 
+     * @return string
      */
     public function getId() {}
 
     /**
      * Regenerate session id.
      *
-     * @return boolean 
+     * @return bool
      */
     public function regenerate() {}
 
     /**
      * Destroy the session.
      *
-     * @return boolean 
+     * @return bool
      */
     public function destroy() {}
 
@@ -61,32 +61,32 @@ class Session extends \Ice\Arr
      * Check whether session has the key.
      * No support for passing variables by reference yet zephir/issues/203
      *
-     * @param string $key 
-     * @return bool 
+     * @param string $key
+     * @return bool
      */
     public function has($key) {}
 
     /**
      * Retrieve a single key from the session.
      *
-     * @param string $key 
-     * @param mixed $defaultValue 
-     * @param bool $required 
+     * @param string $key
+     * @param mixed $defaultValue
+     * @param bool $required
      */
     public function get($key, $defaultValue = null, $required = false) {}
 
     /**
      * Assigns a value to the specified session key.
      *
-     * @param string $key 
-     * @param mixed $value 
+     * @param string $key
+     * @param mixed $value
      */
     public function set($key, $value) {}
 
     /**
      * Remove session key.
      *
-     * @param string $key 
+     * @param string $key
      */
     public function remove($key) {}
 

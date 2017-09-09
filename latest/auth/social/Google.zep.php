@@ -17,28 +17,28 @@ class Google extends \Ice\Auth\Social\Adapter
     /**
      * Google adapter constructor.
      *
-     * @param array $config 
+     * @param array $config
      */
     public function __construct($config = array()) {}
 
     /**
      * Get user birthday or null if it is not set
      *
-     * @return string|null 
+     * @return string|null
      */
     public function getBirthday() {}
 
     /**
      * Authenticate and return bool result of authentication
      *
-     * @return bool 
+     * @return bool
      */
     public function authenticate() {}
 
     /**
      * Prepare params for authentication url
      *
-     * @return array 
+     * @return array
      */
     public function prepareAuthParams() {}
 

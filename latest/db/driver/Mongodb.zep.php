@@ -44,26 +44,26 @@ class Mongodb implements \Ice\Db\DbInterface
     /**
      * Instantiate mongo connection.
      *
-     * @param string $dsn 
-     * @param string $dbname 
-     * @param array $options 
+     * @param string $dsn
+     * @param string $dbname
+     * @param array $options
      */
     public function __construct($dsn, $dbname = null, array $options = array()) {}
 
     /**
      * Get the id value.
      *
-     * @param string $id 
-     * @return object 
+     * @param string $id
+     * @return object
      */
     public function getIdValue($id) {}
 
     /**
      * Get a date time object.
      *
-     * @param mixed $value 
-     * @param boolean $model 
-     * @return object 
+     * @param mixed $value
+     * @param boolean $model
+     * @return object
      */
     public function getDateTime($value = null, $model = false) {}
 
@@ -74,23 +74,24 @@ class Mongodb implements \Ice\Db\DbInterface
      * @param mixed $filters Criteria
      * @param array $options Options to limit/group results
      * @param array $fields Fields to retrieve, if not specified get all
-     * @return Arr 
+     * @return Arr
      */
     public function findOne($from, $filters = array(), array $options = array(), array $fields = array()) {}
 
     /**
      * Find all documents that match criteria.
+     *
      * <pre><code>
-     * $db->find("users", array("a" => 1, "b" => "q"));
-     * $db->find("users", array("age" => array(">" => 33)));
-     * $db->find("users", array("OR" => array(array("a" => 1), array("b" => 2))));
+     *  $db->find("users", array("a" => 1, "b" => "q"));
+     *  $db->find("users", array("age" => array(">" => 33)));
+     *  $db->find("users", array("OR" => array(array("a" => 1), array("b" => 2))));
      * </code></pre>
      *
      * @param string $from Collection name
      * @param mixed $filters Criteria
      * @param array $options Options to limit/group results
      * @param array $fields Fields to retrieve, if not specified get all
-     * @return Arr 
+     * @return Arr
      */
     public function find($from, $filters = array(), array $options = array(), array $fields = array()) {}
 
@@ -132,7 +133,7 @@ class Mongodb implements \Ice\Db\DbInterface
     /**
      * Get an error message.
      *
-     * @return mixed 
+     * @return mixed
      */
     public function getError() {}
 

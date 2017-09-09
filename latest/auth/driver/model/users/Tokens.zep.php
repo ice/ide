@@ -20,7 +20,7 @@ class Tokens extends \Ice\Mvc\Model
     /**
      * Initialize token's relations, remove expired tokens.
      *
-     * @return void 
+     * @return void
      */
     public function initialize() {}
 
@@ -29,14 +29,14 @@ class Tokens extends \Ice\Mvc\Model
      *
      * @param array $fields Fields to save or valid fields
      * @param object $extra Extra validation
-     * @return mixed 
+     * @return mixed
      */
     public function create($fields = array(), \Ice\Validation $extra = null) {}
 
     /**
      * Deletes all expired tokens.
      *
-     * @return void 
+     * @return void
      */
     public function deleteExpired() {}
 
@@ -45,7 +45,7 @@ class Tokens extends \Ice\Mvc\Model
      *
      * @param array $fields Fields to save or valid fields
      * @param object $extra Extra validation
-     * @return mixed 
+     * @return mixed
      */
     public function update($fields = array(), \Ice\Validation $extra = null) {}
 
@@ -53,7 +53,7 @@ class Tokens extends \Ice\Mvc\Model
      * Generate a new unique token.
      *
      * @uses Text::random()
-     * @return string 
+     * @return string
      */
     protected function generate() {}
 

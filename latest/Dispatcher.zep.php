@@ -94,7 +94,7 @@ abstract class Dispatcher
     public function getDefaultNamespace() {}
 
     /**
-     * @param mixed $defaultNamespace 
+     * @param mixed $defaultNamespace
      */
     public function setDefaultNamespace($defaultNamespace) {}
 
@@ -108,7 +108,7 @@ abstract class Dispatcher
     public function getLoops() {}
 
     /**
-     * @param mixed $loops 
+     * @param mixed $loops
      */
     public function setLoops($loops) {}
 
@@ -122,7 +122,7 @@ abstract class Dispatcher
     public function getForwarded() {}
 
     /**
-     * @param mixed $silent 
+     * @param mixed $silent
      */
     public function setSilent($silent) {}
 
@@ -130,7 +130,7 @@ abstract class Dispatcher
     public function getModules() {}
 
     /**
-     * @param mixed $modules 
+     * @param mixed $modules
      */
     public function setModules($modules) {}
 
@@ -138,7 +138,7 @@ abstract class Dispatcher
     public function getModule() {}
 
     /**
-     * @param mixed $module 
+     * @param mixed $module
      */
     public function setModule($module) {}
 
@@ -146,7 +146,7 @@ abstract class Dispatcher
     public function getNamespace() {}
 
     /**
-     * @param mixed $namespace 
+     * @param mixed $namespace
      */
     public function setNamespace($namespace) {}
 
@@ -154,7 +154,7 @@ abstract class Dispatcher
     public function getHandler() {}
 
     /**
-     * @param mixed $handler 
+     * @param mixed $handler
      */
     public function setHandler($handler) {}
 
@@ -162,7 +162,7 @@ abstract class Dispatcher
     public function getAction() {}
 
     /**
-     * @param mixed $action 
+     * @param mixed $action
      */
     public function setAction($action) {}
 
@@ -170,7 +170,7 @@ abstract class Dispatcher
     public function getParams() {}
 
     /**
-     * @param mixed $params 
+     * @param mixed $params
      */
     public function setParams($params) {}
 
@@ -178,7 +178,7 @@ abstract class Dispatcher
     public function getReturnedValue() {}
 
     /**
-     * @param mixed $returnedValue 
+     * @param mixed $returnedValue
      */
     public function setReturnedValue($returnedValue) {}
 
@@ -186,7 +186,7 @@ abstract class Dispatcher
     public function getHandlerSuffix() {}
 
     /**
-     * @param mixed $handlerSuffix 
+     * @param mixed $handlerSuffix
      */
     public function setHandlerSuffix($handlerSuffix) {}
 
@@ -194,7 +194,7 @@ abstract class Dispatcher
     public function getActionSuffix() {}
 
     /**
-     * @param mixed $actionSuffix 
+     * @param mixed $actionSuffix
      */
     public function setActionSuffix($actionSuffix) {}
 
@@ -207,57 +207,60 @@ abstract class Dispatcher
      * Whether or not an param exists by key.
      *
      * @param string $key The param key
-     * @return boolean 
+     * @return bool
      */
     public function hasParam($key) {}
 
     /**
      * Set a param by its name or numeric index.
      *
-     * @param mixed $param 
-     * @param mixed $value 
+     * @param mixed $param
+     * @param mixed $value
      */
     public function setParam($param, $value) {}
 
     /**
      * Gets variable from params attribute applying filters if needed.
      * If no parameters are given, return all.
+     *
      * <pre><code>
-     * //Returns value from $params["id"] without sanitizing
-     * $id = $this->router->getParam("id");
-     * //Returns value from $params["title"] with sanitizing
-     * $title = $this->router->getParam("title", "escape|repeats");
-     * //Returns value from $params["id"] with a default value
-     * $id = $this->router->getParam("id", null, 150);
+     *  //Returns value from $params["id"] without sanitizing
+     *  $id = $this->router->getParam("id");
+     *
+     *  //Returns value from $params["title"] with sanitizing
+     *  $title = $this->router->getParam("title", "escape|repeats");
+     *
+     *  //Returns value from $params["id"] with a default value
+     *  $id = $this->router->getParam("id", null, 150);
      * </code></pre>
      *
      * @param string $key Index to get
      * @param string|array $filters Filters to apply
      * @param mixed $defaultValue Default value if key not exist or value is empty and allowEmpty is false
-     * @param boolean $allowEmpty 
-     * @return mixed 
+     * @param boolean $allowEmpty
+     * @return mixed
      */
     public function getParam($key = null, $filters = null, $defaultValue = null, $allowEmpty = false) {}
 
     /**
      * Returns the current method to be/executed in the dispatcher.
      *
-     * @return string 
+     * @return string
      */
     public function getActiveMethod() {}
 
     /**
      * Dispatches a handle action taking into account the routing parameters.
      *
-     * @return object 
+     * @return object
      */
     public function dispatch() {}
 
     /**
      * Forwards the execution flow to another module/controller/action.
      *
-     * @param array $forward 
-     * @param boolean $force 
+     * @param array $forward
+     * @param boolean $force
      */
     public function forward(array $forward, $force = false) {}
 

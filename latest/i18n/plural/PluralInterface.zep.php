@@ -15,8 +15,8 @@ interface PluralInterface
 {
 
     /**
-     * @param int $count 
-     * @return string 
+     * @param int $count
+     * @return string
      */
     public function getCategory($count);
 

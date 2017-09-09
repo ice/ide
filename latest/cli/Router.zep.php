@@ -40,7 +40,7 @@ class Router
     public function getDefaultModule() {}
 
     /**
-     * @param mixed $defaultModule 
+     * @param mixed $defaultModule
      */
     public function setDefaultModule($defaultModule) {}
 
@@ -48,7 +48,7 @@ class Router
     public function getDefaultHandler() {}
 
     /**
-     * @param mixed $defaultHandler 
+     * @param mixed $defaultHandler
      */
     public function setDefaultHandler($defaultHandler) {}
 
@@ -56,7 +56,7 @@ class Router
     public function getDefaultAction() {}
 
     /**
-     * @param mixed $defaultAction 
+     * @param mixed $defaultAction
      */
     public function setDefaultAction($defaultAction) {}
 
@@ -75,18 +75,19 @@ class Router
     /**
      * Set defaults values
      *
-     * @param array $defaults 
+     * @param array $defaults
      */
     public function setDefaults(array $defaults) {}
 
     /**
      * Handles routing information received from command-line arguments.
+     *
      * <pre><code>
-     * php index.php --module=shell --handler=main --action=main --id=1 --param="some value"
+     *  php index.php --module=shell --handler=main --action=main --id=1 --param="some value"
      * </code></pre>
      *
-     * @param array $arguments 
-     * @return array 
+     * @param array $arguments
+     * @return array
      */
     public function handle($arguments = null) {}
 

@@ -15,21 +15,21 @@ interface DriverInterface
 {
 
     /**
-     * @param mixed $defaultValue 
+     * @param mixed $defaultValue
      */
     public function getUser($defaultValue = null);
 
     /**
-     * @param mixed $user 
-     * @param string $role 
+     * @param mixed $user
+     * @param string $role
      */
     public function hasRole($user, $role = "login");
 
     /**
-     * @param mixed $username 
-     * @param string $password 
-     * @param bool $remember 
-     * @param bool $force 
+     * @param mixed $username
+     * @param string $password
+     * @param bool $remember
+     * @param bool $force
      */
     public function login($username, $password, $remember = false, $force = false);
 

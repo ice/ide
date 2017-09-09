@@ -10,16 +10,20 @@ namespace Ice\Validation\Validator;
  * @author      Ice Team
  * @copyright   (c) 2014-2016 Ice Team
  * @license     http://iceframework.org/license
+ *
  * <pre><code>
- * $validation = new Ice\Validation();
- * $validation->rules([
- * 'email' => 'required|email',
- * 'repeatEmail' => 'same:email'
- * ]);
- * $valid = $validation->validate($_POST);
- * if (!$valid) {
- * $messages = $validation->getMessages();
- * }
+ *  $validation = new Ice\Validation();
+ *
+ *  $validation->rules([
+ *      'email' => 'required|email',
+ *      'repeatEmail' => 'same:email'
+ *  ]);
+ *
+ *  $valid = $validation->validate($_POST);
+ *
+ *  if (!$valid) {
+ *      $messages = $validation->getMessages();
+ *  }
  * </code></pre>
  */
 class Same extends \Ice\Validation\Validator
@@ -29,9 +33,9 @@ class Same extends \Ice\Validation\Validator
      * Validate the validator
      * Options: other (0), allowEmpty (1), label, labelOther, message
      *
-     * @param Validation $validation 
-     * @param string $field 
-     * @return boolean 
+     * @param Validation $validation
+     * @param string $field
+     * @return bool
      */
     public function validate(\Ice\Validation $validation, $field) {}
 

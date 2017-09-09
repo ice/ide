@@ -16,14 +16,14 @@ abstract class Regex implements \Ice\Mvc\Route\DataGenerator\DataGeneratorInterf
     protected abstract function getApproxChunkSize();
 
     /**
-     * @param mixed $regexToRoutesMap 
+     * @param mixed $regexToRoutesMap
      */
     protected abstract function processChunk($regexToRoutesMap);
 
     /**
-     * @param mixed $httpMethod 
-     * @param mixed $routeData 
-     * @param mixed $handler 
+     * @param mixed $httpMethod
+     * @param mixed $routeData
+     * @param mixed $handler
      */
     public function addRoute($httpMethod, $routeData, $handler) {}
 
@@ -34,31 +34,31 @@ abstract class Regex implements \Ice\Mvc\Route\DataGenerator\DataGeneratorInterf
     protected function generateVariableRouteData() {}
 
     /**
-     * @param mixed $count 
+     * @param mixed $count
      */
     protected function computeChunkSize($count) {}
 
     /**
-     * @param mixed $routeData 
+     * @param mixed $routeData
      */
     protected function isStaticRoute($routeData) {}
 
     /**
-     * @param mixed $httpMethod 
-     * @param mixed $routeData 
-     * @param mixed $handler 
+     * @param mixed $httpMethod
+     * @param mixed $routeData
+     * @param mixed $handler
      */
     protected function addStaticRoute($httpMethod, $routeData, $handler) {}
 
     /**
-     * @param mixed $httpMethod 
-     * @param mixed $routeData 
-     * @param mixed $handler 
+     * @param mixed $httpMethod
+     * @param mixed $routeData
+     * @param mixed $handler
      */
     protected function addVariableRoute($httpMethod, $routeData, $handler) {}
 
     /**
-     * @param mixed $routeData 
+     * @param mixed $routeData
      */
     protected function buildRegexForRoute($routeData) {}
 

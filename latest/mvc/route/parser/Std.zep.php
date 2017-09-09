@@ -4,6 +4,7 @@ namespace Ice\Mvc\Route\Parser;
 
 /**
  * Parses route strings of the following form:
+ *
  * "/user/{name}[/{id:[0-9]+}]"
  */
 class Std implements \Ice\Mvc\Route\Parser\ParserInterface
@@ -16,14 +17,14 @@ class Std implements \Ice\Mvc\Route\Parser\ParserInterface
 
 
     /**
-     * @param mixed $route 
+     * @param mixed $route
      */
     public function parse($route) {}
 
     /**
      * Parses a route string that does not contain optional segments.
      *
-     * @param mixed $route 
+     * @param mixed $route
      */
     private function parsePlaceholders($route) {}
 

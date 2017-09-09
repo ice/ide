@@ -67,12 +67,12 @@ abstract class Model extends \Ice\Arr implements \Serializable
     public function getDb() {}
 
     /**
-     * @param mixed $from 
+     * @param mixed $from
      */
     public function setFrom($from) {}
 
     /**
-     * @param mixed $primary 
+     * @param mixed $primary
      */
     public function setPrimary($primary) {}
 
@@ -80,12 +80,12 @@ abstract class Model extends \Ice\Arr implements \Serializable
     public function getPrimary() {}
 
     /**
-     * @param mixed $autoincrement 
+     * @param mixed $autoincrement
      */
     public function setAutoincrement($autoincrement) {}
 
     /**
-     * @param mixed $filters 
+     * @param mixed $filters
      */
     public function setFilters($filters) {}
 
@@ -93,7 +93,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
     public function getFilters() {}
 
     /**
-     * @param mixed $fields 
+     * @param mixed $fields
      */
     public function setFields($fields) {}
 
@@ -101,7 +101,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
     public function getFields() {}
 
     /**
-     * @param mixed $validation 
+     * @param mixed $validation
      */
     public function setValidation($validation) {}
 
@@ -112,7 +112,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
     public function getRelations() {}
 
     /**
-     * @param mixed $labels 
+     * @param mixed $labels
      */
     public function setLabels($labels) {}
 
@@ -120,85 +120,88 @@ abstract class Model extends \Ice\Arr implements \Serializable
     public function getMessages() {}
 
     /**
-     * @param mixed $messages 
+     * @param mixed $messages
      */
     public function setMessages($messages) {}
 
     /**
      * Model constructor. Fetch Di and set it as a property.
      *
-     * @param mixed $filters 
-     * @param array $data 
+     * @param mixed $filters
+     * @param array $data
      */
     public function __construct($filters = null, array $data = array()) {}
 
     /**
      * Get the id.
      *
-     * @return mixed 
+     * @return mixed
      */
     public function getId() {}
 
     /**
      * Get the id key depending on db driver.
      *
-     * @return string 
+     * @return string
      */
     public function getIdKey() {}
 
     /**
      * Get the date time object.
      *
-     * @param mixed $key 
-     * @param boolean $model 
-     * @return object 
+     * @param mixed $key
+     * @param boolean $model
+     * @return object
      */
     public function getDateTime($key, $model = false) {}
 
     /**
      * Load one result to the current object.
      *
-     * @param mixed $filters 
-     * @param array $options 
-     * @return this|false 
+     * @param mixed $filters
+     * @param array $options
+     * @return this|false
      */
     public function loadOne($filters, array $options = array()) {}
 
     /**
      * Load results to the current object.
      *
-     * @param mixed $filters 
-     * @param array $options 
-     * @return object 
+     * @param mixed $filters
+     * @param array $options
+     * @return object
      */
     public function load($filters, array $options = array()) {}
 
     /**
      * Allows to query one record that match the specified conditions.
+     *
      * <pre><code>
-     * //Get the user from users by id 2
-     * $user = Users::findOne(2);
-     * echo "The user name is ", $user->username;
-     * //Get one active user with age > 18
-     * $user = Users::findOne(array("status" => 1, "age" => array(">" => 18)));
+     *  //Get the user from users by id 2
+     *  $user = Users::findOne(2);
+     *  echo "The user name is ", $user->username;
+     *
+     *  //Get one active user with age > 18
+     *  $user = Users::findOne(array("status" => 1, "age" => array(">" => 18)));
      * </code></pre>
      *
-     * @param array $filters 
-     * @param array $options 
-     * @return this|false 
+     * @param array $filters
+     * @param array $options
+     * @return this|false
      */
     public static function findOne($filters = null, array $options = array()) {}
 
     /**
      * Allows to query all records that match the specified conditions.
+     *
      * <pre><code>
-     * //Get all active users with age > 18
-     * $user = Users::find(array("status" => 1, "age" => array(">" => 18)));
+     *  //Get all active users with age > 18
+     *  $user = Users::find(array("status" => 1, "age" => array(">" => 18)));
      * </code></pre>
      *
-     * @param array $filters 
-     * @param array $options 
-     * @return object 
+     * @param array $filters
+     * @param array $options
+     * @return object
      */
     public static function find($filters = null, array $options = array()) {}
 
@@ -207,18 +210,19 @@ abstract class Model extends \Ice\Arr implements \Serializable
      *
      * @param mixed $fields Fields to save or valid fields
      * @param boolean $primary Keep primary key
-     * @return array 
+     * @return array
      */
     protected function fields($fields = array(), $primary = true) {}
 
     /**
      * Insert a new object to the database.
+     *
      * <pre><code>
-     * //Creating a new user
-     * $user = new Users();
-     * $user->lastname = "Kowalski";
-     * $user->status = 1;
-     * $user->create();
+     *  //Creating a new user
+     *  $user = new Users();
+     *  $user->lastname = "Kowalski";
+     *  $user->status = 1;
+     *  $user->create();
      * </code></pre>
      *
      * @param array $fields Fields to save or valid fields
@@ -228,11 +232,12 @@ abstract class Model extends \Ice\Arr implements \Serializable
 
     /**
      * Update an existing object in the database.
+     *
      * <pre><code>
-     * //Updating a user last name
-     * $user = Users::findOne(100);
-     * $user->lastname = "Nowak";
-     * $user->update();
+     *  //Updating a user last name
+     *  $user = Users::findOne(100);
+     *  $user->lastname = "Nowak";
+     *  $user->update();
      * </code></pre>
      *
      * @param array $fields Fields to save or valid fields
@@ -242,174 +247,186 @@ abstract class Model extends \Ice\Arr implements \Serializable
 
     /**
      * Inserts or updates a model instance. Returning true on success or false otherwise.
+     *
      * <pre><code>
-     * //Creating a new user
-     * $user = new Users();
-     * $user->lastname = "Kowalski";
-     * $user->status = 1;
-     * $user->save();
-     * //Updating a user last name
-     * $user = Users::findOne(100);
-     * $user->lastname = "Nowak";
-     * $user->save();
+     *  //Creating a new user
+     *  $user = new Users();
+     *  $user->lastname = "Kowalski";
+     *  $user->status = 1;
+     *  $user->save();
+     *
+     *  //Updating a user last name
+     *  $user = Users::findOne(100);
+     *  $user->lastname = "Nowak";
+     *  $user->save();
      * </code></pre>
      *
-     * @param array $fields 
-     * @param Validation $extra 
-     * @return boolean 
+     * @param array $fields
+     * @param Validation $extra
+     * @return boolean
      */
     public function save($fields = array(), \Ice\Validation $extra = null) {}
 
     /**
      * Removes a model instance(s). Returning true on success or false otherwise.
+     *
      * <pre><code>
-     * //Remove current user
-     * $user = Users::findOne(100);
-     * $user->delete();
-     * //Remove all unactive users
-     * $status = (new Users())->remove(["status" => 0]);
+     *  //Remove current user
+     *  $user = Users::findOne(100);
+     *  $user->delete();
+     *
+     *  //Remove all unactive users
+     *  $status = (new Users())->remove(["status" => 0]);
      * </code></pre>
      *
-     * @param mixed $filters 
-     * @param filters  
-     * @return boolean 
+     * @param mixed $filters
+     * @param filters
+     * @return boolean
      */
     public function remove($filters = array()) {}
 
     /**
      * Get the record if exist.
      *
-     * @param mixed $filters 
-     * @return Model|false 
+     * @param mixed $filters
+     * @return Model|false
      */
     public function exists($filters = array()) {}
 
     /**
      * Get the last Db error.
      *
-     * @return mixed 
+     * @return mixed
      */
     public function getError() {}
 
     /**
      * Setup a relation reverse 1-1 between two models.
+     *
      * <pre><code>
-     * class Posts extends Model
-     * {
-     * public function initialize()
-     * {
-     * //Relation with user, be able to get post's author
-     * $this->belongsTo('user_id', __NAMESPACE__ . '\Users', 'id', ['alias' => 'User']);
-     * }
-     * }
-     * //Get post's author
-     * $post = Posts::findOne(100);
-     * echo $post->getUser()->username;
+     *  class Posts extends Model
+     *  {
+     *      public function initialize()
+     *      {
+     *          //Relation with user, be able to get post's author
+     *          $this->belongsTo('user_id', __NAMESPACE__ . '\Users', 'id', ['alias' => 'User']);
+     *      }
+     *  }
+     *
+     *  //Get post's author
+     *  $post = Posts::findOne(100);
+     *  echo $post->getUser()->username;
      * </code></pre>
      *
-     * @param string $field 
-     * @param string $referenceModel 
-     * @param string $referencedField 
-     * @param array $options 
+     * @param string $field
+     * @param string $referenceModel
+     * @param string $referencedField
+     * @param array $options
      */
     public function belongsTo($field, $referenceModel, $referencedField, array $options = array()) {}
 
     /**
      * Setup a 1-1 relation between two models
+     *
      * <pre><code>
-     * class Users extends Model
-     * {
-     * public function initialize()
-     * {
-     * $this->hasOne('id', __NAMESPACE__ . '\UsersDescriptions', 'user_id', ['alias' => 'Description']);
-     * }
-     * }
+     *  class Users extends Model
+     *  {
+     *      public function initialize()
+     *      {
+     *          $this->hasOne('id', __NAMESPACE__ . '\UsersDescriptions', 'user_id', ['alias' => 'Description']);
+     *      }
+     *  }
      * </code></pre>
      *
-     * @param string $field 
-     * @param string $referenceModel 
-     * @param string $referencedField 
-     * @param array $options 
+     * @param string $field
+     * @param string $referenceModel
+     * @param string $referencedField
+     * @param array $options
      */
     public function hasOne($field, $referenceModel, $referencedField, array $options = array()) {}
 
     /**
      * Setup a relation 1-n between two models.
+     *
      * <pre><code>
-     * class Users extends Model
-     * {
-     * public function initialize()
-     * {
-     * //Relation with posts, be able to get user's posts
-     * $this->hasMany('id', __NAMESPACE__ . '\Posts', 'user_id', ['alias' => 'Posts']);
-     * }
-     * }
-     * //Get user's posts
-     * $user = Users::findOne(2);
-     * foreach ($user->getPosts() as $post) {
-     * echo $post->title;
-     * }
+     *  class Users extends Model
+     *  {
+     *      public function initialize()
+     *      {
+     *          //Relation with posts, be able to get user's posts
+     *          $this->hasMany('id', __NAMESPACE__ . '\Posts', 'user_id', ['alias' => 'Posts']);
+     *      }
+     *  }
+     *
+     *  //Get user's posts
+     *  $user = Users::findOne(2);
+     *  foreach ($user->getPosts() as $post) {
+     *      echo $post->title;
+     *  }
      * </code></pre>
      *
-     * @param string $field 
-     * @param string $referenceModel 
-     * @param string $referencedField 
-     * @param array $options 
+     * @param string $field
+     * @param string $referenceModel
+     * @param string $referencedField
+     * @param array $options
      */
     public function hasMany($field, $referenceModel, $referencedField, array $options = array()) {}
 
     /**
      * Get related models.
      *
-     * @param string $alias 
-     * @param array $filters 
-     * @param array $options 
+     * @param string $alias
+     * @param array $filters
+     * @param array $options
      */
     public function getRelated($alias, array $filters = array(), array $options = array()) {}
 
     /**
      * Get rules for validation.
+     *
      * <pre><code>
-     * // Get rules for one field
-     * $this->getRules('password');
-     * // Get rules for multiple fields
-     * $this->getRules(['fullName', 'about']);
-     * // Get all rules
-     * $this->getRules();
+     *  // Get rules for one field
+     *  $this->getRules('password');
+     *
+     *  // Get rules for multiple fields
+     *  $this->getRules(['fullName', 'about']);
+     *
+     *  // Get all rules
+     *  $this->getRules();
      * </code></pre>
      *
-     * @param mixed $fields 
-     * @return mixed 
+     * @param mixed $fields
+     * @return mixed
      */
     public function getRules($fields = null) {}
 
     /**
      * Set rules for validation.
      *
-     * @param array $rules 
-     * @param boolean $merge 
+     * @param array $rules
+     * @param boolean $merge
      */
     public function setRules(array $rules = array(), $merge = true) {}
 
     /**
      * Serialize the model's data.
      *
-     * @return string 
+     * @return string
      */
     public function serialize() {}
 
     /**
      * Unserialize and set the data.
      *
-     * @param string $data 
+     * @param string $data
      */
     public function unserialize($data) {}
 
     /**
      * Magic call to get related models.
      *
-     * @param string $method 
-     * @param mixed $arguments 
+     * @param string $method
+     * @param mixed $arguments
      */
     public function __call($method, $arguments = null) {}
 

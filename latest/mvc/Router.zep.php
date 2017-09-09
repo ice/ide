@@ -71,7 +71,7 @@ class Router
     public function getDefaultModule() {}
 
     /**
-     * @param mixed $defaultModule 
+     * @param mixed $defaultModule
      */
     public function setDefaultModule($defaultModule) {}
 
@@ -79,7 +79,7 @@ class Router
     public function getDefaultHandler() {}
 
     /**
-     * @param mixed $defaultHandler 
+     * @param mixed $defaultHandler
      */
     public function setDefaultHandler($defaultHandler) {}
 
@@ -87,7 +87,7 @@ class Router
     public function getDefaultAction() {}
 
     /**
-     * @param mixed $defaultAction 
+     * @param mixed $defaultAction
      */
     public function setDefaultAction($defaultAction) {}
 
@@ -107,7 +107,7 @@ class Router
     public function getParams() {}
 
     /**
-     * @param mixed $silent 
+     * @param mixed $silent
      */
     public function setSilent($silent) {}
 
@@ -118,7 +118,7 @@ class Router
     public function getRoutes() {}
 
     /**
-     * @param mixed $routes 
+     * @param mixed $routes
      */
     public function setRoutes($routes) {}
 
@@ -126,7 +126,7 @@ class Router
     public function getCollector() {}
 
     /**
-     * @param mixed $collector 
+     * @param mixed $collector
      */
     public function setCollector($collector) {}
 
@@ -134,22 +134,22 @@ class Router
     public function getDispatcher() {}
 
     /**
-     * @param mixed $dispatcher 
+     * @param mixed $dispatcher
      */
     public function setDispatcher($dispatcher) {}
 
     /**
      * Set defaults values
      *
-     * @param array $defaults 
+     * @param array $defaults
      */
     public function setDefaults(array $defaults) {}
 
     /**
      * Set options.
      *
-     * @param array $options 
-     * @return object 
+     * @param array $options
+     * @return object
      */
     public function setOptions(array $options) {}
 
@@ -161,9 +161,9 @@ class Router
     /**
      * Handles routing information received from the FastRoute engine.
      *
-     * @param mixed $method 
-     * @param string $uri 
-     * @return mixed 
+     * @param mixed $method
+     * @param string $uri
+     * @return mixed
      */
     public function handle($method = null, $uri = null) {}
 

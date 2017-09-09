@@ -33,7 +33,7 @@ abstract class Driver
      * Loads services and configuration options.
      *
      * @param array $options Config options
-     * @return void 
+     * @return void
      */
     public function __construct(array $options = array()) {}
 
@@ -42,7 +42,7 @@ abstract class Driver
      *
      * @param string $password Password plain text
      * @param string $hash Hash version of password
-     * @return boolean 
+     * @return bool
      */
     public function checkHash($password, $hash) {}
 
@@ -51,7 +51,7 @@ abstract class Driver
      *
      * @param mixed $user Complete the login for this user
      * @param array $roles User's roles
-     * @return void 
+     * @return void
      */
     protected function completeLogin($user, array $roles = array()) {}
 
@@ -60,7 +60,7 @@ abstract class Driver
      *
      * @param string $key The option key
      * @param mixed $defaultValue The value to return if option key does not exist
-     * @return mixed 
+     * @return mixed
      */
     public function getOption($key, $defaultValue = null) {}
 
@@ -68,7 +68,7 @@ abstract class Driver
      * Gets the currently logged in user from the session. Returns NULL if no user is currently logged in.
      *
      * @param mixed $defaultValue Default value to return if the user is currently not logged in.
-     * @return mixed 
+     * @return mixed
      */
     public function getUser($defaultValue = null) {}
 
@@ -76,7 +76,7 @@ abstract class Driver
      * Perform a hmac hash, using the configured method.
      *
      * @param string $password String to hash
-     * @return string 
+     * @return string
      */
     public function hash($password) {}
 
@@ -84,7 +84,7 @@ abstract class Driver
      * Check if there is an active session. Optionally allows checking for a specific role.
      *
      * @param string $role Role name
-     * @return mixed 
+     * @return mixed
      */
     public function loggedIn($role = null) {}
 
@@ -93,7 +93,7 @@ abstract class Driver
      *
      * @param boolean $destroy Completely destroy the session
      * @param boolean $logoutAll Remove all tokens for user
-     * @return boolean 
+     * @return bool
      */
     public function logout($destroy = false, $logoutAll = false) {}
 

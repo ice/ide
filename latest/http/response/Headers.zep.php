@@ -17,7 +17,7 @@ class Headers extends \Ice\Arr implements \Ice\Http\Response\HeadersInterface
     /**
      * Sends the headers to the client.
      *
-     * @return boolean 
+     * @return bool
      */
     public function send() {}
 

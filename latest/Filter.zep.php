@@ -20,26 +20,26 @@ class Filter
     /**
      * Adds a user-defined filter.
      *
-     * @param string $name 
-     * @param callable $body 
+     * @param string $name
+     * @param callable $body
      */
     public function add($name, $body) {}
 
     /**
      * Sanitizes a value with a specified single or set of filters.
      *
-     * @param mixed $value 
-     * @param mixed $filters 
-     * @return mixed 
+     * @param mixed $value
+     * @param mixed $filters
+     * @return mixed
      */
     public function sanitize($value, $filters) {}
 
     /**
      * Internal sanitize.
      *
-     * @param mixed $value 
-     * @param string $filter 
-     * @return mixed 
+     * @param mixed $value
+     * @param string $filter
+     * @return mixed
      */
     protected function doSanitize($value, $filter) {}
 

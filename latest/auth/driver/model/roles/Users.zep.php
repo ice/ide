@@ -20,7 +20,7 @@ class Users extends \Ice\Mvc\Model
     /**
      * Initialize roles-users relations.
      *
-     * @return void 
+     * @return void
      */
     public function initialize() {}
 

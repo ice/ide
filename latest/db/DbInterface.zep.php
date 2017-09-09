@@ -15,45 +15,45 @@ interface DbInterface
 {
 
     /**
-     * @param string $from 
-     * @param mixed $filters 
-     * @param array $fields 
-     * @param array $options 
+     * @param string $from
+     * @param mixed $filters
+     * @param array $fields
+     * @param array $options
      */
     public function findOne($from, $filters = array(), array $fields = array(), array $options = array());
 
     /**
-     * @param string $from 
-     * @param mixed $filters 
-     * @param array $fields 
-     * @param array $options 
+     * @param string $from
+     * @param mixed $filters
+     * @param array $fields
+     * @param array $options
      */
     public function find($from, $filters = array(), array $fields = array(), array $options = array());
 
     /**
-     * @param string $from 
-     * @param mixed $filters 
-     * @param array $fields 
-     * @param array $options 
+     * @param string $from
+     * @param mixed $filters
+     * @param array $fields
+     * @param array $options
      */
     public function select($from, $filters = array(), array $fields = array(), array $options = array());
 
     /**
-     * @param string $from 
-     * @param array $fields 
+     * @param string $from
+     * @param array $fields
      */
     public function insert($from, array $fields = array());
 
     /**
-     * @param string $from 
-     * @param mixed $filters 
-     * @param array $fields 
+     * @param string $from
+     * @param mixed $filters
+     * @param array $fields
      */
     public function update($from, $filters = array(), array $fields = array());
 
     /**
-     * @param string $from 
-     * @param mixed $filters 
+     * @param string $from
+     * @param mixed $filters
      */
     public function remove($from, $filters = array());
 

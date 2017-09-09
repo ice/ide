@@ -36,7 +36,7 @@ class Response implements \Ice\Http\Response\ResponseInterface
     public function getProtocolVersion() {}
 
     /**
-     * @param mixed $protocolVersion 
+     * @param mixed $protocolVersion
      */
     public function setProtocolVersion($protocolVersion) {}
 
@@ -44,7 +44,7 @@ class Response implements \Ice\Http\Response\ResponseInterface
     public function getStatus() {}
 
     /**
-     * @param mixed $status 
+     * @param mixed $status
      */
     public function setStatus($status) {}
 
@@ -52,7 +52,7 @@ class Response implements \Ice\Http\Response\ResponseInterface
     public function getLoops() {}
 
     /**
-     * @param mixed $loops 
+     * @param mixed $loops
      */
     public function setLoops($loops) {}
 
@@ -63,7 +63,7 @@ class Response implements \Ice\Http\Response\ResponseInterface
     public function getBody() {}
 
     /**
-     * @param mixed $body 
+     * @param mixed $body
      */
     public function setBody($body) {}
 
@@ -78,54 +78,54 @@ class Response implements \Ice\Http\Response\ResponseInterface
     /**
      * Get HTTP headers.
      *
-     * @return array 
+     * @return array
      */
     public function getHeaders() {}
 
     /**
      * Check whether request have a given header.
      *
-     * @param string $name 
-     * @return boolean 
+     * @param string $name
+     * @return bool
      */
     public function hasHeader($name) {}
 
     /**
      * Get header value.
      *
-     * @param string $name 
-     * @return string 
+     * @param string $name
+     * @return string
      */
     public function getHeader($name) {}
 
     /**
      * Set header value.
      *
-     * @param string $name 
-     * @param string $value 
+     * @param string $name
+     * @param string $value
      */
     public function setHeader($name, $value) {}
 
     /**
      * Set multiple header values.
      *
-     * @param array $headers 
+     * @param array $headers
      */
     public function setHeaders(array $headers) {}
 
     /**
      * Remove header by index name.
      *
-     * @param string $name 
+     * @param string $name
      */
     public function removeHeader($name) {}
 
     /**
      * Set body content.
      *
-     * @param string $contet 
-     * @param string $content 
-     * @return object 
+     * @param string $contet
+     * @param string $content
+     * @return object
      */
     public function setContent($contet) {}
 
@@ -133,15 +133,15 @@ class Response implements \Ice\Http\Response\ResponseInterface
      * Finalize response for delivery to client.
      * Apply final preparations to the resposne object so that it is suitable for delivery to the client.
      *
-     * @param RequestInterface $request 
-     * @return Response 
+     * @param RequestInterface $request
+     * @return Response
      */
     public function finalize(\Ice\Http\Request\RequestInterface $request) {}
 
     /**
      * Send HTTP response headers.
      *
-     * @return Response 
+     * @return Response
      */
     public function send() {}
 
@@ -151,78 +151,78 @@ class Response implements \Ice\Http\Response\ResponseInterface
      *
      * @param string $location The redirect destination
      * @param int $status The redirect HTTP status code
-     * @param bool $external 
-     * @return object 
+     * @param bool $external
+     * @return object
      */
     public function redirect($location = null, $status = 302, $external = false) {}
 
     /**
      * Check whether status is for Empty.
      *
-     * @return boolean 
+     * @return bool
      */
     public function isEmpty() {}
 
     /**
      * Check whether status is for Informational.
      *
-     * @return boolean 
+     * @return bool
      */
     public function isInformational() {}
 
     /**
      * Check whether status is for OK.
      *
-     * @return boolean 
+     * @return bool
      */
     public function isOk() {}
 
     /**
      * Check whether status is for Successful.
      *
-     * @return boolean 
+     * @return bool
      */
     public function isSuccessful() {}
 
     /**
      * Check whether status is for Redirect.
      *
-     * @return boolean 
+     * @return bool
      */
     public function isRedirect() {}
 
     /**
      * Check whether status is for Redirection.
      *
-     * @return boolean 
+     * @return bool
      */
     public function isRedirection() {}
 
     /**
      * Check whether status is for Forbidden.
      *
-     * @return boolean 
+     * @return bool
      */
     public function isForbidden() {}
 
     /**
      * Check whether status is for Not Found.
      *
-     * @return boolean 
+     * @return bool
      */
     public function isNotFound() {}
 
     /**
      * Check whether status is for Client error.
      *
-     * @return boolean 
+     * @return bool
      */
     public function isClientError() {}
 
     /**
      * Check whether status is for Server Error.
      *
-     * @return boolean 
+     * @return bool
      */
     public function isServerError() {}
 
@@ -230,21 +230,21 @@ class Response implements \Ice\Http\Response\ResponseInterface
      * Get message for Response codes.
      *
      * @param int $code Status code
-     * @return string 
+     * @return string
      */
     public function getMessage($code = 200) {}
 
     /**
      * Get all messages.
      *
-     * @return array 
+     * @return array
      */
     public function getMessages() {}
 
     /**
      * Magic toString, convert response to string.
      *
-     * @return string 
+     * @return string
      */
     public function __toString() {}
 

@@ -42,7 +42,7 @@ class Cookies
     public function getSalt() {}
 
     /**
-     * @param mixed $salt 
+     * @param mixed $salt
      */
     public function setSalt($salt) {}
 
@@ -50,7 +50,7 @@ class Cookies
     public function getExpiration() {}
 
     /**
-     * @param mixed $expiration 
+     * @param mixed $expiration
      */
     public function setExpiration($expiration) {}
 
@@ -58,7 +58,7 @@ class Cookies
     public function getPath() {}
 
     /**
-     * @param mixed $path 
+     * @param mixed $path
      */
     public function setPath($path) {}
 
@@ -66,7 +66,7 @@ class Cookies
     public function getDomain() {}
 
     /**
-     * @param mixed $domain 
+     * @param mixed $domain
      */
     public function setDomain($domain) {}
 
@@ -74,7 +74,7 @@ class Cookies
     public function getSecure() {}
 
     /**
-     * @param mixed $secure 
+     * @param mixed $secure
      */
     public function setSecure($secure) {}
 
@@ -82,7 +82,7 @@ class Cookies
     public function getHttpOnly() {}
 
     /**
-     * @param mixed $httpOnly 
+     * @param mixed $httpOnly
      */
     public function setHttpOnly($httpOnly) {}
 
@@ -90,12 +90,12 @@ class Cookies
     public function getEncrypt() {}
 
     /**
-     * @param mixed $encrypt 
+     * @param mixed $encrypt
      */
     public function setEncrypt($encrypt) {}
 
     /**
-     * @param string $salt 
+     * @param string $salt
      */
     public function __construct($salt = null) {}
 
@@ -103,7 +103,7 @@ class Cookies
      * Does cookie contain a key
      *
      * @param string $key The cookie key
-     * @return boolean 
+     * @return bool
      */
     public function has($key) {}
 
@@ -124,7 +124,7 @@ class Cookies
      * @param string $key Name of cookie
      * @param string $value Value of cookie
      * @param integer $lifetime Expired time in seconds
-     * @return boolean 
+     * @return boolean
      */
     public function set($key, $value, $lifetime = 0) {}
 
@@ -132,7 +132,7 @@ class Cookies
      * Deletes a cookie by making the value NULL and expiring it.
      *
      * @param string $key cookie name
-     * @return boolean 
+     * @return bool
      */
     public function remove($key) {}
 
@@ -142,7 +142,7 @@ class Cookies
      * @throws Exception if salt is not configured
      * @param string $name Name of cookie
      * @param string $value Value of cookie
-     * @return string 
+     * @return string
      */
     public function salt($name, $value) {}
 
@@ -151,14 +151,14 @@ class Cookies
      * have been sent.
      *
      * @see setcookie
-     * @param string $name 
-     * @param string $value 
-     * @param integer $expire 
-     * @param string $path 
-     * @param string $domain 
-     * @param boolean $secure 
-     * @param boolean $httpOnly 
-     * @return bool 
+     * @param string $name
+     * @param string $value
+     * @param integer $expire
+     * @param string $path
+     * @param string $domain
+     * @param boolean $secure
+     * @param boolean $httpOnly
+     * @return bool
      */
     protected function setcookie($name, $value, $expire, $path, $domain, $secure, $httpOnly) {}
 

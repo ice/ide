@@ -21,48 +21,48 @@ abstract class Engine extends \Ice\Di\Access implements \Ice\Mvc\View\Engine\Eng
 
 
     /**
-     * @param mixed $options 
+     * @param mixed $options
      */
     public function setOptions($options) {}
 
     /**
      * Engine constructor. Set the view and di object.
      *
-     * @param mixed $view 
-     * @param mixed $di 
+     * @param \Ice\Mvc\View\ViewInterface $view
+     * @param \Ice\Di $di
      */
     public function __construct(\Ice\Mvc\View\ViewInterface $view, \Ice\Di $di = null) {}
 
     /**
      * Get the view content.
      *
-     * @return string 
+     * @return string
      */
     public function getContent() {}
 
     /**
      * Load some view.
      *
-     * @param string $path 
-     * @param array $data 
-     * @return string 
+     * @param string $path
+     * @param array $data
+     * @return string
      */
     public function load($path, array $data = array()) {}
 
     /**
      * Load some partial view.
      *
-     * @param string $path 
-     * @param array $data 
-     * @return string 
+     * @param string $path
+     * @param array $data
+     * @return string
      */
     public function partial($path, array $data = array()) {}
 
     /**
      * Render some view.
      *
-     * @param string $path 
-     * @param array $data 
+     * @param string $path
+     * @param array $data
      */
     public abstract function render($path, array $data = array());
 

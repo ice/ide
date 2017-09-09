@@ -24,7 +24,7 @@ class App extends \Ice\Di\Access
     public function getAutoRender() {}
 
     /**
-     * @param mixed $autoRender 
+     * @param mixed $autoRender
      */
     public function setAutoRender($autoRender) {}
 
@@ -32,24 +32,24 @@ class App extends \Ice\Di\Access
     public function getModules() {}
 
     /**
-     * @param mixed $modules 
+     * @param mixed $modules
      */
     public function setModules($modules) {}
 
     /**
      * App constructor
      *
-     * @param mixed $di 
-     * @param Di $$di 
+     * @param \Ice\Di $di
+     * @param Di $$di
      */
     public function __construct(\Ice\Di $di = null) {}
 
     /**
      * Handles a MVC request.
      *
-     * @param string $method 
-     * @param string $uri 
-     * @return ResponseInterface|boolean 
+     * @param string $method
+     * @param string $uri
+     * @return bool|\Ice\Http\Response\ResponseInterface
      */
     public function handle($method = null, $uri = null) {}
 

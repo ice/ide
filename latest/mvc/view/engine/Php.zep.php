@@ -17,9 +17,9 @@ class Php extends \Ice\Mvc\View\Engine
     /**
      * Render the PHP file.
      *
-     * @param string $path 
-     * @param array $data 
-     * @return string 
+     * @param string $path
+     * @param array $data
+     * @return string
      */
     public function render($path, array $data = array()) {}
 

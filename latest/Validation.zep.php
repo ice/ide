@@ -12,18 +12,22 @@ namespace Ice;
  * @license     http://iceframework.org/license
  * @uses        Ice\Filter (if service is available)
  * @uses        Ice\I18n (if service is available)
+ *
  * <pre><code>
- * $validation = new Ice\Validation();
- * $validation->rules([
- * 'fullName' => 'required',
- * 'email' => 'required|email',
- * 'repeatEmail' => 'same:email',
- * 'about' => 'required|length:10,5000',
- * ]);
- * $valid = $validation->validate($_POST);
- * if (!$valid) {
- * $messages = $validation->getMessages();
- * }
+ *  $validation = new Ice\Validation();
+ *
+ *  $validation->rules([
+ *      'fullName' => 'required',
+ *      'email' => 'required|email',
+ *      'repeatEmail' => 'same:email',
+ *      'about' => 'required|length:10,5000',
+ *  ]);
+ *
+ *  $valid = $validation->validate($_POST);
+ *
+ *  if (!$valid) {
+ *      $messages = $validation->getMessages();
+ *  }
  * </code></pre>
  */
 class Validation
@@ -72,7 +76,7 @@ class Validation
     public function getData() {}
 
     /**
-     * @param mixed $rules 
+     * @param mixed $rules
      */
     public function setRules($rules) {}
 
@@ -80,22 +84,22 @@ class Validation
     public function getRules() {}
 
     /**
-     * @param mixed $filters 
+     * @param mixed $filters
      */
     public function setFilters($filters) {}
 
     /**
-     * @param mixed $labels 
+     * @param mixed $labels
      */
     public function setLabels($labels) {}
 
     /**
-     * @param mixed $aliases 
+     * @param mixed $aliases
      */
     public function setAliases($aliases) {}
 
     /**
-     * @param mixed $translate 
+     * @param mixed $translate
      */
     public function setTranslate($translate) {}
 
@@ -103,7 +107,7 @@ class Validation
     public function getTranslate() {}
 
     /**
-     * @param mixed $humanLabels 
+     * @param mixed $humanLabels
      */
     public function setHumanLabels($humanLabels) {}
 
@@ -117,53 +121,57 @@ class Validation
     /**
      * Resolve one rule.
      *
-     * @param string $alias 
-     * @param string $field 
-     * @param mixed $options 
-     * @return void 
+     * @param string $alias
+     * @param string $field
+     * @param mixed $options
+     * @return void
      */
     public function resolve($alias, $field, $options = null) {}
 
     /**
      * Add one rule.
+     *
      * <pre><code>
-     * $validation = new Ice\Validation();
-     * $validation->rule('email', 'required|email');
-     * $validation->rule('content', [
-     * 'length' => [
-     * 'max' => 1000,
-     * 'messageMin' => 'Too long!',
-     * 'label' => 'Desctiption'
-     * ]
-     * ]);
+     *  $validation = new Ice\Validation();
+     *
+     *  $validation->rule('email', 'required|email');
+     *  $validation->rule('content', [
+     *      'length' => [
+     *          'max' => 1000,
+     *          'messageMin' => 'Too long!',
+     *          'label' => 'Desctiption'
+     *      ]
+     *  ]);
      * </code></pre>
      *
-     * @param string $field 
-     * @param mixed $validators 
-     * @param mixed $options 
-     * @return void 
+     * @param string $field
+     * @param mixed $validators
+     * @param mixed $options
+     * @return void
      */
     public function rule($field, $validators, $options = null) {}
 
     /**
      * Add multiple rules at once.
+     *
      * <pre><code>
-     * $validation = new Ice\Validation();
-     * $validation->rules([
-     * 'username' => 'required|length:4,24|notIn:admin,user,root|unique:users',
-     * 'password'  => 'required|length:5,32',
-     * 'repeatPassword'  => 'same:password',
-     * 'email'  => 'email',
-     * 'status'  => 'required|digit|in:0,1,2',
-     * 'website'  => 'url',
-     * 'title'  => 'length:,100',
-     * 'age'  => 'required|between:18,21',
-     * ]);
+     *  $validation = new Ice\Validation();
+     *
+     *  $validation->rules([
+     *      'username' => 'required|length:4,24|notIn:admin,user,root|unique:users',
+     *      'password'  => 'required|length:5,32',
+     *      'repeatPassword'  => 'same:password',
+     *      'email'  => 'email',
+     *      'status'  => 'required|digit|in:0,1,2',
+     *      'website'  => 'url',
+     *      'title'  => 'length:,100',
+     *      'age'  => 'required|between:18,21',
+     *  ]);
      * </code></pre>
      *
-     * @param array $validators 
-     * @param boolean $merge 
-     * @return void 
+     * @param array $validators
+     * @param boolean $merge
+     * @return void
      */
     public function rules(array $validators, $merge = true) {}
 
@@ -172,14 +180,14 @@ class Validation
      *
      * @param array $data Data to validate
      * @param boolean $clear Clear messages before
-     * @return boolean 
+     * @return bool
      */
     public function validate(array $data = array(), $clear = true) {}
 
     /**
      * Check if validation passed.
      *
-     * @return boolean 
+     * @return bool
      */
     public function valid() {}
 
@@ -187,7 +195,7 @@ class Validation
      * Whether or not a value exists by field.
      *
      * @param string $field The data key
-     * @return boolean 
+     * @return bool
      */
     public function hasValue($field) {}
 
@@ -196,25 +204,28 @@ class Validation
      *
      * @param string $field The data key
      * @param boolean $filtered Get the filtered value or original
-     * @return mixed 
+     * @return mixed
      */
     public function getValue($field, $filtered = true) {}
 
     /**
      * Get the values by fields.
      * Values are automatically filtered out if filters have been setted.
+     *
      * <pre><code>
-     * // Get value for one field
-     * $validation->getValues('password');
-     * // Get values for multiple fields
-     * $validation->getValues(['fullName', 'about']);
-     * // Get all values
-     * $validation->getValues();
+     *  // Get value for one field
+     *  $validation->getValues('password');
+     *
+     *  // Get values for multiple fields
+     *  $validation->getValues(['fullName', 'about']);
+     *
+     *  // Get all values
+     *  $validation->getValues();
      * </code></pre>
      *
      * @param mixed $fields The data keys
      * @param boolean $filtered Get the filtered value or original
-     * @return mixed 
+     * @return mixed
      */
     public function getValues($fields = null, $filtered = true) {}
 
@@ -223,15 +234,15 @@ class Validation
      * Humanize a label if humanLabels attribute and filter service is available
      *
      * @param string $field The data key
-     * @return string 
+     * @return string
      */
     public function getLabel($field) {}
 
     /**
      * Set the default messages.
      *
-     * @param array $messages 
-     * @return void 
+     * @param array $messages
+     * @return void
      */
     public function setDefaultMessages(array $messages = array()) {}
 
@@ -239,23 +250,23 @@ class Validation
      * Get a default message for the type.
      *
      * @param string $type Type of message
-     * @return string 
+     * @return string
      */
     public function getDefaultMessage($type) {}
 
     /**
      * Add a message to the field.
      *
-     * @param string $field 
-     * @param string $message 
-     * @return void 
+     * @param string $field
+     * @param string $message
+     * @return void
      */
     public function addMessage($field, $message) {}
 
     /**
      * Get the validation's messages.
      *
-     * @return Arr 
+     * @return Arr
      */
     public function getMessages() {}
 

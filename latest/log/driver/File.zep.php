@@ -28,19 +28,19 @@ class File extends \Ice\Log\Driver
     /**
      * Logs with an arbitrary level.
      *
-     * @param mixed $level 
-     * @param string $message 
-     * @param array $context 
-     * @return void 
+     * @param mixed $level
+     * @param string $message
+     * @param array $context
+     * @return void
      */
     public function log($level, $message, array $context = array()) {}
 
     /**
      * Interpolates context values into the message placeholders.
      *
-     * @param string $message 
-     * @param array $context 
-     * @return string 
+     * @param string $message
+     * @param array $context
+     * @return string
      */
     protected function interpolate($message, array $context = array()) {}
 
