@@ -9,7 +9,7 @@ namespace Ice\Mvc;
  * @package     Ice/Db
  * @category    Component
  * @author      Ice Team
- * @copyright   (c) 2014-2016 Ice Team
+ * @copyright   (c) 2014-2018 Ice Team
  * @license     http://iceframework.org/license
  */
 abstract class Model extends \Ice\Arr implements \Serializable
@@ -28,6 +28,9 @@ abstract class Model extends \Ice\Arr implements \Serializable
 
 
     protected $db;
+
+
+    protected $service = "db";
 
 
     protected $from;

@@ -8,7 +8,7 @@ namespace Ice\Auth;
  * @package     Ice/Auth
  * @category    Library
  * @author      Ice Team
- * @copyright   (c) 2014-2016 Ice Team
+ * @copyright   (c) 2014-2018 Ice Team
  * @license     http://iceframework.org/license
  */
 class Social

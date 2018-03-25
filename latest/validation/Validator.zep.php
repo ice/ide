@@ -8,7 +8,7 @@ namespace Ice\Validation;
  * @package     Ice/Validation
  * @category    Security
  * @author      Ice Team
- * @copyright   (c) 2014-2016 Ice Team
+ * @copyright   (c) 2014-2018 Ice Team
  * @license     http://iceframework.org/license
  */
 abstract class Validator

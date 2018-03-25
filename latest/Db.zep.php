@@ -8,7 +8,7 @@ namespace Ice;
  * @package     Ice/Db
  * @category    Component
  * @author      Ice Team
- * @copyright   (c) 2014-2016 Ice Team
+ * @copyright   (c) 2014-2018 Ice Team
  * @license     http://iceframework.org/license
  */
 class Db
@@ -34,8 +34,9 @@ class Db
      * @param string $name
      * @param string $user
      * @param string $password
+     * @param array $options
      */
-    public function __construct($driver, $host = null, $port = null, $name = null, $user = null, $password = null) {}
+    public function __construct($driver, $host = null, $port = null, $name = null, $user = null, $password = null, array $options = array()) {}
 
     /**
      * Magic call, call driver's method.
