@@ -14,10 +14,10 @@ namespace Ice\Mvc;
 class Url
 {
 
-    protected $baseUri = "/";
+    protected $baseUri = '/';
 
 
-    protected $staticUri = "/";
+    protected $staticUri = '/';
 
 
 
@@ -42,7 +42,7 @@ class Url
      * @param string $uri
      * @return string
      */
-    public function getStatic($uri = null) {}
+    public function getStatic(string $uri = null): string {}
 
     /**
      * Generates a URL.
@@ -52,6 +52,6 @@ class Url
      * @param bool $local
      * @return string
      */
-    public function get($uri = null, $args = null, $local = true) {}
+    public function get($uri = null, $args = null, bool $local = true): string {}
 
 }

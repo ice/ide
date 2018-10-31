@@ -44,7 +44,7 @@ abstract class Adapter implements \Ice\Auth\Social\SocialInterface
     protected $userInfo;
 
 
-    protected $responseType = "code";
+    protected $responseType = 'code';
 
 
     /**
@@ -77,7 +77,7 @@ abstract class Adapter implements \Ice\Auth\Social\SocialInterface
      * @param string $method
      * @return mixed
      */
-    public function __call($name, $arguments = null) {}
+    public function __call(string $name, $arguments = null) {}
 
     /**
      * Whether or not an data exists by key.
@@ -85,7 +85,7 @@ abstract class Adapter implements \Ice\Auth\Social\SocialInterface
      * @param string $key The data key
      * @return bool
      */
-    public function has($key) {}
+    public function has(string $key): bool {}
 
     /**
      * Retrieve a single key from an array.
@@ -95,7 +95,7 @@ abstract class Adapter implements \Ice\Auth\Social\SocialInterface
      * @param mixed $defaultValue The value to return if data key does not exist
      * @return mixed
      */
-    public function get($key, $defaultValue = null) {}
+    public function get(string $key, $defaultValue = null) {}
 
     /**
      * Get authentication url.
@@ -111,7 +111,7 @@ abstract class Adapter implements \Ice\Auth\Social\SocialInterface
      * @param mixed $defaultValue The value to return if option key does not exist
      * @return mixed
      */
-    public function getOption($key, $defaultValue = null) {}
+    public function getOption(string $key, $defaultValue = null) {}
 
     /**
      * Make curl get/post request and return result.
@@ -122,6 +122,6 @@ abstract class Adapter implements \Ice\Auth\Social\SocialInterface
      * @param boolean $parse
      * @return array|string
      */
-    protected function call($method = self::GET, $url, array $params, $parse = true) {}
+    protected function call(int $method = self::GET, string $url, array $params, bool $parse = true) {}
 
 }

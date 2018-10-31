@@ -15,13 +15,13 @@ namespace Ice\Cli;
 class Router
 {
 
-    protected $defaultModule = "shell";
+    protected $defaultModule = 'shell';
 
 
-    protected $defaultHandler = "main";
+    protected $defaultHandler = 'main';
 
 
-    protected $defaultAction = "main";
+    protected $defaultAction = 'main';
 
 
     protected $module;

@@ -37,7 +37,7 @@ class File extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      * @param string $role Role name
      * @return bool
      */
-    public function hasRole($user, $role = "login") {}
+    public function hasRole($user, string $role = 'login'): bool {}
 
     /**
      * Logs a user in.
@@ -48,6 +48,6 @@ class File extends \Ice\Auth\Driver implements \Ice\Auth\Driver\DriverInterface
      * @param boolean $force login without password
      * @return bool|null
      */
-    public function login($username, $password, $remember = false, $force = false) {}
+    public function login($username, string $password, bool $remember = false, bool $force = false): ?bool {}
 
 }

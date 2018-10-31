@@ -29,7 +29,7 @@ class Ini extends \Ice\Config
      * @param mixed $raw The same array but with raw strings
      * @return mixed
      */
-    private function cast($ini, $raw) {}
+    protected function cast($ini, $raw) {}
 
     /**
      * Map the array recursively.
@@ -38,6 +38,6 @@ class Ini extends \Ice\Config
      * @param array $raw
      * @return array
      */
-    private function map($ini, $raw) {}
+    protected function map($ini, $raw) {}
 
 }

@@ -15,7 +15,10 @@ namespace Ice\Cli;
 class Dispatcher extends \Ice\Dispatcher
 {
 
-    protected $handlerSuffix = "Task";
+    protected $handlers = 'Tasks';
+
+
+    protected $handlerSuffix = 'Task';
 
 
 }

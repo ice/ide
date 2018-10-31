@@ -23,12 +23,12 @@ class Access
      *
      * @param string $property
      */
-    public function __get($property) {}
+    public function __get(string $property) {}
 
     /**
      * @param string $property
      * @param mixed $value
      */
-    public function __set($property, $value) {}
+    public function __set(string $property, $value) {}
 
 }

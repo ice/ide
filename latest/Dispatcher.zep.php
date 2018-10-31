@@ -75,10 +75,13 @@ abstract class Dispatcher
     protected $returnedValue = null;
 
 
-    protected $handlerSuffix = "Handler";
+    protected $handlers = 'Handlers';
 
 
-    protected $actionSuffix = "Action";
+    protected $handlerSuffix = 'Handler';
+
+
+    protected $actionSuffix = 'Action';
 
 
     protected $previousModule = null;
@@ -183,6 +186,14 @@ abstract class Dispatcher
     public function setReturnedValue($returnedValue) {}
 
 
+    public function getHandlers() {}
+
+    /**
+     * @param mixed $handlers
+     */
+    public function setHandlers($handlers) {}
+
+
     public function getHandlerSuffix() {}
 
     /**
@@ -209,7 +220,7 @@ abstract class Dispatcher
      * @param string $key The param key
      * @return bool
      */
-    public function hasParam($key) {}
+    public function hasParam(string $key): bool {}
 
     /**
      * Set a param by its name or numeric index.
@@ -240,14 +251,23 @@ abstract class Dispatcher
      * @param boolean $allowEmpty
      * @return mixed
      */
-    public function getParam($key = null, $filters = null, $defaultValue = null, $allowEmpty = false) {}
+    public function getParam(string $key = null, $filters = null, $defaultValue = null, bool $allowEmpty = false) {}
 
     /**
      * Returns the current method to be/executed in the dispatcher.
      *
      * @return string
      */
-    public function getActiveMethod() {}
+    public function getActiveMethod(): string {}
+
+    /**
+     * Add module with its dir path, initial class name and namespace
+     *
+     * @param string $name
+     * @param array $options The keys can be [path|class|namespace]
+     * @return object
+     */
+    public function addModule(string $name, array $options) {}
 
     /**
      * Dispatches a handle action taking into account the routing parameters.
@@ -261,7 +281,15 @@ abstract class Dispatcher
      *
      * @param array $forward
      * @param boolean $force
+     * @return object
      */
-    public function forward(array $forward, $force = false) {}
+    public function forward(array $forward, bool $force = false) {}
+
+    /**
+     * Reset module, handler and action to default ones, and empty the params.
+     *
+     * @return object
+     */
+    public function reset() {}
 
 }

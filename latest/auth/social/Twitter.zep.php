@@ -58,6 +58,6 @@ class Twitter extends \Ice\Auth\Social\Adapter
      * @param string $type
      * @return array
      */
-    private function prepareUrlParams($url, $params = array(), $oauthToken = "", $type = "GET") {}
+    private function prepareUrlParams(string $url, $params = array(), string $oauthToken = '', string $type = 'GET') {}
 
 }

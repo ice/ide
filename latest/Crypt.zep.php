@@ -18,10 +18,10 @@ class Crypt
     protected $key;
 
 
-    protected $cipher = "aes-256";
+    protected $cipher = 'aes-256';
 
 
-    protected $mode = "cbc";
+    protected $mode = 'cbc';
 
 
     protected $block = 16;
@@ -53,7 +53,7 @@ class Crypt
      * @param string $key
      * @return void
      */
-    public function __construct($key = null) {}
+    public function __construct(string $key = null) {}
 
     /**
      * Encrypt the given value.
@@ -61,14 +61,14 @@ class Crypt
      * @param string $text
      * @return string
      */
-    public function encrypt($text) {}
+    public function encrypt(string $text): string {}
 
     /**
      * Generate an input vector.
      *
      * @return string
      */
-    protected function generateInputVector() {}
+    protected function generateInputVector(): string {}
 
     /**
      * Actually encrypt the value using the given Iv with the openssl library encrypt function.
@@ -77,7 +77,7 @@ class Crypt
      * @param string $iv
      * @return string
      */
-    protected function doEncrypt($value, $iv) {}
+    protected function doEncrypt(string $value, string $iv): string {}
 
     /**
      * Decrypt the given value.
@@ -85,7 +85,7 @@ class Crypt
      * @param string $text payload
      * @return string
      */
-    public function decrypt($text) {}
+    public function decrypt(string $text): string {}
 
     /**
      * Actually decrypt the value using the given Iv with the openssl library decrypt function.
@@ -94,7 +94,7 @@ class Crypt
      * @param string $iv
      * @return string
      */
-    protected function doDecrypt($value, $iv) {}
+    protected function doDecrypt(string $value, string $iv): string {}
 
     /**
      * Get the JSON array from the given payload.
@@ -102,7 +102,7 @@ class Crypt
      * @param string $text payload
      * @return array
      */
-    protected function getJsonPayload($text) {}
+    protected function getJsonPayload(string $text) {}
 
     /**
      * Create a MAC for the given value.
@@ -110,7 +110,7 @@ class Crypt
      * @param string $value
      * @return string
      */
-    protected function hash($value) {}
+    protected function hash(string $value): string {}
 
     /**
      * Add PKCS7 padding to a given value.
@@ -118,7 +118,7 @@ class Crypt
      * @param string $value
      * @return string
      */
-    protected function addPadding($value) {}
+    protected function addPadding(string $value): string {}
 
     /**
      * Remove the padding from the given value.
@@ -126,7 +126,7 @@ class Crypt
      * @param string $value
      * @return string
      */
-    protected function stripPadding($value) {}
+    protected function stripPadding(string $value): string {}
 
     /**
      * Determine if the given padding for a value is valid.
@@ -135,7 +135,7 @@ class Crypt
      * @param string $value
      * @return bool
      */
-    protected function paddingIsValid($pad, $value) {}
+    protected function paddingIsValid(int $pad, string $value): bool {}
 
     /**
      * Verify that the encryption payload is valid.
@@ -143,13 +143,13 @@ class Crypt
      * @param array $data
      * @return bool
      */
-    protected function invalidPayload(array $data) {}
+    protected function invalidPayload(array $data): bool {}
 
     /**
      * Get the IV size for the cipher.
      *
      * @return int
      */
-    protected function getIvSize() {}
+    protected function getIvSize(): int {}
 
 }

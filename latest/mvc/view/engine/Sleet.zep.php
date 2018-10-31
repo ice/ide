@@ -26,7 +26,7 @@ class Sleet extends \Ice\Mvc\View\Engine
      * @param string $path Path to the file
      * @return string to the compiled file
      */
-    public function compile($path) {}
+    public function compile(string $path) {}
 
     /**
      * Render the Slet file. Compile first.
@@ -35,6 +35,6 @@ class Sleet extends \Ice\Mvc\View\Engine
      * @param array $data
      * @return string
      */
-    public function render($path, array $data = array()) {}
+    public function render(string $path, array $data = array()) {}
 
 }

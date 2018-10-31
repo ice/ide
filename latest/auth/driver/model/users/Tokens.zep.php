@@ -14,7 +14,12 @@ namespace Ice\Auth\Driver\Model\Users;
 class Tokens extends \Ice\Mvc\Model
 {
 
-    protected $from = "user_tokens";
+    protected $from = 'user_tokens';
+
+    /**
+     * User class name.
+     */
+    protected $userClass = 'Ice\\\\Auth\\\\Driver\\\\Model\\\\Users';
 
 
     /**
@@ -36,7 +41,7 @@ class Tokens extends \Ice\Mvc\Model
     /**
      * Deletes all expired tokens.
      *
-     * @return void
+     * @return bool
      */
     public function deleteExpired() {}
 
@@ -55,6 +60,6 @@ class Tokens extends \Ice\Mvc\Model
      * @uses Text::random()
      * @return string
      */
-    protected function generate() {}
+    protected function generate(): string {}
 
 }

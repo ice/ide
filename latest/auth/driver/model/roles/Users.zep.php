@@ -14,7 +14,17 @@ namespace Ice\Auth\Driver\Model\Roles;
 class Users extends \Ice\Mvc\Model
 {
 
-    protected $from = "roles_users";
+    protected $from = 'roles_users';
+
+    /**
+     * User class name.
+     */
+    protected $userClass = 'Ice\\\\Auth\\\\Driver\\\\Model\\\\Users';
+
+    /**
+     * Role class name.
+     */
+    protected $roleClass = 'Ice\\\\Auth\\\\Driver\\\\Model\\\\Roles';
 
 
     /**

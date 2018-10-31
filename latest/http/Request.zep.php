@@ -11,7 +11,7 @@ namespace Ice\Http;
  * @copyright   (c) 2014-2018 Ice Team
  * @license     http://iceframework.org/license
  */
-class Request extends \Ice\Arr
+class Request extends \Ice\Arr implements \Ice\Http\Request\RequestInterface
 {
 
     protected $files;
@@ -37,7 +37,7 @@ class Request extends \Ice\Arr
      * @param string $name Index name
      * @return bool
      */
-    public function hasRequest($name) {}
+    public function hasRequest(string $name): bool {}
 
     /**
      * Check whether _POST has index.
@@ -45,7 +45,7 @@ class Request extends \Ice\Arr
      * @param string $name Index name
      * @return bool
      */
-    public function hasPost($name) {}
+    public function hasPost(string $name): bool {}
 
     /**
      * Check whether _GET has index.
@@ -53,7 +53,7 @@ class Request extends \Ice\Arr
      * @param string $name Index name
      * @return bool
      */
-    public function hasGet($name) {}
+    public function hasGet(string $name): bool {}
 
     /**
      * Check whether _SERVER has index.
@@ -61,7 +61,7 @@ class Request extends \Ice\Arr
      * @param string $name Index name
      * @return bool
      */
-    public function hasServer($name) {}
+    public function hasServer(string $name): bool {}
 
     /**
      * Check whether _FILES has index.
@@ -69,91 +69,91 @@ class Request extends \Ice\Arr
      * @param string $name Index name
      * @return bool
      */
-    public function hasFile($name) {}
+    public function hasFile(string $name): bool {}
 
     /**
      * Checks whether HTTP method is POST.
      *
      * @return bool
      */
-    public function isPost() {}
+    public function isPost(): bool {}
 
     /**
      * Checks whether HTTP method is GET.
      *
      * @return bool
      */
-    public function isGet() {}
+    public function isGet(): bool {}
 
     /**
      * Checks whether HTTP method is PUT.
      *
      * @return bool
      */
-    public function isPut() {}
+    public function isPut(): bool {}
 
     /**
      * Checks whether HTTP method is PATCH.
      *
      * @return bool
      */
-    public function isPatch() {}
+    public function isPatch(): bool {}
 
     /**
      * Checks whether HTTP method is HEAD.
      *
      * @return bool
      */
-    public function isHead() {}
+    public function isHead(): bool {}
 
     /**
      * Checks whether HTTP method is DELETE.
      *
      * @return bool
      */
-    public function isDelete() {}
+    public function isDelete(): bool {}
 
     /**
      * Checks whether HTTP method is OPTIONS.
      *
      * @return bool
      */
-    public function isOptions() {}
+    public function isOptions(): bool {}
 
     /**
      * Checks whether request has been made using AJAX.
      *
      * @return bool
      */
-    public function isAjax() {}
+    public function isAjax(): bool {}
 
     /**
      * Gets HTTP method which request has been made.
      *
      * @return string
      */
-    public function getMethod() {}
+    public function getMethod(): string {}
 
     /**
      * Gets HTTP user agent used to made the request.
      *
      * @return string
      */
-    public function getUserAgent() {}
+    public function getUserAgent(): string {}
 
     /**
      * Gets web page that refers active request.
      *
      * @return string
      */
-    public function getHTTPReferer() {}
+    public function getHTTPReferer(): string {}
 
     /**
      * Gets most possible client IPv4 Address.
      *
      * @return string
      */
-    public function getClientAddress() {}
+    public function getClientAddress(): string {}
 
     /**
      * Gets variable from _GET superglobal applying filters if needed.
@@ -176,7 +176,7 @@ class Request extends \Ice\Arr
      * @param boolean $allowEmpty
      * @return mixed
      */
-    public function getQuery($key = null, $filters = null, $defaultValue = null, $allowEmpty = false) {}
+    public function getQuery(string $key = null, $filters = null, $defaultValue = null, bool $allowEmpty = true) {}
 
     /**
      * Gets variable from _POST superglobal applying filters if needed.
@@ -199,7 +199,7 @@ class Request extends \Ice\Arr
      * @param boolean $allowEmpty
      * @return mixed
      */
-    public function getPost($key = null, $filters = null, $defaultValue = null, $allowEmpty = false) {}
+    public function getPost(string $key = null, $filters = null, $defaultValue = null, bool $allowEmpty = true) {}
 
     /**
      * Gets variable from _SERVER superglobal.
@@ -208,7 +208,7 @@ class Request extends \Ice\Arr
      * @param mixed $defaultValue
      * @return mixed
      */
-    public function getServer($key = null, $defaultValue = null) {}
+    public function getServer(string $key = null, $defaultValue = null) {}
 
     /**
      * Gets variable from _FILES superglobal.
@@ -217,6 +217,6 @@ class Request extends \Ice\Arr
      * @param mixed $defaultValue
      * @return mixed
      */
-    public function getFiles($key = null, $defaultValue = null) {}
+    public function getFiles(string $key = null, $defaultValue = null) {}
 
 }

@@ -21,7 +21,10 @@ class Dispatcher extends \Ice\Dispatcher
     protected $method;
 
 
-    protected $handlerSuffix = "Controller";
+    protected $handlers = 'Controllers';
+
+
+    protected $handlerSuffix = 'Controller';
 
 
 
@@ -37,7 +40,7 @@ class Dispatcher extends \Ice\Dispatcher
      *
      * @return string
      */
-    public function getActiveMethod() {}
+    public function getActiveMethod(): string {}
 
 
     public function dispatch() {}

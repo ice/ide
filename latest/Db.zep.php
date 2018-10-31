@@ -36,7 +36,7 @@ class Db
      * @param string $password
      * @param array $options
      */
-    public function __construct($driver, $host = null, $port = null, $name = null, $user = null, $password = null, array $options = array()) {}
+    public function __construct($driver, string $host = null, int $port = null, string $name = null, string $user = null, string $password = null, array $options = array()) {}
 
     /**
      * Magic call, call driver's method.
@@ -44,6 +44,6 @@ class Db
      * @param string $method
      * @param mixed $arguments
      */
-    public function __call($method, $arguments = null) {}
+    public function __call(string $method, $arguments = null) {}
 
 }

@@ -20,7 +20,7 @@ class Flash
     protected $tag;
 
 
-    protected $options = array("session_key" => "_flash", "success" => array("class" => "alert alert-success"), "info" => array("class" => "alert alert-info"), "warning" => array("class" => "alert alert-warning"), "danger" => array("class" => "alert alert-danger"), "html" => true);
+    protected $options = array('session_key' => '_flash', 'success' => array('class' => 'alert alert-success'), 'info' => array('class' => 'alert alert-info'), 'warning' => array('class' => 'alert alert-warning'), 'danger' => array('class' => 'alert alert-danger'), 'html' => true);
 
 
     /**
@@ -42,7 +42,7 @@ class Flash
      * @param mixed $defaultValue The value to return if option key does not exist
      * @return mixed
      */
-    public function getOption($key, $defaultValue = null) {}
+    public function getOption(string $key, $defaultValue = null) {}
 
     /**
      * Display the messages.
@@ -50,7 +50,7 @@ class Flash
      * @param boolean $remove
      * @return string
      */
-    public function getMessages($remove = true) {}
+    public function getMessages(bool $remove = true): string {}
 
     /**
      * Get a message formatting it with HTML.
@@ -60,75 +60,79 @@ class Flash
      * @param mixed $message
      * @return string
      */
-    public function getMessage($type, $messages) {}
+    public function getMessage(string $type, $messages): string {}
 
     /**
      * Adds a message to the flash.
      *
      * @param string $type
      * @param string $message
-     * @return void
+     * @return object
      */
-    public function message($type, $message) {}
+    public function message(string $type, string $message) {}
 
     /**
      * Add success message.
      *
      * @param string $message
-     * @return void
+     * @return object
      */
-    public function success($message) {}
+    public function success(string $message) {}
 
     /**
      * Alias of success message.
      *
      * @param string $message
+     * @return object
      */
-    public function ok($message) {}
+    public function ok(string $message) {}
 
     /**
      * Add info message.
      *
      * @param string $message
-     * @return void
+     * @return object
      */
-    public function info($message) {}
+    public function info(string $message) {}
 
     /**
      * Alias of info message.
      *
      * @param string $message
+     * @return object
      */
-    public function notice($message) {}
+    public function notice(string $message) {}
 
     /**
      * Add warning message.
      *
      * @param string $message
-     * @return void
+     * @return object
      */
-    public function warning($message) {}
+    public function warning(string $message) {}
 
     /**
      * Alias of warning message.
      *
      * @param string $message
+     * @return object
      */
-    public function alert($message) {}
+    public function alert(string $message) {}
 
     /**
      * Add danger message.
      *
      * @param string $message
-     * @return void
+     * @return object
      */
-    public function danger($message) {}
+    public function danger(string $message) {}
 
     /**
      * Alias of danger message.
      *
      * @param string $message
+     * @return object
      */
-    public function error($message) {}
+    public function error(string $message) {}
 
 }

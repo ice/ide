@@ -30,13 +30,13 @@ class Js
     const ACTION_DELETE_A_B = 3;
 
 
-    protected $a = "";
+    protected $a = '';
 
 
-    protected $b = "";
+    protected $b = '';
 
 
-    protected $input = "";
+    protected $input = '';
 
 
     protected $inputIndex = 0;
@@ -48,7 +48,7 @@ class Js
     protected $lookAhead = null;
 
 
-    protected $output = "";
+    protected $output = '';
 
 
 
@@ -60,7 +60,7 @@ class Js
      * @param string $js JS code to minify
      * @return string
      */
-    public function sanitize($js) {}
+    public function sanitize(string $js) {}
 
     /**
      * Action -- do something! What to do is determined by the $command argument.
@@ -79,7 +79,7 @@ class Js
      *      ACTION_DELETE_A_B  Get the next B. (Delete B).
      * @param int $command
      */
-    protected function action($command) {}
+    protected function action(int $command) {}
 
     /**
      * Get next char. Convert ctrl char to space.

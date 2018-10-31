@@ -40,6 +40,6 @@ class Css
      * @param string $css CSS code to minify
      * @return string
      */
-    public function sanitize($css) {}
+    public function sanitize(string $css): string {}
 
 }

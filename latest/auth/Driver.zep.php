@@ -26,7 +26,7 @@ abstract class Driver
     protected $user;
 
 
-    protected $options = array("hash_method" => "sha256", "hash_key" => "", "session_key" => "auth_user", "session_roles" => "auth_user_roles", "lifetime" => 1209600);
+    protected $options = array('hash_method' => 1, 'hash_option' => array(), 'hash_key' => '', 'session_key' => 'auth_user', 'session_roles' => 'auth_user_roles', 'lifetime' => 1209600);
 
 
     /**
@@ -44,7 +44,7 @@ abstract class Driver
      * @param string $hash Hash version of password
      * @return bool
      */
-    public function checkHash($password, $hash) {}
+    public function checkHash(string $password, string $hash): bool {}
 
     /**
      * Complete the login for a user by setting session data and eg. incrementing the logins.
@@ -62,7 +62,16 @@ abstract class Driver
      * @param mixed $defaultValue The value to return if option key does not exist
      * @return mixed
      */
-    public function getOption($key, $defaultValue = null) {}
+    public function getOption(string $key, $defaultValue = null) {}
+
+    /**
+     * Assigns a value to the specified options.
+     *
+     * @param string $key The option key
+     * @param mixed $value
+     * @return object
+     */
+    public function setOption(string $key, $value) {}
 
     /**
      * Gets the currently logged in user from the session. Returns NULL if no user is currently logged in.
@@ -78,7 +87,7 @@ abstract class Driver
      * @param string $password String to hash
      * @return string
      */
-    public function hash($password) {}
+    public function hash(string $password) {}
 
     /**
      * Check if there is an active session. Optionally allows checking for a specific role.
@@ -86,7 +95,7 @@ abstract class Driver
      * @param string $role Role name
      * @return mixed
      */
-    public function loggedIn($role = null) {}
+    public function loggedIn(string $role = null) {}
 
     /**
      * Log out a user by removing the related session variables.
@@ -95,6 +104,6 @@ abstract class Driver
      * @param boolean $logoutAll Remove all tokens for user
      * @return bool
      */
-    public function logout($destroy = false, $logoutAll = false) {}
+    public function logout(bool $destroy = false, bool $logoutAll = false): bool {}
 
 }

@@ -72,7 +72,7 @@ class Assets
      * @param string $Collection Collection name
      * @return object
      */
-    public function add($parameters, $version = null, $collection = null, $minify = null) {}
+    public function add($parameters, string $version = null, string $collection = null, $minify = null) {}
 
     /**
      * Add CSS resource to assets.
@@ -84,7 +84,7 @@ class Assets
      * @param string $Collection Collection name
      * @return object
      */
-    public function addCss(array $parameters, $version = null, $collection = "css", $minify = null) {}
+    public function addCss(array $parameters, string $version = null, string $collection = 'css', $minify = null) {}
 
     /**
      * Add JS resource to assets.
@@ -96,7 +96,7 @@ class Assets
      * @param string $Collection Collection name
      * @return object
      */
-    public function addJs(array $parameters, $version = null, $collection = "js", $minify = null) {}
+    public function addJs(array $parameters, string $version = null, string $collection = 'js', $minify = null) {}
 
     /**
      * Add an asset to the collection.
@@ -126,7 +126,7 @@ class Assets
      * @param string $key Collection name
      * @return array
      */
-    public function get($key) {}
+    public function get(string $key) {}
 
     /**
      * Minify content.
@@ -135,7 +135,7 @@ class Assets
      * @param string $type Type of content
      * @return string
      */
-    protected function minify($content, $type) {}
+    protected function minify(string $content, $type) {}
 
     /**
      * Prepare resource.
@@ -145,6 +145,6 @@ class Assets
      * @param int $minify Option of minify
      * @return string path to the source
      */
-    protected function prepare($uri, $type, $minify) {}
+    protected function prepare(string $uri, string $type, $minify) {}
 
 }

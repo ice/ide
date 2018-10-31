@@ -17,7 +17,7 @@ class Json extends \Ice\Config
     /**
      * Config json constructor.
      *
-     * @param string $data Path to the json file
+     * @param string $data Path to the file or json string
      */
     public function __construct($data = null) {}
 

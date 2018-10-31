@@ -23,7 +23,7 @@ class File extends \Ice\Log\Driver
      * @throws Exception When logfile cannot be created or is not writeable
      * @param string $file Filename to log messages to (complete path)
      */
-    public function __construct($file) {}
+    public function __construct(string $file) {}
 
     /**
      * Logs with an arbitrary level.
@@ -33,7 +33,7 @@ class File extends \Ice\Log\Driver
      * @param array $context
      * @return void
      */
-    public function log($level, $message, array $context = array()) {}
+    public function log($level, string $message, array $context = array()) {}
 
     /**
      * Interpolates context values into the message placeholders.
@@ -42,6 +42,6 @@ class File extends \Ice\Log\Driver
      * @param array $context
      * @return string
      */
-    protected function interpolate($message, array $context = array()) {}
+    protected function interpolate(string $message, array $context = array()): string {}
 
 }

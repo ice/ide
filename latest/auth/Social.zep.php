@@ -41,7 +41,7 @@ class Social
      * @param mixed $defaultValue The value to return if data key does not exist
      * @return mixed
      */
-    public function get($key, $defaultValue = null) {}
+    public function get(string $key, $defaultValue = null) {}
 
     /**
      * Call method of this class or methods of adapter class.
@@ -50,6 +50,6 @@ class Social
      * @param mixed $arguments
      * @return mixed
      */
-    public function __call($method, $arguments = null) {}
+    public function __call(string $method, $arguments = null) {}
 
 }

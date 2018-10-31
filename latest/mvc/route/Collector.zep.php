@@ -25,10 +25,8 @@ class Collector
     /**
      * Constructs a route collector.
      *
-     * @param \Ice\Mvc\Route\Parser\ParserInterface $routeParser
-     * @param \Ice\Mvc\Route\DataGenerator\DataGeneratorInterface $dataGenerator
-     * @param RouteParser $$routeParser
-     * @param DataGenerator $$dataGenerator
+     * @param RouteParser $routeParser
+     * @param DataGenerator $dataGenerator
      */
     public function __construct(\Ice\Mvc\Route\Parser\ParserInterface $routeParser = null, \Ice\Mvc\Route\DataGenerator\DataGeneratorInterface $dataGenerator = null) {}
 
@@ -37,14 +35,12 @@ class Collector
      *
      * The syntax used in the $route string depends on the used route parser.
      *
-     * @param mixed $httpMethod
+     * @param string|array $httpMethod
      * @param string $route
      * @param mixed $handler
-     * @param string|array $$httpMethod
-     * @param string $$route
-     * @param mixed $$handler
+     * @return object
      */
-    public function addRoute($httpMethod, $route, $handler = null) {}
+    public function addRoute($httpMethod, string $route, $handler = null) {}
 
     /**
      * Returns the collected route data, as provided by the data generator.

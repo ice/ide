@@ -31,8 +31,7 @@ interface ParserInterface
      *
      * Here one route string was converted into two route data arrays.
      *
-     * @param mixed $route
-     * @param string $$route Route string to parse
+     * @param string $route Route string to parse
      * @return mixed[][] of route data arrays
      */
     public function parse($route);

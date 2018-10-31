@@ -13,6 +13,11 @@ namespace Ice\Auth\Driver\Model;
  */
 class Roles extends \Ice\Mvc\Model
 {
+    /**
+     * User class name.
+     */
+    protected $userClass = 'Ice\\\\Auth\\\\Driver\\\\Model\\\\Roles\\\\Users';
+
 
     /**
      * Initialize role's relations.

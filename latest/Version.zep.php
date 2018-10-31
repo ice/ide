@@ -33,7 +33,7 @@ class Version
     const MAJOR = 1;
 
 
-    const MINOR = 3;
+    const MINOR = 4;
 
 
     const PATCH = 0;
@@ -63,7 +63,7 @@ class Version
      *
      * @return string
      */
-    public static function get() {}
+    public static function get(): string {}
 
     /**
      * Get version id.
@@ -73,6 +73,6 @@ class Version
      *
      * @return int
      */
-    public static function id() {}
+    public static function id(): int {}
 
 }

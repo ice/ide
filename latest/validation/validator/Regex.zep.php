@@ -40,6 +40,6 @@ class Regex extends \Ice\Validation\Validator
      * @param string $field
      * @return bool
      */
-    public function validate(\Ice\Validation $validation, $field) {}
+    public function validate(\Ice\Validation $validation, string $field): bool {}
 
 }

@@ -66,7 +66,7 @@ class Validation
     protected $humanLabels = false;
 
 
-    protected $defaultMessages = array("alnum" => "Field :field must contain only letters and numbers", "alpha" => "Field :field must contain only letters", "between" => "Field :field must be within the range of :min to :max", "digit" => "Field :field must be numeric", "default" => "Field :field is not valid", "email" => "Field :field must be an email address", "fileEmpty" => "Field :field must not be empty", "fileIniSize" => "File :field exceeds the maximum file size", "fileMaxResolution" => "File :field must not exceed :max resolution", "fileMinResolution" => "File :field must be at least :min resolution", "fileSize" => "File :field exceeds the size of :max", "fileType" => "File :field must be of type: :types", "in" => "Field :field must be a part of list: :values", "lengthMax" => "Field :field must not exceed :max characters long", "lengthMin" => "Field :field must be at least :min characters long", "notIn" => "Field :field must not be a part of list: :values", "regex" => "Field :field does not match the required format", "required" => "Field :field is required", "same" => "Field :field and :other must match", "unique" => "Field :field must be unique", "url" => "Field :field must be a url", "with" => "Field :field must occur together with :fields", "without" => "Field :field must not occur together with :fields");
+    protected $defaultMessages = array('alnum' => 'Field :field must contain only letters and numbers', 'alpha' => 'Field :field must contain only letters', 'between' => 'Field :field must be within the range of :min to :max', 'digit' => 'Field :field must be numeric', 'default' => 'Field :field is not valid', 'email' => 'Field :field must be an email address', 'fileEmpty' => 'Field :field must not be empty', 'fileIniSize' => 'File :field exceeds the maximum file size', 'fileMaxResolution' => 'File :field must not exceed :max resolution', 'fileMinResolution' => 'File :field must be at least :min resolution', 'fileSize' => 'File :field exceeds the size of :max', 'fileType' => 'File :field must be of type: :types', 'in' => 'Field :field must be a part of list: :values', 'lengthMax' => 'Field :field must not exceed :max characters long', 'lengthMin' => 'Field :field must be at least :min characters long', 'notIn' => 'Field :field must not be a part of list: :values', 'regex' => 'Field :field does not match the required format', 'required' => 'Field :field is required', 'same' => 'Field :field and :other must match', 'unique' => 'Field :field must be unique', 'url' => 'Field :field must be a url', 'with' => 'Field :field must occur together with :fields', 'without' => 'Field :field must not occur together with :fields');
 
 
 
@@ -124,9 +124,9 @@ class Validation
      * @param string $alias
      * @param string $field
      * @param mixed $options
-     * @return void
+     * @return object
      */
-    public function resolve($alias, $field, $options = null) {}
+    public function resolve(string $alias, string $field, $options = null) {}
 
     /**
      * Add one rule.
@@ -147,9 +147,9 @@ class Validation
      * @param string $field
      * @param mixed $validators
      * @param mixed $options
-     * @return void
+     * @return object
      */
-    public function rule($field, $validators, $options = null) {}
+    public function rule(string $field, $validators, $options = null) {}
 
     /**
      * Add multiple rules at once.
@@ -171,9 +171,9 @@ class Validation
      *
      * @param array $validators
      * @param boolean $merge
-     * @return void
+     * @return object
      */
-    public function rules(array $validators, $merge = true) {}
+    public function rules(array $validators, bool $merge = true) {}
 
     /**
      * Validate the data.
@@ -182,14 +182,14 @@ class Validation
      * @param boolean $clear Clear messages before
      * @return bool
      */
-    public function validate(array $data = array(), $clear = true) {}
+    public function validate(array $data = array(), bool $clear = true): bool {}
 
     /**
      * Check if validation passed.
      *
      * @return bool
      */
-    public function valid() {}
+    public function valid(): bool {}
 
     /**
      * Whether or not a value exists by field.
@@ -197,7 +197,7 @@ class Validation
      * @param string $field The data key
      * @return bool
      */
-    public function hasValue($field) {}
+    public function hasValue(string $field): bool {}
 
     /**
      * Get a value by field.
@@ -206,7 +206,7 @@ class Validation
      * @param boolean $filtered Get the filtered value or original
      * @return mixed
      */
-    public function getValue($field, $filtered = true) {}
+    public function getValue(string $field, bool $filtered = true) {}
 
     /**
      * Get the values by fields.
@@ -227,7 +227,7 @@ class Validation
      * @param boolean $filtered Get the filtered value or original
      * @return mixed
      */
-    public function getValues($fields = null, $filtered = true) {}
+    public function getValues($fields = null, bool $filtered = true) {}
 
     /**
      * Get the label of a field.
@@ -236,13 +236,13 @@ class Validation
      * @param string $field The data key
      * @return string
      */
-    public function getLabel($field) {}
+    public function getLabel(string $field): string {}
 
     /**
      * Set the default messages.
      *
      * @param array $messages
-     * @return void
+     * @return object
      */
     public function setDefaultMessages(array $messages = array()) {}
 
@@ -252,22 +252,22 @@ class Validation
      * @param string $type Type of message
      * @return string
      */
-    public function getDefaultMessage($type) {}
+    public function getDefaultMessage(string $type): string {}
 
     /**
      * Add a message to the field.
      *
      * @param string $field
      * @param string $message
-     * @return void
+     * @return object
      */
-    public function addMessage($field, $message) {}
+    public function addMessage(string $field, string $message) {}
 
     /**
      * Get the validation's messages.
      *
      * @return Arr
      */
-    public function getMessages() {}
+    public function getMessages(): Arr {}
 
 }

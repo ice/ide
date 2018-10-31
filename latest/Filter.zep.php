@@ -22,8 +22,9 @@ class Filter
      *
      * @param string $name
      * @param callable $body
+     * @return object
      */
-    public function add($name, $body) {}
+    public function add(string $name, $body) {}
 
     /**
      * Sanitizes a value with a specified single or set of filters.
@@ -41,6 +42,6 @@ class Filter
      * @param string $filter
      * @return mixed
      */
-    protected function doSanitize($value, $filter) {}
+    protected function doSanitize(string $value, string $filter) {}
 
 }

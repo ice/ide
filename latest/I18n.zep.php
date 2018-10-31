@@ -23,7 +23,7 @@ class I18n
     protected $rules = array();
 
 
-    protected $options = array("source" => "en-gb", "lang" => "en-gb", "dir" => "");
+    protected $options = array('source' => 'en-gb', 'lang' => 'en-gb', 'dir' => '');
 
 
     /**
@@ -46,7 +46,7 @@ class I18n
      * @param string $lang New language setting
      * @return string
      */
-    public function lang($lang = null) {}
+    public function lang(string $lang = null): string {}
 
     /**
      * Get ISO language code.
@@ -55,7 +55,7 @@ class I18n
      * @param boolean $country Get country code, by default gets language code
      * @return string
      */
-    public function iso($lang = null, $country = false) {}
+    public function iso($lang = null, bool $country = false): string {}
 
     /**
      * Returns specified form of a string translation. No parameters are replaced.
@@ -66,7 +66,7 @@ class I18n
      * @param string $lang Target language
      * @return string
      */
-    public function get($str, $form = null, $lang = null) {}
+    public function get(string $str, $form = null, string $lang = null): string {}
 
     /**
      * Load language from the file.
@@ -74,7 +74,7 @@ class I18n
      * @param string $lang Language code
      * @return array
      */
-    private function load($lang) {}
+    private function load(string $lang) {}
 
     /**
      * Returns translation of a string with right plural form.
@@ -86,7 +86,7 @@ class I18n
      * @param string $string
      * @return string
      */
-    public function plural($str, $count = 0, $lang = null) {}
+    public function plural(string $str, int $count = 0, string $lang = null) {}
 
     /**
      * Plural rules lazy initialization.
@@ -94,7 +94,7 @@ class I18n
      * @param string $code Language code
      * @return object
      */
-    protected function pluralRules($code) {}
+    protected function pluralRules(string $code) {}
 
     /**
      * Alias of translate.
@@ -105,7 +105,7 @@ class I18n
      * @param string $lang
      * @return string
      */
-    public function _($str, array $values = null, $context = null, $lang = null) {}
+    public function _(string $str, array $values = null, $context = null, string $lang = null): string {}
 
     /**
      * Translation/internationalization function. strtr() or sprintf is used for replacing parameters.
@@ -117,6 +117,6 @@ class I18n
      * @param string $string Text to translate
      * @return string
      */
-    public function translate($str, array $values = null, $context = null, $lang = null) {}
+    public function translate(string $str, array $values = null, $context = null, string $lang = null): string {}
 
 }

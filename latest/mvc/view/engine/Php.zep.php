@@ -21,6 +21,6 @@ class Php extends \Ice\Mvc\View\Engine
      * @param array $data
      * @return string
      */
-    public function render($path, array $data = array()) {}
+    public function render(string $path, array $data = array()) {}
 
 }

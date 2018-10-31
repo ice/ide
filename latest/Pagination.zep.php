@@ -39,7 +39,7 @@ class Pagination extends \Ice\Arr
      *
      * @return Pagination
      */
-    public function calculate() {}
+    public function calculate(): Pagination {}
 
     /**
      * Prepare list button.
@@ -50,7 +50,7 @@ class Pagination extends \Ice\Arr
      * @param string $symbol HTML symbol to add
      * @return string
      */
-    protected function prepareButton($page, $url = null, $active = false, $symbol = null) {}
+    protected function prepareButton($page, $url = null, bool $active = false, $symbol = null) {}
 
     /**
      * Prepare minimal pagination.
@@ -82,6 +82,6 @@ class Pagination extends \Ice\Arr
      * @param int $countIn Number of page links on each side of current page
      * @return string
      */
-    public function floating($url = null, array $parameters = array(), $countOut = 0, $countIn = 2) {}
+    public function floating($url = null, array $parameters = array(), int $countOut = 0, int $countIn = 2) {}
 
 }

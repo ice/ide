@@ -32,6 +32,6 @@ abstract class Service extends \Ice\Di\Access
      * @param mixed $arguments
      * @return mixed
      */
-    public function __call($method, $arguments = null) {}
+    public function __call(string $method, $arguments = null) {}
 
 }

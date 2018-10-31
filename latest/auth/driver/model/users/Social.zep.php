@@ -14,7 +14,12 @@ namespace Ice\Auth\Driver\Model\Users;
 class Social extends \Ice\Mvc\Model
 {
 
-    protected $from = "user_social";
+    protected $from = 'user_social';
+
+    /**
+     * User class name.
+     */
+    protected $userClass = 'Ice\\\\Auth\\\\Driver\\\\Model\\\\Users';
 
 
     /**

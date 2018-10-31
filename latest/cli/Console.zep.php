@@ -40,10 +40,18 @@ class Console extends \Ice\Di\Access
     /**
      * Console constructor
      *
-     * @param \Ice\Di $di
-     * @param Di $$di
+     * @param Di $di
      */
     public function __construct(\Ice\Di $di = null) {}
+
+    /**
+     * Add module with its dir path, initial class name and namespace
+     *
+     * @param string $name
+     * @param array $options The keys can be [path|class|namespace]
+     * @return object
+     */
+    public function addModule(string $name, array $options) {}
 
     /**
      * Handle an command-line request.
@@ -63,6 +71,6 @@ class Console extends \Ice\Di\Access
      * @param string $bgColor The background color
      * @return string string
      */
-    public static function color($text, $color = null, $decoration = 0, $bgColor = null) {}
+    public static function color(string $text, string $color = null, int $decoration = 0, string $bgColor = null) {}
 
 }

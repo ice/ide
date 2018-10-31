@@ -11,7 +11,7 @@ namespace Ice;
  * @copyright   (c) 2014-2015 Ice Team
  * @license     http://iceframework.org/license
  */
-class Exception extends \Exception
+class Exception extends Exception
 {
 
     /**
@@ -22,13 +22,12 @@ class Exception extends \Exception
      * @param mixed $code The exception code
      * @param Exception|Throwable $previous Previous exception
      */
-    public function __construct($message = "", $code = 0, $previous = null) {}
+    public function __construct($message = '', $code = 0, $previous = null) {}
 
     /**
      * Get the full trace as string.
      *
-     * @param mixed $e
-     * @param Exception|Throwable $$e
+     * @param Exception|Throwable $e
      * @return string
      */
     public function getFullTraceAsString($e) {}
@@ -44,13 +43,12 @@ class Exception extends \Exception
      * @param array $context
      * @return true
      */
-    public static function errorHandler($code, $message, $file = null, $line = 0, array $context = array()) {}
+    public static function errorHandler(int $code, string $message, string $file = null, int $line = 0, array $context = array()) {}
 
     /**
      * Inline exception handler, displays the error message, source of the exception, and the stack trace of the error.
      *
-     * @param mixed $e
-     * @param Exception|Throwable $$e
+     * @param Exception|Throwable $e
      * @return void
      */
     public static function handler($e) {}

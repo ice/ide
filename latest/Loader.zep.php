@@ -34,7 +34,7 @@ class Loader
      * @param bool $prepend
      * @return Loader
      */
-    public function addNamespace($prefix, $baseDir, $prepend = false) {}
+    public function addNamespace(string $prefix, string $baseDir, bool $prepend = false) {}
 
     /**
      * Loads the class file for a given class name.
@@ -42,26 +42,24 @@ class Loader
      * @param string $className The fully-qualified class name
      * @return mixed mapped file name on success, or boolean false on failure
      */
-    public function loadClass($className) {}
+    public function loadClass(string $className) {}
 
     /**
      * Load the mapped file for a namespace prefix and relative class.
      *
-     * @param string $prefix
+     * @param string $prefix The namespace prefix
      * @param string $relativeClass
-     * @param string $$prefix The namespace prefix
-     * @param string $$relative_class The relative class name
+     * @param string $relative_class The relative class name
      * @return mixed false if no mapped file can be loaded, or the name of the mapped file that was loaded
      */
-    protected function loadMappedFile($prefix, $relativeClass) {}
+    protected function loadMappedFile(string $prefix, string $relativeClass) {}
 
     /**
      * If a file exists, require it from the file system.
      *
-     * @param string $file
-     * @param string $$file The file to require
+     * @param string $file The file to require
      * @return bool if the file exists, false if not
      */
-    protected function requireFile($file) {}
+    protected function requireFile(string $file) {}
 
 }

@@ -36,6 +36,6 @@ class Text
      * @param int $length
      * @return string
      */
-    public function random($type = 0, $length = 8) {}
+    public function random(int $type = 0, int $length = 8): string {}
 
 }

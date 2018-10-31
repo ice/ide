@@ -39,7 +39,7 @@ abstract class Validator
      * @param Validation $validation
      * @param string $field
      */
-    public abstract function validate(\Ice\Validation $validation, $field);
+    public abstract function validate(\Ice\Validation $validation, string $field);
 
     /**
      * Whether or not an option exists by key.
@@ -47,7 +47,7 @@ abstract class Validator
      * @param string $key The option key
      * @return bool
      */
-    public function has($key) {}
+    public function has($key): bool {}
 
     /**
      * Retrieve a single option.
@@ -63,7 +63,7 @@ abstract class Validator
      *
      * @param string $key The data key
      * @param mixed $value
-     * @return void
+     * @return object
      */
     public function set($key, $value) {}
 

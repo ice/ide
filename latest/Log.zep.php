@@ -14,28 +14,28 @@ namespace Ice;
 class Log
 {
 
-    const EMERGENCY = "emergency";
+    const EMERGENCY = 'emergency';
 
 
-    const ALERT = "alert";
+    const ALERT = 'alert';
 
 
-    const CRITICAL = "critical";
+    const CRITICAL = 'critical';
 
 
-    const ERROR = "error";
+    const ERROR = 'error';
 
 
-    const WARNING = "warning";
+    const WARNING = 'warning';
 
 
-    const NOTICE = "notice";
+    const NOTICE = 'notice';
 
 
-    const INFO = "info";
+    const INFO = 'info';
 
 
-    const DEBUG = "debug";
+    const DEBUG = 'debug';
 
 
 }

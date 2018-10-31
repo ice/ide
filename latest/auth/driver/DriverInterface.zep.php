@@ -23,7 +23,7 @@ interface DriverInterface
      * @param mixed $user
      * @param string $role
      */
-    public function hasRole($user, $role = "login");
+    public function hasRole($user, string $role = 'login');
 
     /**
      * @param mixed $username
@@ -31,6 +31,6 @@ interface DriverInterface
      * @param bool $remember
      * @param bool $force
      */
-    public function login($username, $password, $remember = false, $force = false);
+    public function login($username, string $password, bool $remember = false, bool $force = false);
 
 }

@@ -40,7 +40,7 @@ class Di extends \Ice\Arr
      *
      * @return Di
      */
-    public static function fetch() {}
+    public static function fetch(): Di {}
 
     /**
      * Resolves the service based on its configuration.
@@ -48,7 +48,7 @@ class Di extends \Ice\Arr
      * @param string $key Service name
      * @param mixed $parameters Definition
      */
-    public function get($key, $parameters = null) {}
+    public function get(string $key, $parameters = null) {}
 
     /**
      * Registers a service in the services container.
@@ -56,7 +56,7 @@ class Di extends \Ice\Arr
      * @param string $key Service name
      * @param mixed $value Definition
      */
-    public function set($key, $value) {}
+    public function set(string $key, $value) {}
 
     /**
      * Get default services.
@@ -117,26 +117,30 @@ class Di extends \Ice\Arr
      * @param string $className
      * @return object
      */
-    public function errors($className = "Ice\\\\Exception") {}
+    public function errors(string $className = 'Ice\\\\Exception') {}
 
     /**
      * Assign hook.
      *
      * @param string $name The hook name
      * @param mixed $callback
+     * @param mixed $context The callback bind to the object
      * @param int $priority The hook priority; 0 = high, 10 = low
      * @param mixed $callable A callable object
+     * @return object
      */
-    public function hook($name, $callback, $priority = 10) {}
+    public function hook(string $name, $callback, $context = null, int $priority = 10) {}
 
     /**
      * Invoke hook.
      *
      * @param string $name The hook name
      * @param array $args
+     * @param mixed $context The callback bind to the object
      * @param mixed $hookArg Argument for hooked functions
+     * @return object
      */
-    public function applyHook($name, array $args = null) {}
+    public function applyHook(string $name, array $args = null, $context = null) {}
 
     /**
      * Get hook listeners.
@@ -145,19 +149,21 @@ class Di extends \Ice\Arr
      * are arrays of listeners.
      *
      * @param string $name A hook name (Optional)
+     * @param mixed $context The callback bind to the object
      * @return array|null
      */
-    public function getHooks($name = null) {}
+    public function getHooks(string $name = null, $context = null): ? {}
 
     /**
      * Clear hook listeners.
      * Clear all listeners for all hooks. If `$name` is a valid hook name, only the listeners attached to that hook
      * will be cleared.
      *
-     * @param string $name
-     * @param string $$name A hook name (Optional)
+     * @param string $name A hook name (Optional)
+     * @param mixed $context The callback bind to the object
+     * @return object
      */
-    public function clearHooks($name = null) {}
+    public function clearHooks(string $name = null, $context = null) {}
 
     /**
      * Magic method to get or set services using setters/getters.
@@ -166,6 +172,6 @@ class Di extends \Ice\Arr
      * @param mixed $arguments
      * @return mixed
      */
-    public function __call($method, $arguments = null) {}
+    public function __call(string $method, $arguments = null) {}
 
 }

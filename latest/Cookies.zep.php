@@ -23,7 +23,7 @@ class Cookies
     protected $expiration = 0;
 
 
-    protected $path = "/";
+    protected $path = '/';
 
 
     protected $domain = null;
@@ -97,7 +97,7 @@ class Cookies
     /**
      * @param string $salt
      */
-    public function __construct($salt = null) {}
+    public function __construct(string $salt = null) {}
 
     /**
      * Does cookie contain a key
@@ -105,7 +105,7 @@ class Cookies
      * @param string $key The cookie key
      * @return bool
      */
-    public function has($key) {}
+    public function has(string $key): bool {}
 
     /**
      * Gets the value of a signed cookie.
@@ -115,7 +115,7 @@ class Cookies
      * @param string $key Cookie name
      * @param mixed $defaultValue Default value to return
      */
-    public function get($key, $defaultValue = null) {}
+    public function get(string $key, $defaultValue = null) {}
 
     /**
      * Sets a signed cookie.
@@ -126,7 +126,7 @@ class Cookies
      * @param integer $lifetime Expired time in seconds
      * @return boolean
      */
-    public function set($key, $value, $lifetime = 0) {}
+    public function set(string $key, string $value, int $lifetime = 0) {}
 
     /**
      * Deletes a cookie by making the value NULL and expiring it.
@@ -134,7 +134,7 @@ class Cookies
      * @param string $key cookie name
      * @return bool
      */
-    public function remove($key) {}
+    public function remove(string $key): bool {}
 
     /**
      * Generates a salt string for a cookie based on the name and value.
@@ -144,7 +144,7 @@ class Cookies
      * @param string $value Value of cookie
      * @return string
      */
-    public function salt($name, $value) {}
+    public function salt($name, $value): string {}
 
     /**
      * Proxy for the native setcookie function - to allow mocking in unit tests so that they do not fail when headers
@@ -160,6 +160,6 @@ class Cookies
      * @param boolean $httpOnly
      * @return bool
      */
-    protected function setcookie($name, $value, $expire, $path, $domain, $secure, $httpOnly) {}
+    protected function setcookie(string $name, string $value, int $expire, string $path, string $domain, bool $secure, bool $httpOnly) {}
 
 }

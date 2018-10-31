@@ -28,12 +28,12 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
     public function __construct(array $data = array()) {}
 
     /**
-     * Whether or not an data exists by key.
+     * Whether or not a data exists by key.
      *
      * @param string $key The data key
      * @return bool
      */
-    public function has($key) {}
+    public function has(string $key): bool {}
 
     /**
      * Retrieve a single key from an array.
@@ -43,22 +43,22 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      * @param mixed $defaultValue The value to return if data key does not exist
      * @return mixed
      */
-    public function get($key, $defaultValue = null) {}
+    public function get(string $key, $defaultValue = null) {}
 
     /**
      * Assigns a value to the specified data.
      *
      * @param string $key The data key
      * @param mixed $value
-     * @return void
+     * @return object
      */
-    public function set($key, $value) {}
+    public function set(string $key, $value) {}
 
     /**
      * Add data to set, replaces the existing data.
      *
      * @param array $data
-     * @return void
+     * @return Arr
      */
     public function replace(array $data) {}
 
@@ -76,7 +76,7 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      * @param boolean $strict Fetch key only if exist
      * @return array
      */
-    public function only(array $keys, $strict = true) {}
+    public function only(array $keys, bool $strict = true) {}
 
     /**
      * Gets value from data applying filters if needed.
@@ -98,7 +98,7 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      * @param boolean $allowEmpty
      * @return mixed
      */
-    public function getValue($key, $filters = null, $defaultValue = null, $allowEmpty = false) {}
+    public function getValue(string $key, $filters = null, $defaultValue = null, bool $allowEmpty = false) {}
 
     /**
      * Set data, clears and overwrites the current data.
@@ -116,17 +116,17 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
     public function keys() {}
 
     /**
-     * Remove an data by key.
+     * Remove a data by key.
      *
      * @param string $key The data key
-     * @return void
+     * @return object
      */
-    public function remove($key) {}
+    public function remove(string $key) {}
 
     /**
      * Clear all values.
      *
-     * @return void
+     * @return object
      */
     public function clear() {}
 
@@ -135,7 +135,7 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @return int
      */
-    public function count() {}
+    public function count(): int {}
 
     /**
      * Get a data iterator.
@@ -144,7 +144,7 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @return \ArrayIterator
      */
-    public function getIterator() {}
+    public function getIterator(): ArrayIterator {}
 
     /**
      * Gets a value from an array using a dot separated path.
@@ -164,7 +164,7 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      * @param string $delimiter Key path delimiter
      * @return mixed
      */
-    public function getPath($path, $defaultValue = null, $delimiter = ".") {}
+    public function getPath($path, $defaultValue = null, string $delimiter = '.') {}
 
     /**
      * Converts recursively the object to an array.
@@ -177,17 +177,17 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      * Whether or not an offset exists.
      *
      * @abstracting ArrayAccess
-     * @param string $offset
+     * @param mixed $offset
      * @param string $An offset to check for
      * @return bool
      */
-    public function offsetExists($offset) {}
+    public function offsetExists($offset): bool {}
 
     /**
      * Returns the value at specified offset.
      *
      * @abstracting ArrayAccess
-     * @param string $offset
+     * @param mixed $offset
      * @param string $The offset to retrieve
      * @return mixed
      */
@@ -197,7 +197,7 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      * Assigns a value to the specified offset.
      *
      * @abstracting ArrayAccess
-     * @param string $offset
+     * @param mixed $offset
      * @param mixed $value
      * @param mixed $The value to set
      * @return void
@@ -208,7 +208,7 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      * Unsets an offset.
      *
      * @abstracting ArrayAccess
-     * @param string $offset
+     * @param mixed $offset
      * @param string $The offset to unset
      * @return void
      */
@@ -220,7 +220,7 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      * @param string $key
      * @return bool
      */
-    public function __isset($key) {}
+    public function __isset(string $key): bool {}
 
     /**
      * Magic get, returns the value at specified key.
@@ -237,7 +237,7 @@ class Arr implements \ArrayAccess, \Countable, \IteratorAggregate
      * @param string $key
      * @param mixed $value
      */
-    public function __set($key, $value) {}
+    public function __set(string $key, $value) {}
 
     /**
      * Magic unset, unsets a key.

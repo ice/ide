@@ -39,8 +39,7 @@ class App extends \Ice\Di\Access
     /**
      * App constructor
      *
-     * @param \Ice\Di $di
-     * @param Di $$di
+     * @param Di $di
      */
     public function __construct(\Ice\Di $di = null) {}
 
@@ -52,5 +51,14 @@ class App extends \Ice\Di\Access
      * @return bool|\Ice\Http\Response\ResponseInterface
      */
     public function handle($method = null, $uri = null) {}
+
+    /**
+     * Add module with its dir path, initial class name and namespace
+     *
+     * @param string $name
+     * @param array $options The keys can be [path|class|namespace]
+     * @return object
+     */
+    public function addModule(string $name, array $options) {}
 
 }

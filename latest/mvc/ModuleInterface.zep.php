@@ -14,8 +14,10 @@ namespace Ice\Mvc;
 interface ModuleInterface
 {
 
-
-    public function registerAutoloaders();
+    /**
+     * @param \Ice\Loader $loader
+     */
+    public function registerAutoloaders(\Ice\Loader $loader = null);
 
     /**
      * @param \Ice\Di $di

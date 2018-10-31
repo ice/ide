@@ -54,7 +54,7 @@ class Compiler
      * @param string $path
      * @return string content
      */
-    public function compile($path) {}
+    public function compile(string $path) {}
 
     /**
      * Magic toString to get parsed content.

@@ -34,9 +34,9 @@ abstract class Regex implements \Ice\Mvc\Route\Dispatcher\DispatcherInterface
     protected abstract function dispatchVariableRoute($routeData, $uri);
 
     /**
-     * @param mixed $httpMethod
-     * @param mixed $uri
+     * @param string $httpMethod
+     * @param string $uri
      */
-    public function dispatch($httpMethod, $uri) {}
+    public function dispatch(string $httpMethod, string $uri) {}
 
 }

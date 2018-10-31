@@ -14,10 +14,10 @@ namespace Ice\Db\Driver;
 class Mongodb implements \Ice\Db\DbInterface
 {
 
-    protected $id = "_id";
+    protected $id = '_id';
 
 
-    protected $type = "NOSQL";
+    protected $type = 'NOSQL';
 
 
     protected $error;
@@ -48,7 +48,7 @@ class Mongodb implements \Ice\Db\DbInterface
      * @param string $dbname
      * @param array $options
      */
-    public function __construct($dsn, $dbname = null, array $options = array()) {}
+    public function __construct(string $dsn, string $dbname = null, array $options = array()) {}
 
     /**
      * Get the id value.
@@ -56,7 +56,7 @@ class Mongodb implements \Ice\Db\DbInterface
      * @param string $id
      * @return object
      */
-    public function getIdValue($id) {}
+    public function getIdValue(string $id) {}
 
     /**
      * Get a date time object.
@@ -76,7 +76,7 @@ class Mongodb implements \Ice\Db\DbInterface
      * @param array $fields Fields to retrieve, if not specified get all
      * @return Arr
      */
-    public function findOne($from, $filters = array(), array $options = array(), array $fields = array()) {}
+    public function findOne(string $from, $filters = array(), array $options = array(), array $fields = array()) {}
 
     /**
      * Find all documents that match criteria.
@@ -93,7 +93,7 @@ class Mongodb implements \Ice\Db\DbInterface
      * @param array $fields Fields to retrieve, if not specified get all
      * @return Arr
      */
-    public function find($from, $filters = array(), array $options = array(), array $fields = array()) {}
+    public function find(string $from, $filters = array(), array $options = array(), array $fields = array()) {}
 
     /**
      * SELECT document(s) that match criteria.
@@ -103,7 +103,7 @@ class Mongodb implements \Ice\Db\DbInterface
      * @param array $options Options to limit/group results
      * @param array $fields Fields to retrieve, if not specified get all
      */
-    public function select($from, $filters = array(), array $options = array(), array $fields = array()) {}
+    public function select(string $from, $filters = array(), array $options = array(), array $fields = array()) {}
 
     /**
      * INSERT document into collection.
@@ -111,7 +111,7 @@ class Mongodb implements \Ice\Db\DbInterface
      * @param string $from Collection name
      * @param array $fields Fields to insert, keys are the column names
      */
-    public function insert($from, array $fields = array()) {}
+    public function insert(string $from, array $fields = array()) {}
 
     /**
      * UPDATE documents in the collection.
@@ -120,7 +120,7 @@ class Mongodb implements \Ice\Db\DbInterface
      * @param mixed $filters Criteria
      * @param array $fields Fields to update, keys are the column names
      */
-    public function update($from, $filters = array(), array $fields = array()) {}
+    public function update(string $from, $filters = array(), array $fields = array()) {}
 
     /**
      * Remove documents from the collection.
@@ -128,7 +128,7 @@ class Mongodb implements \Ice\Db\DbInterface
      * @param string $from Collection name
      * @param mixed $filters Criteria
      */
-    public function remove($from, $filters = array()) {}
+    public function delete(string $from, $filters = array()) {}
 
     /**
      * Get an error message.

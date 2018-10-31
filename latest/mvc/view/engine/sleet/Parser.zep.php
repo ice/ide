@@ -23,10 +23,10 @@ class Parser
     const INARRAY = 2;
 
 
-    protected $functions = array("content" => "$this->getContent", "partial" => "$this->partial", "load" => "$this->load", "dump" => "$this->dump->vars", "version" => "Ice\\\\Version::get");
+    protected $functions = array('content' => '$this->getContent', 'partial' => '$this->partial', 'load' => '$this->load', 'dump' => '$this->dump->vars', 'version' => 'Ice\\\\Version::get');
 
 
-    protected $filters = array("capitalize" => "ucfirst");
+    protected $filters = array('capitalize' => 'ucfirst');
 
 
     protected $env = array();
@@ -43,7 +43,7 @@ class Parser
      * @param string $text
      * @return string
      */
-    public function text($text) {}
+    public function text(string $text): string {}
 
     /**
      * Parse one sleet expression.
@@ -51,7 +51,7 @@ class Parser
      * @param string $expression
      * @return string
      */
-    public function parse($expression) {}
+    public function parse(string $expression): string {}
 
     /**
      * Parse control expression.
@@ -60,7 +60,7 @@ class Parser
      * @param array $expression Tokens
      * @return string
      */
-    private function parseControl($control, $expression) {}
+    private function parseControl($control, $expression): string {}
 
     /**
      * Parse echo expression.
@@ -68,7 +68,7 @@ class Parser
      * @param array $expression Tokens
      * @return string
      */
-    private function parseEcho($expression) {}
+    private function parseEcho($expression): string {}
 
     /**
      * Parse set expression.
@@ -76,7 +76,7 @@ class Parser
      * @param array $expression Tokens
      * @return string
      */
-    private function parseSet($expression) {}
+    private function parseSet($expression): string {}
 
     /**
      * Parse use expression.
@@ -84,7 +84,7 @@ class Parser
      * @param array $expression Tokens
      * @return string
      */
-    private function parseUse($expression) {}
+    private function parseUse($expression): string {}
 
     /**
      * Internal tokens parse.
@@ -92,7 +92,7 @@ class Parser
      * @param array $tokens
      * @return string
      */
-    private function doParse($tokens) {}
+    private function doParse($tokens): string {}
 
     /**
      * Internal token parse.

@@ -60,7 +60,7 @@ class Tag
     protected $title = null;
 
 
-    protected $titleSeparator = " - ";
+    protected $titleSeparator = ' - ';
 
 
     protected $meta = array();
@@ -119,18 +119,18 @@ class Tag
      *
      * @param string $title
      * @param string $separator
-     * @return void
+     * @return object
      */
-    public function appendTitle($title, $separator = null) {}
+    public function appendTitle(string $title, string $separator = null) {}
 
     /**
      * Prepends a text to current document title.
      *
      * @param string $title
      * @param string $separator
-     * @return void
+     * @return object
      */
-    public function prependTitle($title, $separator = null) {}
+    public function prependTitle(string $title, string $separator = null) {}
 
     /**
      * Add meta tag to the container.
@@ -154,7 +154,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function textField(array $parameters) {}
+    public function textField(array $parameters): string {}
 
     /**
      * Builds a HTML INPUT[type="password"] tag.
@@ -170,7 +170,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function passwordField(array $parameters) {}
+    public function passwordField(array $parameters): string {}
 
     /**
      * Builds a HTML INPUT[type="hidden"] tag.
@@ -186,7 +186,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function hiddenField(array $parameters) {}
+    public function hiddenField(array $parameters): string {}
 
     /**
      * Builds a HTML INPUT[type="file"] tag.
@@ -199,7 +199,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function fileField(array $parameters) {}
+    public function fileField(array $parameters): string {}
 
     /**
      * Builds a HTML INPUT[type="submit"] tag.
@@ -215,7 +215,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function submitButton(array $parameters) {}
+    public function submitButton(array $parameters): string {}
 
     /**
      * Builds a HTML BUTTON tag.
@@ -231,7 +231,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function button(array $parameters) {}
+    public function button(array $parameters): string {}
 
     /**
      * Builds a HTML INPUT[type="checkbox"] tag.
@@ -247,7 +247,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function checkField(array $parameters) {}
+    public function checkField(array $parameters): string {}
 
     /**
      * Builds a HTML INPUT[type="radio"] tag.
@@ -263,7 +263,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function radioField(array $parameters) {}
+    public function radioField(array $parameters): string {}
 
     /**
      * Builds generic INPUT tags.
@@ -272,7 +272,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function input($type, array $parameters) {}
+    public function input(string $type, array $parameters): string {}
 
     /**
      * Builds a HTML FORM tag.
@@ -294,14 +294,14 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function form(array $parameters) {}
+    public function form(array $parameters): string {}
 
     /**
      * Builds a FORM close tag.
      *
      * @return string
      */
-    public function endForm() {}
+    public function endForm(): string {}
 
     /**
      * Builds a HTML TEXTAREA tag.
@@ -317,7 +317,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function textArea(array $parameters) {}
+    public function textArea(array $parameters): string {}
 
     /**
      * Alias of the `img` method.
@@ -325,7 +325,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function image(array $parameters) {}
+    public function image(array $parameters): string {}
 
     /**
      * Builds HTML IMG tags.
@@ -341,7 +341,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function img(array $parameters) {}
+    public function img(array $parameters): string {}
 
     /**
      * Alias of the `a` method.
@@ -349,7 +349,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function linkTo(array $parameters) {}
+    public function linkTo(array $parameters): string {}
 
     /**
      * Builds a HTML A tag using framework conventions.
@@ -365,7 +365,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function a(array $parameters) {}
+    public function a(array $parameters): string {}
 
     /**
      * Builds a LINK[rel="stylesheet"] tag.
@@ -381,7 +381,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function link(array $parameters) {}
+    public function link(array $parameters): string {}
 
     /**
      * Builds a SCRIPT[type="javascript"] tag.
@@ -397,7 +397,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function script(array $parameters) {}
+    public function script(array $parameters): string {}
 
     /**
      * Builds a STYLE tag.
@@ -410,7 +410,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function style(array $parameters) {}
+    public function style(array $parameters): string {}
 
     /**
      * Builds a META tag.
@@ -426,7 +426,7 @@ class Tag
      * @param array $parameters
      * @return string
      */
-    public function meta(array $parameters) {}
+    public function meta(array $parameters): string {}
 
     /**
      * Builds a SELECT tag.
@@ -454,7 +454,7 @@ class Tag
      * @param boolean $single Void element, close a tag by " />" (depending on doctype)
      * @return string
      */
-    public function tagHtml($name, array $parameters = array(), array $defaultParams = array(), array $skip = array(), $content = null, $close = false, $eol = false, $single = false) {}
+    public function tagHtml(string $name, array $parameters = array(), array $defaultParams = array(), array $skip = array(), string $content = null, bool $close = false, bool $eol = false, bool $single = false): string {}
 
     /**
      * Builds a HTML close tag.
@@ -468,7 +468,7 @@ class Tag
      * @param boolean $eol
      * @return string
      */
-    public function endTag($name, $eol = true) {}
+    public function endTag(string $name, bool $eol = true): string {}
 
     /**
      * Renders parameters keeping order in html attributes.
@@ -479,7 +479,7 @@ class Tag
      * @param boolean $single
      * @return string
      */
-    public function prepareTag($name, array $attributes, array $skip = array(), $single = false) {}
+    public function prepareTag(string $name, array $attributes, array $skip = array(), bool $single = false): string {}
 
     /**
      * Check if a helper has a default value set using Ice\Tag::setValues or value from _POST.
@@ -487,25 +487,25 @@ class Tag
      * @param string $name
      * @return bool
      */
-    public function hasValue($name) {}
+    public function hasValue(string $name): bool {}
 
     /**
      * Assigns default values to generated tags by helpers.
      *
      * @param string $id
      * @param mixed $value
-     * @return void
+     * @return object
      */
-    public function setValue($id, $value) {}
+    public function setValue(string $id, $value) {}
 
     /**
      * Assigns default values to generated tags by helpers.
      *
      * @param array $values
      * @param boolean $merge
-     * @return void
+     * @return object
      */
-    public function setValues(array $values, $merge = false) {}
+    public function setValues(array $values, bool $merge = false) {}
 
     /**
      * Every helper calls this function to check whether a component has a predefined value using Ice\Tag::setValue
@@ -514,7 +514,7 @@ class Tag
      * @param string $name
      * @return mixed
      */
-    public function getValue($name) {}
+    public function getValue(string $name) {}
 
     /**
      * Converts texts into URL-friendly titles.
@@ -531,13 +531,13 @@ class Tag
      * @param mixed $replace
      * @return string
      */
-    public function friendlyTitle($text, $separator = "-", $lowercase = true, $replace = null) {}
+    public function friendlyTitle(string $text, string $separator = '-', bool $lowercase = true, $replace = null): string {}
 
     /**
      * Get the document type declaration of content.
      *
      * @return string
      */
-    public function getDocType() {}
+    public function getDocType(): string {}
 
 }

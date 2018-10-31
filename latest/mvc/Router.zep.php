@@ -11,27 +11,14 @@ namespace Ice\Mvc;
  * @author      Ice Team
  * @copyright   (c) 2014-2018 Ice Team
  * @license     http://iceframework.org/license
- * @uses        FastRoute http:/github.com/nikic/FastRoute
  */
 class Router
 {
 
-    const NOT_FOUND = 0;
+    protected $routes = array();
 
 
-    const FOUND = 1;
-
-
-    const METHOD_NOT_ALLOWED = 2;
-
-
-    protected $defaultModule = "default";
-
-
-    protected $defaultHandler = "index";
-
-
-    protected $defaultAction = "index";
+    protected $route = 'default';
 
 
     protected $method;
@@ -49,23 +36,43 @@ class Router
     protected $params = array();
 
 
-    protected $ready = false;
-
-
     protected $silent = false;
 
 
-    protected $options = array();
+    protected $defaultModule = 'default';
 
 
-    protected $routes;
+    protected $defaultHandler = 'index';
 
 
-    protected $collector;
+    protected $defaultAction = 'index';
 
 
-    protected $dispatcher;
 
+    public function getRoutes() {}
+
+
+    public function getMethod() {}
+
+
+    public function getModule() {}
+
+
+    public function getHandler() {}
+
+
+    public function getAction() {}
+
+
+    public function getParams() {}
+
+
+    public function getSilent() {}
+
+    /**
+     * @param mixed $silent
+     */
+    public function setSilent($silent) {}
 
 
     public function getDefaultModule() {}
@@ -91,80 +98,124 @@ class Router
      */
     public function setDefaultAction($defaultAction) {}
 
-
-    public function getMethod() {}
-
-
-    public function getModule() {}
-
-
-    public function getHandler() {}
-
-
-    public function getAction() {}
-
-
-    public function getParams() {}
+    /**
+     * Stores a named route and returns it.
+     *
+     * <pre><code>
+     *     $router->addRoute("default", "[/{controller}[/{action}[/{id}]]]")
+     *         ->setDefaults(["controller" => "hello"]);
+     * </code></pre>
+     *
+     * @param string $name
+     * @param string $uri
+     * @param array $regex patterns for route keys
+     * @param mix $method Request method limitation, * for no limit or an array of methods
+     * @param string $route name
+     * @param string $URI pattern
+     * @return object
+     */
+    public function addRoute(string $name, string $uri, array $regex = null, $method = '*') {}
 
     /**
-     * @param mixed $silent
+     * Retrieves a named route or the current matched route.
+     *
+     * <pre><code>
+     *     $route = $router->getRoute("default");
+     * </code></pre>
+     *
+     * @param string $name
+     * @param string $route name
+     * @return Route|null
      */
-    public function setSilent($silent) {}
-
-
-    public function getOptions() {}
-
-
-    public function getRoutes() {}
+    public function getRoute(string $name = null) {}
 
     /**
-     * @param mixed $routes
+     * Get the name of a route.
+     *
+     * @param Route $route
+     * @param object $Route instance
+     * @return string
      */
-    public function setRoutes($routes) {}
-
-
-    public function getCollector() {}
+    public function getRouteName(Route $route) {}
 
     /**
-     * @param mixed $collector
+     * Saves or loads the route cache.
+     *
+     * <pre><code>
+     *     if (! $router->cache()) {
+     *         // set routes
+     *         $router->addRoute("default", "[/{controller}[/{action}[/{id}]]]");
+     *         // cache routes
+     *         $router->cache($filePath);
+     *     }
+     * </code></pre>
+     *
+     * @param string $file Cache the current routes to the file
+     * @return self|boolean saving routes or loading routes
      */
-    public function setCollector($collector) {}
-
-
-    public function getDispatcher() {}
-
-    /**
-     * @param mixed $dispatcher
-     */
-    public function setDispatcher($dispatcher) {}
+    public function cache(string $file = null) {}
 
     /**
      * Set defaults values
      *
-     * @param array $defaults
-     */
-    public function setDefaults(array $defaults) {}
-
-    /**
-     * Set options.
+     * <pre><code>
+     *     $route->defaults(["controller" => "hello", "action" => "world"]);
+     * </code></pre>
      *
-     * @param array $options
-     * @return object
+     * @param array $defaults values
+     * @return self
      */
-    public function setOptions(array $options) {}
+    public function defaults(array $defaults) {}
 
     /**
-     * Prepare the FastRoute.
-     */
-    public function fastRoute() {}
-
-    /**
-     * Handles routing information received from the FastRoute engine.
+     * Set an array of route rules.
+     * httpMethod:|null - no limit, GET, POST, PUT or PATCH
+     * URI pattern: [] wrap for optional, {} wrap for regex placeholder key
+     * regex: an associate array placeholder key and regex limitation pattern
+     * defaults: default options for the module, handler and action
      *
-     * @param mixed $method
+     * <pre><code>
+     *     // the rule format: ['name' => ["httpMethod", "URI pattern", "regex", "defaults"]]
+     *     $route->setRoutes([
+     *         ["default" => ["POST", "/{controller}[.ext]", ["controller" => "[a-z]+", "ext" => "(?:htm|html)"]]]
+     *     ]);
+     * </code></pre>
+     *
+     * @param array $routes Route rules
+     * @return self
+     */
+    public function setRoutes(array $routes = null) {}
+
+    /**
+     * Handles routing information.
+     *
+     * @param string $method
      * @param string $uri
      * @return mixed
      */
-    public function handle($method = null, $uri = null) {}
+    public function handle(string $method = null, string $uri = null) {}
+
+    /**
+     * Get route matched by uri and method.
+     *
+     * @param string $uri
+     * @param string $method
+     * @return Route|false|null
+     */
+    public function match(string $uri = null, string $method = null) {}
+
+    /**
+     * Generates a URI based on the parameters given. (AKA. reverse route).
+     *
+     * <pre><code>
+     *     $uri = $router->uri(["controller" => "blog", "action" => "post", "param" => 10]);
+     * </code></pre>
+     *
+     * @param array $params
+     * @param string $method
+     * @param array $URI parameters
+     * @return string|null
+     */
+    public function uri(array $params, string $method = '*') {}
 
 }

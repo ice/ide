@@ -18,98 +18,102 @@ interface RequestInterface
      * @param string $name
      * @return bool
      */
-    public function hasRequest($name);
+    public function hasRequest(string $name): bool;
 
     /**
      * @param string $name
      * @return bool
      */
-    public function hasPost($name);
+    public function hasPost(string $name): bool;
 
     /**
      * @param string $name
      * @return bool
      */
-    public function hasGet($name);
+    public function hasGet(string $name): bool;
 
     /**
      * @param string $name
      * @return bool
      */
-    public function hasServer($name);
+    public function hasServer(string $name): bool;
 
     /**
      * @return bool
      */
-    public function isPost();
+    public function isPost(): bool;
 
     /**
      * @return bool
      */
-    public function isGet();
+    public function isGet(): bool;
 
     /**
      * @return bool
      */
-    public function isPut();
+    public function isPut(): bool;
 
     /**
      * @return bool
      */
-    public function isPatch();
+    public function isPatch(): bool;
 
     /**
      * @return bool
      */
-    public function isHead();
+    public function isHead(): bool;
 
     /**
      * @return bool
      */
-    public function isDelete();
+    public function isDelete(): bool;
 
     /**
      * @return bool
      */
-    public function isOptions();
+    public function isOptions(): bool;
 
     /**
      * @return string
      */
-    public function getMethod();
+    public function getMethod(): string;
 
     /**
      * @return string
      */
-    public function getUserAgent();
+    public function getUserAgent(): string;
 
     /**
      * @return string
      */
-    public function getHTTPReferer();
+    public function getHTTPReferer(): string;
+
+    /**
+     * @param string $key
+     * @param mixed $filters
+     * @param mixed $defaultValue
+     * @param bool $allowEmpty
+     */
+    public function getQuery(string $key = null, $filters = null, $defaultValue = null, bool $allowEmpty = false);
 
     /**
      * @param string $key
      * @param mixed $defaultValue
      */
-    public function get($key, $defaultValue = null);
+    public function getFiles(string $key = null, $defaultValue = null);
+
+    /**
+     * @param string $key
+     * @param mixed $filters
+     * @param mixed $defaultValue
+     * @param bool $allowEmpty
+     */
+    public function getPost(string $key = null, $filters = null, $defaultValue = null, bool $allowEmpty = false);
 
     /**
      * @param string $key
      * @param mixed $defaultValue
      */
-    public function request($key, $defaultValue = null);
-
-    /**
-     * @param string $key
-     * @param mixed $defaultValue
-     */
-    public function post($key, $defaultValue = null);
-
-    /**
-     * @param string $key
-     * @param mixed $defaultValue
-     */
-    public function server($key, $defaultValue = null);
+    public function getServer(string $key = null, $defaultValue = null);
 
 }

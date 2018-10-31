@@ -20,13 +20,13 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
     protected $content;
 
 
-    protected $mainView = "index";
+    protected $mainView = 'index';
 
 
-    protected $layoutsDir = "layouts/";
+    protected $layoutsDir = 'layouts/';
 
 
-    protected $partialsDir = "partials/";
+    protected $partialsDir = 'partials/';
 
 
     protected $viewsDir;
@@ -125,7 +125,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      * @param array $data Vars to send
      * @return string
      */
-    public function load($file, array $data = array()) {}
+    public function load(string $file, array $data = array()) {}
 
     /**
      * Load the partial view.
@@ -134,7 +134,7 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      * @param array $data Vars to send
      * @return string
      */
-    public function partial($file, array $data = array()) {}
+    public function partial(string $file, array $data = array()) {}
 
     /**
      * Load the layout view.
@@ -150,13 +150,15 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      *
      * @param string $name
      * @param mixed $value
+     * @return object
      */
-    public function setVar($name, $value) {}
+    public function setVar(string $name, $value) {}
 
     /**
      * Set multiple vars to the view.
      *
      * @param array $vars
+     * @return object
      */
     public function setVars(array $vars) {}
 
@@ -165,8 +167,9 @@ class View extends \Ice\Arr implements \Ice\Mvc\View\ViewInterface
      *
      * @param string $layout
      * @param array $vars
+     * @return object
      */
-    public function setLayout($layout) {}
+    public function setLayout(string $layout) {}
 
     /**
      * Magic toStrint, get the rendered view.

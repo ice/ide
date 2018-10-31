@@ -30,7 +30,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
     protected $db;
 
 
-    protected $service = "db";
+    protected $service = 'db';
 
 
     protected $from;
@@ -61,6 +61,9 @@ abstract class Model extends \Ice\Arr implements \Serializable
 
 
     protected $messages = array();
+
+
+    protected $isLoaded = null;
 
 
 
@@ -132,8 +135,9 @@ abstract class Model extends \Ice\Arr implements \Serializable
      *
      * @param mixed $filters
      * @param array $data
+     * @param array $options Options to limit/group/orderby results when filters is not null
      */
-    public function __construct($filters = null, array $data = array()) {}
+    public function __construct($filters = null, array $data = array(), array $options = array()) {}
 
     /**
      * Get the id.
@@ -147,7 +151,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      *
      * @return string
      */
-    public function getIdKey() {}
+    public function getIdKey(): string {}
 
     /**
      * Get the date time object.
@@ -162,7 +166,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * Load one result to the current object.
      *
      * @param mixed $filters
-     * @param array $options
+     * @param array $options Options to limit/group/orderby results
      * @return this|false
      */
     public function loadOne($filters, array $options = array()) {}
@@ -215,7 +219,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param boolean $primary Keep primary key
      * @return array
      */
-    protected function fields($fields = array(), $primary = true) {}
+    protected function fields($fields = array(), bool $primary = true) {}
 
     /**
      * Insert a new object to the database.
@@ -230,6 +234,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      *
      * @param array $fields Fields to save or valid fields
      * @param object $extra Validation for fields such as a CSRF token, password verification, or a CAPTCHA
+     * @return null|boolean validate fail return null, else return insert status
      */
     public function create($fields = array(), \Ice\Validation $extra = null) {}
 
@@ -245,6 +250,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      *
      * @param array $fields Fields to save or valid fields
      * @param object $extra Validation for fields such as a CSRF token, password verification, or a CAPTCHA
+     * @return null|boolean validate fail return null, else return update status
      */
     public function update($fields = array(), \Ice\Validation $extra = null) {}
 
@@ -266,7 +272,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      *
      * @param array $fields
      * @param Validation $extra
-     * @return boolean
+     * @return null|boolean validate fail return null, else return save status
      */
     public function save($fields = array(), \Ice\Validation $extra = null) {}
 
@@ -279,14 +285,14 @@ abstract class Model extends \Ice\Arr implements \Serializable
      *  $user->delete();
      *
      *  //Remove all unactive users
-     *  $status = (new Users())->remove(["status" => 0]);
+     *  $status = (new Users())->delete(["status" => 0]);
      * </code></pre>
      *
      * @param mixed $filters
      * @param filters
      * @return boolean
      */
-    public function remove($filters = array()) {}
+    public function delete($filters = array()) {}
 
     /**
      * Get the record if exist.
@@ -325,8 +331,9 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param string $referenceModel
      * @param string $referencedField
      * @param array $options
+     * @return object
      */
-    public function belongsTo($field, $referenceModel, $referencedField, array $options = array()) {}
+    public function belongsTo(string $field, string $referenceModel, string $referencedField, array $options = array()) {}
 
     /**
      * Setup a 1-1 relation between two models
@@ -345,8 +352,9 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param string $referenceModel
      * @param string $referencedField
      * @param array $options
+     * @return object
      */
-    public function hasOne($field, $referenceModel, $referencedField, array $options = array()) {}
+    public function hasOne(string $field, string $referenceModel, string $referencedField, array $options = array()) {}
 
     /**
      * Setup a relation 1-n between two models.
@@ -372,8 +380,9 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param string $referenceModel
      * @param string $referencedField
      * @param array $options
+     * @return object
      */
-    public function hasMany($field, $referenceModel, $referencedField, array $options = array()) {}
+    public function hasMany(string $field, string $referenceModel, string $referencedField, array $options = array()) {}
 
     /**
      * Get related models.
@@ -382,7 +391,7 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param array $filters
      * @param array $options
      */
-    public function getRelated($alias, array $filters = array(), array $options = array()) {}
+    public function getRelated(string $alias, array $filters = array(), array $options = array()) {}
 
     /**
      * Get rules for validation.
@@ -408,22 +417,24 @@ abstract class Model extends \Ice\Arr implements \Serializable
      *
      * @param array $rules
      * @param boolean $merge
+     * @return object
      */
-    public function setRules(array $rules = array(), $merge = true) {}
+    public function setRules(array $rules = array(), bool $merge = true) {}
 
     /**
      * Serialize the model's data.
      *
      * @return string
      */
-    public function serialize() {}
+    public function serialize(): string {}
 
     /**
      * Unserialize and set the data.
      *
-     * @param string $data
+     * @param mixed $serialized
+     * @return object
      */
-    public function unserialize($data) {}
+    public function unserialize($serialized) {}
 
     /**
      * Magic call to get related models.
@@ -431,6 +442,6 @@ abstract class Model extends \Ice\Arr implements \Serializable
      * @param string $method
      * @param mixed $arguments
      */
-    public function __call($method, $arguments = null) {}
+    public function __call(string $method, $arguments = null) {}
 
 }
